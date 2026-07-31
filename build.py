@@ -33,13 +33,22 @@ ANNUAL_REPORT_PDF = (
 NAV = [
     {"href": "index.html", "label": "Översikt"},
     {"href": ANNUAL_REPORT_PDF, "label": "Årsredovisning 2025", "external": True},
-    {"href": "parking.html", "label": "Parkering och garage"},
-    {"href": "dogs.html", "label": "Hundägare"},
     {
-        "href": "amenities.html",
+        # Ingen "href": posten är enbart en meny som fälls ut vid klick.
         "label": "Bekvämligheter",
         "children": [
+            {"href": "parking.html", "label": "Parkering"},
+            {"href": "bicycle-storage.html", "label": "Cykelförråd"},
+            {"href": "playground.html", "label": "Lekplats"},
             {"href": "gym.html", "label": "Gym"},
+            {"href": "outdoor-gym.html", "label": "Utegym"},
+            {"href": "sauna.html", "label": "Bastu"},
+            {"href": "boule.html", "label": "Boulebana"},
+            {"href": "ice-rink.html", "label": "Isbana"},
+            {"href": "football-field.html", "label": "Fotbollsplan"},
+            {"href": "barbecue.html", "label": "Grillplatser"},
+            {"href": "dogs.html", "label": "Hundägare"},
+            {"href": "laundry.html", "label": "Tvättstugor"},
         ],
     },
 ]
@@ -109,6 +118,9 @@ def nav_link(item, current):
 
 
 def render_nav(current):
+    """Menyn. En post med "children" är ingen länk utan en knapp som fäller ut
+    undermenyn – ett klick på etiketten öppnar alltså menyn i stället för att
+    leda till en egen sida."""
     out = []
     for item in NAV:
         children = item.get("children", [])
@@ -116,28 +128,21 @@ def render_nav(current):
             out.append("        <li>%s</li>" % nav_link(item, current))
             continue
 
-        # Föräldern markeras som aktiv även när en undersida visas.
+        # Föräldern markeras som aktiv när någon av undersidorna visas.
         in_branch = current in [c["href"] for c in children]
-        cls = ' class="is-active"' if in_branch else ""
+        cls = " nav__sub-button is-active" if in_branch else " nav__sub-button"
         subs = "\n".join(
             "            <li>%s</li>" % nav_link(c, current) for c in children
         )
         out.append(
             '        <li class="nav__has-sub">\n'
-            '          <a href="%s"%s%s>%s</a>\n'
-            '          <button class="nav__sub-toggle" type="button" aria-expanded="false"'
-            ' aria-label="Visa undersidor till %s">%s</button>\n'
+            '          <button class="%s" type="button" aria-expanded="false">\n'
+            "            %s\n"
+            "            %s\n"
+            "          </button>\n"
             '          <ul class="nav__sub">\n%s\n          </ul>\n'
             "        </li>"
-            % (
-                item["href"],
-                ' aria-current="page"' if item["href"] == current else "",
-                cls,
-                item["label"],
-                item["label"],
-                icon("chevron", width="2"),
-                subs,
-            )
+            % (cls.strip(), item["label"], icon("chevron", width="2"), subs)
         )
     return "\n".join(out)
 

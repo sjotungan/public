@@ -8,10 +8,23 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 | Fil | Sida i menyn |
 | --- | --- |
 | [index.html](index.html) | Översikt |
-| [parking.html](parking.html) | Parkering och garage |
-| [dogs.html](dogs.html) | Hundägare |
 | [amenities.html](amenities.html) | Bekvämligheter |
+| [parking.html](parking.html) | Bekvämligheter → Parkering |
+| [bicycle-storage.html](bicycle-storage.html) | Bekvämligheter → Cykelförråd |
+| [playground.html](playground.html) | Bekvämligheter → Lekplats |
 | [gym.html](gym.html) | Bekvämligheter → Gym |
+| [outdoor-gym.html](outdoor-gym.html) | Bekvämligheter → Utegym |
+| [sauna.html](sauna.html) | Bekvämligheter → Bastu |
+| [boule.html](boule.html) | Bekvämligheter → Boulebana |
+| [ice-rink.html](ice-rink.html) | Bekvämligheter → Isbana |
+| [football-field.html](football-field.html) | Bekvämligheter → Fotbollsplan |
+| [barbecue.html](barbecue.html) | Bekvämligheter → Grillplatser |
+| [dogs.html](dogs.html) | Bekvämligheter → Hundägare |
+| [laundry.html](laundry.html) | Bekvämligheter → Tvättstugor |
+
+Sidorna för lekplats, utegym, boulebana, isbana, fotbollsplan, grillplatser och
+tvättstugor är tomma skal med rubrik och texten ”Innehåll kommer”. De fylls på
+en i taget. Parkering, cykelförråd, gym, bastu och hundägare har innehåll.
 
 Menyvalet **Årsredovisning 2025** är ingen sida utan en direktlänk till PDF:en
 hos sjotungan.se. Ekonomin behöver ingen egen sida så länge dokumentet finns.
@@ -185,6 +198,7 @@ innehåller inga påhittade uppgifter.
 | Adresser, org.nr, e-post, styrelsens roller | [Kontakt](https://www.sjotungan.se/public_html/new2016/kontakt/kontakt.html) |
 | Felanmälan och journummer | [Felanmälan](https://www.sjotungan.se/public_html/new2016/forvaltning/felanmalan.html) |
 | Gymavgiften, 50 kr per medlem och månad | Uppgift från styrelsen – står inte på sjotungan.se |
+| Cykelrum i nästan alla hus, långtidsförråd i M10 | Uppgift från styrelsen – A–Ö anger M6, se nedan |
 
 Ett par saker att känna till innan sidorna publiceras:
 
@@ -199,6 +213,9 @@ Ett par saker att känna till innan sidorna publiceras:
   nästa stämma.
 - **Gymsidan** bygger på bilder tagna i lokalen i juli 2026 plus uppgifterna om
   öppettider, åldersgräns och medlemskap från A–Ö.
+- **Cykelförrådet.** A–Ö skriver att långtidsförvaringen finns i miljöhuset vid
+  **M6** och rymmer ett tjugotal cyklar. Sidan anger **M10** enligt uppgift från
+  styrelsen. Stäm av vilket som gäller, och rätta antingen sidan eller A–Ö.
 - **Länkarna till årsredovisningen** – i menyn och på översiktssidan – pekar på
   PDF:en hos sjotungan.se. Sökvägen innehåller årtalet `2026`, så den måste
   bytas när nästa års handlingar publiceras. Den står på ett ställe i koden:

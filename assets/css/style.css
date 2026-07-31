@@ -315,33 +315,42 @@ hr {
   align-items: center;
 }
 
-.nav__sub-toggle {
+/* Föräldern är en knapp som ser ut som en menylänk – ett klick öppnar
+   undermenyn i stället för att gå vidare till en sida. */
+.nav__sub-button {
   display: inline-flex;
   align-items: center;
-  justify-content: center;
-  width: 26px;
-  height: 26px;
-  margin-left: -0.35rem;
-  padding: 0;
-  color: var(--muted);
+  gap: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 550;
+  line-height: inherit;
+  color: var(--ink-soft);
   background: none;
   border: 0;
-  border-radius: 50%;
+  border-radius: 999px;
   cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-.nav__sub-toggle svg {
+.nav__sub-button:hover {
+  background: var(--bg-alt);
+  color: var(--ink);
+}
+
+.nav__sub-button.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.nav__sub-button svg {
   width: 15px;
   height: 15px;
   transition: transform 0.15s ease;
 }
 
-.nav__sub-toggle:hover {
-  color: var(--ink);
-  background: var(--bg-alt);
-}
-
-.nav__has-sub[data-open="true"] .nav__sub-toggle svg {
+.nav__has-sub[data-open="true"] .nav__sub-button svg {
   transform: rotate(180deg);
 }
 
@@ -381,8 +390,12 @@ hr {
     flex-wrap: wrap;
   }
 
-  .nav__has-sub > a {
+  .nav__sub-button {
     flex: 1;
+    justify-content: space-between;
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.875rem;
+    font-size: 1rem;
   }
 
   .nav__sub {

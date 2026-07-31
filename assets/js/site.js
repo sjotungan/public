@@ -1,6 +1,5 @@
 /* Meny: hamburgaren på små skärmar och undermenyerna.
-   Progressiv förbättring – utan JavaScript nås alla länkar ändå, eftersom
-   föräldern i undermenyn är en vanlig länk till sin egen sida. */
+   Undermenyns förälder är en knapp – ett klick på etiketten fäller ut menyn. */
 (function () {
   "use strict";
 
@@ -17,7 +16,7 @@
 
   function setSub(item, open) {
     item.setAttribute("data-open", open ? "true" : "false");
-    var button = item.querySelector(".nav__sub-toggle");
+    var button = item.querySelector(".nav__sub-button");
     if (button) button.setAttribute("aria-expanded", open ? "true" : "false");
   }
 
@@ -30,7 +29,7 @@
   setNav(false);
   subs.forEach(function (item) {
     setSub(item, false);
-    var button = item.querySelector(".nav__sub-toggle");
+    var button = item.querySelector(".nav__sub-button");
     if (!button) return;
     button.addEventListener("click", function (event) {
       event.stopPropagation();
