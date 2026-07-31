@@ -184,6 +184,7 @@ innehåller inga påhittade uppgifter.
 | Parkering, hundar, tvättstugor, bastu, gym, sopor | [Sjötungan A–Ö](https://www.sjotungan.se/public_html/new2016/a-o/a-o.html) |
 | Adresser, org.nr, e-post, styrelsens roller | [Kontakt](https://www.sjotungan.se/public_html/new2016/kontakt/kontakt.html) |
 | Felanmälan och journummer | [Felanmälan](https://www.sjotungan.se/public_html/new2016/forvaltning/felanmalan.html) |
+| Gymavgiften, 50 kr per medlem och månad | Uppgift från styrelsen – står inte på sjotungan.se |
 
 Ett par saker att känna till innan sidorna publiceras:
 
