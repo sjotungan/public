@@ -30,25 +30,24 @@ ANNUAL_REPORT_PDF = (
 )
 
 # Menyn. "children" ger en undermeny; "external" länkar utanför sajten.
+#
+# Undermenyn är indelad efter vem läsaren är, inte efter vilka anläggningar som
+# finns. Etiketterna är skrivna för att läsas ihop med föräldern: "För dig" +
+# "med barn". En anläggning kan därför dyka upp på flera sidor – lekplatsen hör
+# till barnsidan, gymmet till träningssidan – och en sida som inte har någon
+# läsare att peka ut hör inte hemma i menyn alls.
 NAV = [
     {"href": "index.html", "label": "Översikt"},
     {"href": ANNUAL_REPORT_PDF, "label": "Årsredovisning 2025", "external": True},
     {
         # Ingen "href": posten är enbart en meny som fälls ut vid klick.
-        "label": "Bekvämligheter",
+        "label": "För dig…",
         "children": [
-            {"href": "parking.html", "label": "Parkering"},
-            {"href": "bicycle-storage.html", "label": "Cykelförråd"},
-            {"href": "playground.html", "label": "Lekplats"},
-            {"href": "gym.html", "label": "Gym"},
-            {"href": "outdoor-gym.html", "label": "Utegym"},
-            {"href": "sauna.html", "label": "Bastu"},
-            {"href": "boule.html", "label": "Boulebana"},
-            {"href": "ice-rink.html", "label": "Isbana"},
-            {"href": "football-field.html", "label": "Fotbollsplan"},
-            {"href": "barbecue.html", "label": "Grillplatser"},
-            {"href": "dogs.html", "label": "Hundägare"},
-            {"href": "laundry.html", "label": "Tvättstugor"},
+            {"href": "family.html", "label": "med barn"},
+            {"href": "car.html", "label": "med bil eller MC"},
+            {"href": "bicycle.html", "label": "på cykel"},
+            {"href": "dogs.html", "label": "med hund"},
+            {"href": "fitness.html", "label": "som tränar"},
         ],
     },
 ]
@@ -73,6 +72,8 @@ ICONS = {
     "bike": '<circle cx="5.8" cy="16" r="3.2"/><circle cx="18.2" cy="16" r="3.2"/><path d="M8.5 8.5h3.5l2.8 7.5"/><path d="m9.5 16 3.5-6"/><path d="M15 8.5h2.5"/>',
     "bin": '<path d="M6 8h12l-1 11a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 19z"/><path d="M4.5 8h15"/><path d="M9.5 8V5.5a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5V8"/>',
     "home2": '<path d="M3.5 20V9.5L12 4l8.5 5.5V20"/><path d="M3.5 20h17"/><path d="M9 20v-5h6v5"/>',
+    "kite": '<path d="M12 2.8 4.8 10 12 17.2 19.2 10Z"/><path d="M12 2.8V17.2"/><path d="M4.8 10h14.4"/><path d="M12 17.2v2.3a1.7 1.7 0 0 1-3.4 0"/>',
+    "ball": '<circle cx="12" cy="12" r="8.6"/><path d="m12 7.4 3.9 2.8-1.5 4.6H9.6l-1.5-4.6Z"/><path d="M12 3.4v4"/><path d="m4 9.9 4.1.3"/><path d="m20 9.9-4.1.3"/><path d="m7.3 19 2.3-4.2"/><path d="m16.7 19-2.3-4.2"/>',
 }
 
 FAVICON = (

@@ -5,29 +5,45 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 
 ## Sidor
 
-| Fil | Sida i menyn |
-| --- | --- |
-| [index.html](index.html) | Översikt |
-| [amenities.html](amenities.html) | Bekvämligheter |
-| [parking.html](parking.html) | Bekvämligheter → Parkering |
-| [bicycle-storage.html](bicycle-storage.html) | Bekvämligheter → Cykelförråd |
-| [playground.html](playground.html) | Bekvämligheter → Lekplats |
-| [gym.html](gym.html) | Bekvämligheter → Gym |
-| [outdoor-gym.html](outdoor-gym.html) | Bekvämligheter → Utegym |
-| [sauna.html](sauna.html) | Bekvämligheter → Bastu |
-| [boule.html](boule.html) | Bekvämligheter → Boulebana |
-| [ice-rink.html](ice-rink.html) | Bekvämligheter → Isbana |
-| [football-field.html](football-field.html) | Bekvämligheter → Fotbollsplan |
-| [barbecue.html](barbecue.html) | Bekvämligheter → Grillplatser |
-| [dogs.html](dogs.html) | Bekvämligheter → Hundägare |
-| [laundry.html](laundry.html) | Bekvämligheter → Tvättstugor |
-
-Sidorna för lekplats, utegym, boulebana, isbana, fotbollsplan, grillplatser och
-tvättstugor är tomma skal med rubrik och texten ”Innehåll kommer”. De fylls på
-en i taget. Parkering, cykelförråd, gym, bastu och hundägare har innehåll.
+| Fil | Sida i menyn | Vad sidan samlar |
+| --- | --- | --- |
+| [index.html](index.html) | Översikt | Föreningen, ekonomin, styrelsen, det gemensamma |
+| [family.html](family.html) | För dig … med barn | Gårdarna, lekplatser, fotbollsplan, isbana |
+| [car.html](car.html) | För dig … med bil eller MC | P-platser, garage, laddplatser, MC och moped, körning i området |
+| [bicycle.html](bicycle.html) | För dig … på cykel | Cykelrum i husen, långtidsförrådet |
+| [dogs.html](dogs.html) | För dig … med hund | Kopplingstvång, hundrastgården, katter |
+| [fitness.html](fitness.html) | För dig … som tränar | Gymmet med bilder och video, bastun, utegym, boulebana |
 
 Menyvalet **Årsredovisning 2025** är ingen sida utan en direktlänk till PDF:en
 hos sjotungan.se. Ekonomin behöver ingen egen sida så länge dokumentet finns.
+
+### Indelningen följer läsaren, inte anläggningarna
+
+Sidorna är indelade efter **vem läsaren är** – med barn, med bil, på cykel, med
+hund, som tränar – inte efter vilka anläggningar föreningen råkar äga. Det är
+så en spekulant läser: man letar efter om det finns någonstans att göra av
+cykeln eller om barnen kan vara ute själva, inte efter en förteckning över
+gemensamma utrymmen.
+
+Det får några konsekvenser att hålla fast vid:
+
+- **En anläggning kan förekomma på flera sidor.** Hundrastgården ligger vid
+  idrottsplatsen och nämns därför både under hund och under barn. Bilförbudet i
+  området hör lika mycket hemma på barnsidan som på bilsidan. Upprepa det korta
+  och länka till sidan som har detaljerna.
+- **Anläggningar utan läsare får ingen sida.** Tvättstugor, grillplatser,
+  gästlägenheten och miljöhusen är sådant alla har, inte en roll man känner
+  igen sig i. De ligger som korta punkter under *Gemensamt för alla* på
+  översikten.
+- **En ny sida kräver en ny roll**, inte en ny anläggning. Frågan att ställa är
+  ”vem är det som söker det här?”. Finns rollen inte redan i menyn, och är den
+  inte tillräckligt vanlig för att bära en egen sida, hör uppgiften hemma på en
+  befintlig sida eller ingenstans.
+
+Sidorna för barn och träning innehåller stycken märkta ”Innehåll kommer” där
+uppgifter saknas – lekplatsernas läge och utrustning, när isbanan är i bruk,
+samt utegymmets och boulebanans läge. Det som står i övrigt är belagt i
+källorna längre ned. Skriv inte in gissningar i luckorna.
 
 Filnamn, id:n och CSS-klasser är på engelska; all text som besökaren ser är på
 svenska.
@@ -106,7 +122,7 @@ src/pages/*.html        innehållet, ett <main> per sida
 *.html                  genererade filer (checkas in, skrivs över vid bygge)
 assets/css/style.css    designsystem (färger, typografi, komponenter)
 assets/js/site.js       enda skriptet: mobilmeny och undermenyer
-assets/images/gym/      bilder till gymsidan (JPEG) samt videons posterbild
+assets/images/gym/      bilder till gymavsnittet på fitness.html (JPEG) + posterbild
 assets/video/           gym-tour.mp4
 ```
 
@@ -137,11 +153,14 @@ Pages kan servera dem rakt av utan byggsteg.
    förälder – då hamnar den i undermenyn:
 
    ```python
-   {"href": "amenities.html", "label": "Bekvämligheter", "children": [
-       {"href": "gym.html", "label": "Gym"},
+   {"label": "För dig…", "children": [
+       {"href": "family.html", "label": "med barn"},
    ]},
    ```
 
+   Etiketterna i rollmenyn är skrivna för att läsas ihop med föräldern –
+   ”För dig” + ”med barn” – och börjar därför med liten bokstav. Föräldern har
+   ingen `href`: den är bara en knapp som fäller ut undermenyn.
    `"external": True` markerar en länk som pekar utanför sajten.
 
 3. Kör `python3 build.py`.
@@ -155,7 +174,7 @@ Ikonerna ligger som SVG-banor i `ICONS` i `build.py` och används i fragmenten
 som `{{icon:namn}}` – till exempel `{{icon:arrow}}`. Ändra en ikon på ett ställe
 och den uppdateras på alla sidor.
 
-### Bilderna och videon på gymsidan
+### Bilderna och videon från gymmet
 
 Originalen kommer från en iPhone. De ligger inte i repot – `.gitignore` håller
 `IMG_*.HEIC` och `IMG_*.MOV` utanför, och det är webbversionerna under `assets/`
@@ -211,8 +230,12 @@ Ett par saker att känna till innan sidorna publiceras:
   är hämtade ur handlingarna till den stämman.
 - **Styrelsen** som listas är den som valdes för 2026–2027. Uppdatera efter
   nästa stämma.
-- **Gymsidan** bygger på bilder tagna i lokalen i juli 2026 plus uppgifterna om
-  öppettider, åldersgräns och medlemskap från A–Ö.
+- **Gymavsnittet** på `fitness.html` bygger på bilder tagna i lokalen i juli
+  2026 plus uppgifterna om öppettider, åldersgräns och medlemskap från A–Ö.
+- **Lekplatser, fotbollsplan, isbana, utegym och boulebana** finns belagda som
+  anläggningar, men A–Ö säger inget om läge, utrustning eller säsong. Därför står
+  bara att de finns. Uppgifterna behöver hämtas från styrelsen innan styckena
+  ”Innehåll kommer” kan ersättas.
 - **Cykelförrådet.** A–Ö skriver att långtidsförvaringen finns i miljöhuset vid
   **M6** och rymmer ett tjugotal cyklar. Sidan anger **M10** enligt uppgift från
   styrelsen. Stäm av vilket som gäller, och rätta antingen sidan eller A–Ö.
