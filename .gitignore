@@ -1,0 +1,4 @@
+# Camera originals for gymsidan. The web-sized copies under assets/ are what
+# the site actually uses; these are ~111 MB and don't belong in git.
+IMG_*.HEIC
+IMG_*.MOV
