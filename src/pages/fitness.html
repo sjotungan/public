@@ -22,123 +22,19 @@ description: Träning i Brf Sjötungan: föreningens gym med bilder och rundtur,
 
   <section class="section" id="gym">
     <div class="container">
-      <div class="section__head">
-        <h2>Gymmet</h2>
-        <p>
-          Öppet för boende som tecknat gymmedlemskap, 50 kronor per medlem och
-          månad.
-        </p>
-      </div>
-
-      <div class="facts">
-        <div class="facts__item">
-          <span class="facts__value">50 kr</span>
-          <span class="facts__label">Per medlem och månad</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">07–21</span>
-          <span class="facts__label">Måndag–fredag</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">10–19</span>
-          <span class="facts__label">Lördag–söndag</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">16 år</span>
-          <span class="facts__label">Åldersgräns</span>
-        </div>
-      </div>
+      {{block:gym:section}}
     </div>
   </section>
 
   <section class="section section--alt" id="tour">
     <div class="container">
-      <div class="section__head">
-        <h2>Rundtur i gymmet</h2>
-        <p>En promenad genom lokalen, från maskinrummet till konditionsdelen.</p>
-      </div>
-
-      <div class="video">
-        <video controls preload="none" playsinline
-               poster="assets/images/gym/video-poster.jpg"
-               width="540" height="960">
-          <source src="assets/video/gym-tour.mp4" type="video/mp4">
-          Din webbläsare kan inte spela upp videon.
-        </video>
-      </div>
-      <p class="video-note">1 minut 24 sekunder, utan ljud.</p>
+      {{block:gym-rundtur:section}}
     </div>
   </section>
 
   <section class="section" id="photos">
     <div class="container">
-      <div class="section__head">
-        <h2>Bilder från gymmet</h2>
-        <p>Klicka på en bild för att se den i full storlek.</p>
-      </div>
-
-      <div class="gallery">
-        <figure>
-          <a href="assets/images/gym/img_2546.jpg">
-            <img src="assets/images/gym/img_2546.jpg" alt="Maskinrummet sett från dörren, med Gymleco-bänkar till vänster och spinningcyklar till höger." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Maskinrummet, med styrkemaskiner längs väggarna och spinningcyklar på högersidan.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2548.jpg">
-            <img src="assets/images/gym/img_2548.jpg" alt="Maskinrummet med bänkar, spinningcyklar och benpress." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Bänkar, spinningcyklar och benpress i samma rum.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2549.jpg">
-            <img src="assets/images/gym/img_2549.jpg" alt="Rad med kabelmaskiner och Technogym Element-maskiner längs väggen." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Kabelmaskin och Technogym Element längs långväggen.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2547.jpg">
-            <img src="assets/images/gym/img_2547.jpg" alt="Maskinrummet speglat i väggspegeln, med viktmagasin och benpress." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Speglarna gör rummet ljusare och hjälper till med tekniken.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2553.jpg">
-            <img src="assets/images/gym/img_2553.jpg" alt="Konditionsrummet med crosstrainer, två roddmaskiner och tre löpband." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Konditionsrummet: crosstrainer, roddmaskiner och löpband.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2554.jpg">
-            <img src="assets/images/gym/img_2554.jpg" alt="Två roddmaskiner i förgrunden och löpband längs väggen." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Två roddmaskiner och crosstrainer.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2555.jpg">
-            <img src="assets/images/gym/img_2555.jpg" alt="Tre löpband av märket True uppställda bredvid varandra." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Tre löpband.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2550.jpg">
-            <img src="assets/images/gym/img_2550.jpg" alt="Rum med hantelställ, spinningcykel, SkiErg och pilatesbollar." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Fria vikter, SkiErg och pilatesbollar i det inre rummet.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2551.jpg">
-            <img src="assets/images/gym/img_2551.jpg" alt="SkiErg och spinningcykel med pilatesbollar i hörnet." loading="lazy" decoding="async">
-          </a>
-          <figcaption>SkiErg från Concept2 och en spinningcykel.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/gym/img_2552.jpg">
-            <img src="assets/images/gym/img_2552.jpg" alt="Hantelställ med runda hantlar från 7,5 till 20 kilo samt mindre hexhantlar." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Hantlar från 7,5 upp till 20 kilo, plus lättare hexhantlar och kettlebells.</figcaption>
-        </figure>
-      </div>
+      {{block:gym-bilder:section}}
     </div>
   </section>
 
@@ -146,34 +42,7 @@ description: Träning i Brf Sjötungan: föreningens gym med bilder och rundtur,
     <div class="container">
       <div class="split">
         <div class="prose">
-          <h2>Utrustningen i gymmet</h2>
-          <p>
-            Lokalen är uppdelad i ett maskinrum och en konditionsdel, med ett
-            mindre rum för fria vikter.
-          </p>
-
-          <h3>Styrka</h3>
-          <ul>
-            <li>Styrkemaskiner från Gymleco och Technogym Element.</li>
-            <li>Kabelmaskiner med viktmagasin och benpress.</li>
-            <li>Justerbara bänkar och skivstångsställ.</li>
-            <li>Hantlar från 7,5 till 20 kilo, lättare hexhantlar och kettlebells.</li>
-          </ul>
-
-          <h3>Kondition</h3>
-          <ul>
-            <li>Tre löpband.</li>
-            <li>Crosstrainer.</li>
-            <li>Två roddmaskiner och en SkiErg från Concept2.</li>
-            <li>Spinningcyklar och motionscykel.</li>
-          </ul>
-
-          <h3>Övrigt</h3>
-          <ul>
-            <li>Pilatesbollar och mattor.</li>
-            <li>Speglar längs väggarna.</li>
-            <li>Gummigolv i hela lokalen.</li>
-          </ul>
+          {{block:gym-utrustning:prose}}
         </div>
 
         <aside class="aside-card">
@@ -190,32 +59,7 @@ description: Träning i Brf Sjötungan: föreningens gym med bilder och rundtur,
 
   <section class="section" id="sauna">
     <div class="container">
-      <div class="section__head">
-        <h2>Bastun</h2>
-        <p>
-          Bastu med tillhörande duschrum i M90, och ett relaxrum att sitta kvar
-          i efteråt. Öppen för boende som är medlemmar i föreningen.
-        </p>
-      </div>
-
-      <div class="facts">
-        <div class="facts__item">
-          <span class="facts__value">50 kr</span>
-          <span class="facts__label">Per hushåll och månad</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">12–21</span>
-          <span class="facts__label">Öppet dagligen</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">M90</span>
-          <span class="facts__label">Här ligger bastun</span>
-        </div>
-        <div class="facts__item">
-          <span class="facts__value">2018</span>
-          <span class="facts__label">Året relaxrummet invigdes</span>
-        </div>
-      </div>
+      {{block:bastu:section}}
     </div>
   </section>
 
@@ -227,20 +71,27 @@ description: Träning i Brf Sjötungan: föreningens gym med bilder och rundtur,
       </div>
 
       <div class="grid grid--2">
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:gym}}</span>
-          <h3>Utegym</h3>
-          <p>Föreningen har ett utegym inom området.</p>
-        </article>
+        {{block:utegym}}
+        {{block:boulebana}}
 
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:spark}}</span>
-          <h3>Boulebana</h3>
-          <p>Föreningen har en boulebana inom området.</p>
-        </article>
       </div>
 
-      <p class="lead mt-lg">Innehåll kommer: läge och utrustning.</p>
+      <div class="gallery mt-lg">
+        <figure>
+          <a href="assets/images/outdoor-gym/img_2567.jpg">
+            <img src="assets/images/outdoor-gym/img_2567.jpg" alt="Utegymmet på gräsmattan: böjda stålräcken i förgrunden, en gul träningsmaskin i mitten och en roddmaskin till höger." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Redskapen står fritt på gräsmattan, med ett bänkbord vid husväggen.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/images/outdoor-gym/img_2570.jpg">
+            <img src="assets/images/outdoor-gym/img_2570.jpg" alt="Fyra gula redskap intill husgaveln: vridhjul, roddmaskin och två maskiner att sitta i." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Vridhjul för armar och skuldror, roddmaskin och maskiner att sitta i.</figcaption>
+        </figure>
+      </div>
+
+      <p class="lead mt-lg">Innehåll kommer: var i området anläggningarna ligger.</p>
     </div>
   </section>
 

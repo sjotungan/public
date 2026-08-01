@@ -1,4 +1,16 @@
-# Camera originals for gymsidan. The web-sized copies under assets/ are what
-# the site actually uses; these are ~111 MB and don't belong in git.
+# Camera originals, HEIC rakt från telefonen. De nedskalade JPEG-kopiorna under
+# assets/ är det sajten använder; originalen är ~114 MB och hör inte hemma i git.
 IMG_*.HEIC
 IMG_*.MOV
+
+# Skärmbilder från telefonen. IMG_2613.PNG är originalet ur hundägarnas
+# WhatsApp-grupp, med namn, ett mobilnummer och profilbilder i klartext. Det är
+# den maskade kopian assets/images/dogs/whatsapp.jpg som sajten använder;
+# originalet ska inte checkas in – i git ligger det kvar även efter en radering.
+IMG_*.PNG
+
+# Skärmbildsoriginalen till översiktskartorna, 6 MB styck. De beskurna
+# webbversionerna som sidorna använder ligger i assets/images/playground/karta.jpg
+# och assets/images/dogs/karta.jpg.
+sjotungan-playgrounds.png
+sjotungan-dogpark.png

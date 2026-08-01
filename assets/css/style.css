@@ -1090,6 +1090,80 @@ tbody tr.is-total th {
   color: var(--muted);
 }
 
+/* Kartbilder, till skillnad från fotografierna: de har teckenförklaringen i ett
+   hörn och en text i bild, så de får varken beskäras eller zoomas vid hover.
+   Två i bredd av samma skäl som .grid--2 – med fyra kartor skulle auto-fit
+   lämna en ensam på andra raden – och för att gatorna ska gå att urskilja. */
+.gallery--map {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .gallery--map {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* height: auto krävs – bildernas height-attribut skulle annars sätta höjden till
+   460 px och object-fit lägga svarta fält över och under kartan. */
+.gallery--map img {
+  aspect-ratio: 700 / 460;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--map a:hover img {
+  transform: none;
+}
+
+/* Översiktskartan över lekplatserna är ett brett utsnitt, drygt 2,5:1. Den får
+   varken beskäras till 4:3 som fotografierna eller tvingas in i kartornas
+   700/460 – båda skulle klippa bort markeringar – utan behåller sina egna
+   proportioner i en enda spalt. */
+.gallery--wide {
+  grid-template-columns: 1fr;
+}
+
+.gallery--wide img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--wide a:hover img {
+  transform: none;
+}
+
+/* Skärmbilder från telefonen är höga och smala. En 4:3-beskärning skulle klippa
+   bort både sidhuvud och de nedersta meddelandena, så bilden behåller sin form
+   och begränsas i bredd i stället – ungefär en telefon bred på en stor skärm. */
+.gallery--phone {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.gallery--phone figure {
+  max-width: 320px;
+}
+
+/* height: auto av samma skäl som kartorna ovan: height-attributet på img sätter
+   annars höjden till 1731 px, och bilden får tomrum över och under sig. */
+.gallery--phone img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--phone a:hover img {
+  transform: none;
+}
+
+.credit {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
 .video {
   max-width: 400px;
   margin-inline: auto;
@@ -1178,6 +1252,13 @@ tbody tr.is-total th {
 .site-footer__sep {
   margin-inline: 0.45rem;
   color: var(--line-strong);
+}
+
+.site-footer p.site-footer__note {
+  margin-top: 0.9rem;
+  max-width: 46ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
 }
 
 .site-footer a {

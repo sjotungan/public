@@ -9,6 +9,11 @@ projektroten. Kör:
 
 Ändra sidhuvud, meny eller sidfot här – aldrig i de genererade filerna, som
 skrivs över vid nästa körning.
+
+Innehållet finns i två lager. En sida i src/pages/ bestämmer ordning och
+layout; en anläggning – lekplatsen, gymmet, hundrastgården – beskrivs i ett
+eget innehållsblock i src/blocks/ och hämtas in med {{block:namn}}. Samma block
+kan ligga på flera sidor, och texten står då bara på ett ställe.
 """
 
 import os
@@ -17,6 +22,7 @@ import sys
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 PAGES = os.path.join(ROOT, "src", "pages")
+BLOCKS = os.path.join(ROOT, "src", "blocks")
 
 SITE_NAME = "BRF Sjötungan"
 LEGAL_NAME = "HSB Brf Sjötungan i Tyresö"
@@ -70,6 +76,8 @@ ICONS = {
     "sauna": '<path d="M8 14c-2-2.2-2-4.5 0-6.7 1.3-1.4 1.6-2.5 1-3.3"/><path d="M15 14c-2-2.2-2-4.5 0-6.7 1.3-1.4 1.6-2.5 1-3.3"/><path d="M4 17.5h16"/><path d="M4 20.5h16"/>',
     "gym": '<path d="M4 9v6"/><path d="M20 9v6"/><path d="M7 6.5v11"/><path d="M17 6.5v11"/><path d="M7 12h10"/>',
     "bike": '<circle cx="5.8" cy="16" r="3.2"/><circle cx="18.2" cy="16" r="3.2"/><path d="M8.5 8.5h3.5l2.8 7.5"/><path d="m9.5 16 3.5-6"/><path d="M15 8.5h2.5"/>',
+    "road": '<path d="M8.5 3.5 6 20.5"/><path d="m15.5 3.5 2.5 17"/><path d="M12 4.5v2.6"/><path d="M12 10.7v2.6"/><path d="M12 16.9v2.6"/>',
+    "map": '<path d="M9 4.4 3.5 6.6v13L9 17.4l6 2.2 5.5-2.2v-13L15 6.6z"/><path d="M9 4.4v13"/><path d="M15 6.6v13"/>',
     "bin": '<path d="M6 8h12l-1 11a2 2 0 0 1-2 1.8H9A2 2 0 0 1 7 19z"/><path d="M4.5 8h15"/><path d="M9.5 8V5.5a1.5 1.5 0 0 1 1.5-1.5h2a1.5 1.5 0 0 1 1.5 1.5V8"/>',
     "home2": '<path d="M3.5 20V9.5L12 4l8.5 5.5V20"/><path d="M3.5 20h17"/><path d="M9 20v-5h6v5"/>',
     "kite": '<path d="M12 2.8 4.8 10 12 17.2 19.2 10Z"/><path d="M12 2.8V17.2"/><path d="M4.8 10h14.4"/><path d="M12 17.2v2.3a1.7 1.7 0 0 1-3.4 0"/>',
@@ -99,8 +107,10 @@ def expand_icons(html):
                   lambda m: icon(m.group(1)), html)
 
 
-def read_page(path):
-    """Returnerar (metadata, innehåll) för ett sidfragment."""
+def read_fragment(path):
+    """Returnerar (metadata, innehåll) för en sida eller ett block.
+
+    Metadata står i en HTML-kommentar överst, en nyckel per rad."""
     raw = open(path, encoding="utf-8").read()
     meta = {}
     m = re.match(r"\s*<!--(.*?)-->\s*", raw, re.S)
@@ -111,6 +121,130 @@ def read_page(path):
                 meta[key.strip()] = value.strip()
         raw = raw[m.end():]
     return meta, raw.strip()
+
+
+# Innehållsblock. Ett block beskriver en sak i området – lekplatsen, gymmet,
+# hundrastgården – som ren text plus en rubrik och en ikon. Inramningen ligger
+# inte i blocket utan i varianten, så att samma block kan vara ett kort i ett
+# rutnät på en sida och ett helt avsnitt på en annan.
+#
+# Hämtas in med {{block:namn}} eller {{block:namn:variant}}, ensamt på en rad.
+# Raden får den indragning platsen kräver – blocket skrivs in med samma.
+BLOCK_RE = re.compile(
+    r"^([ \t]*)\{\{block:([a-z0-9-]+)(?::([a-z-]+))?\}\}[ \t]*$", re.M)
+
+# Första stycket i ett block är ingressen: den mening som ensam duger som svar.
+# Varianten "section" sätter den i sidhuvudet och resten under.
+LEAD_RE = re.compile(r"\A\s*(<p>.*?</p>)(.*)\Z", re.S)
+
+
+def indent(text, pad):
+    return "\n".join(pad + line if line.strip() else line
+                     for line in text.splitlines())
+
+
+def read_block(name):
+    path = os.path.join(BLOCKS, name + ".html")
+    if not os.path.isfile(path):
+        sys.exit("hittar inget block som heter %s (%s)" % (name, path))
+    meta, body = read_fragment(path)
+    if "title" not in meta:
+        sys.exit("blocket %s saknar title i kommentaren överst" % name)
+    return meta, body
+
+
+def split_lead(body):
+    """Delar innehållet i ingress (första stycket) och resten."""
+    m = LEAD_RE.match(body)
+    if not m:
+        return "", body
+    return m.group(1), m.group(2).strip("\n")
+
+
+def card_body(meta, body):
+    out = []
+    if "icon" in meta:
+        out.append('  <span class="card__icon" aria-hidden="true">'
+                   "{{icon:%s}}</span>" % meta["icon"])
+    out.append("  <h3>%s</h3>" % meta["title"])
+    out.append(indent(body, "  "))
+    return out
+
+
+def render_card(meta, body):
+    """Ett kort att ställa i ett rutnät: ikon, rubrik och text."""
+    return "\n".join(['<article class="card">']
+                     + card_body(meta, body) + ["</article>"])
+
+
+def render_link_card(meta, body):
+    """Samma kort, men hela ytan är en länk – för det som ligger utanför sajten."""
+    if "href" not in meta:
+        sys.exit("blocket %s saknar href och kan inte bli link-card"
+                 % meta["title"])
+    more = meta.get("more", "Läs mer")
+    return "\n".join(
+        ['<a class="card card--link" href="%s">' % meta["href"]]
+        + card_body(meta, body)
+        + ['  <span class="card__more">%s {{icon:arrow}}</span>' % more,
+           "</a>"])
+
+
+def render_section(meta, body):
+    """Ett eget avsnitt: rubrik och ingress i ett sidhuvud, resten under."""
+    lead, rest = split_lead(body)
+    head = ['<div class="section__head">', "  <h2>%s</h2>" % meta["title"]]
+    if lead:
+        head.append(indent(lead, "  "))
+    head.append("</div>")
+    head = "\n".join(head)
+    return head + "\n\n" + rest if rest else head
+
+
+def render_prose(meta, body):
+    """Rubrik och text utan inramning, att ställa i en .prose eller .split."""
+    return "<h2>%s</h2>\n%s" % (meta["title"], body)
+
+
+def render_subsection(meta, body):
+    """Samma sak en nivå ner, under en rubrik som sidan redan satt."""
+    return "<h3>%s</h3>\n%s" % (meta["title"], body)
+
+
+def render_text(meta, body):
+    """Bara innehållet – sidan sätter rubriken själv, eller ingen alls."""
+    return body
+
+
+VARIANTS = {
+    "card": render_card,
+    "link-card": render_link_card,
+    "section": render_section,
+    "prose": render_prose,
+    "subsection": render_subsection,
+    "text": render_text,
+}
+
+
+def expand_blocks(html, stack=()):
+    def replace(m):
+        pad, name, variant = m.group(1), m.group(2), m.group(3) or "card"
+        if name in stack:
+            sys.exit("blocket %s hämtar in sig självt: %s"
+                     % (name, " → ".join(stack + (name,))))
+        if variant not in VARIANTS:
+            sys.exit("okänd variant %s för blocket %s – finns: %s"
+                     % (variant, name, ", ".join(sorted(VARIANTS))))
+        meta, body = read_block(name)
+        rendered = VARIANTS[variant](meta, body)
+        return indent(expand_blocks(rendered, stack + (name,)), pad)
+
+    html = BLOCK_RE.sub(replace, html)
+    left = re.search(r"\{\{block:[^}]*\}\}", html)
+    if left:
+        sys.exit("%s måste stå ensamt på sin rad för att hämtas in"
+                 % left.group(0))
+    return html
 
 
 def nav_link(item, current):
@@ -195,6 +329,11 @@ def render(meta, content, current):
       <span class="site-footer__sep" aria-hidden="true">·</span>
       <a href="{official}">sjotungan.se</a>
     </p>
+    <p class="site-footer__note">
+      <a href="{official}">sjotungan.se</a> är föreningens officiella webbplats.
+      Den här sidan är inte officiell utan är skapad och underhålls av aktiva
+      medlemmar i föreningen.
+    </p>
   </div>
 </footer>
 
@@ -209,7 +348,7 @@ def render(meta, content, current):
         brandmark=icon("house", width="1.9", extra=""),
         menuicon=icon("menu", width="2"),
         nav=render_nav(current),
-        content=expand_icons(content),
+        content=expand_icons(expand_blocks(content)),
         legal=LEGAL_NAME,
         address=ADDRESS,
         email=EMAIL,
@@ -224,7 +363,7 @@ def main():
     for name in sorted(os.listdir(PAGES)):
         if not name.endswith(".html"):
             continue
-        meta, content = read_page(os.path.join(PAGES, name))
+        meta, content = read_fragment(os.path.join(PAGES, name))
         html = render(meta, content, name)
         open(os.path.join(ROOT, name), "w", encoding="utf-8").write(html)
         print("skrev %-24s %6d bytes" % (name, len(html)))

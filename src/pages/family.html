@@ -1,6 +1,6 @@
 <!--
 title: För dig med barn
-description: Barnfamiljer i Brf Sjötungan: bilfria gårdar, lekplatser, fotbollsplan och isbana på 116 000 kvadratmeter mark, plus föreningens ungdomslägenheter.
+description: Barnfamiljer i Brf Sjötungan: bilfria gårdar, lekplatser, fotbollsplan och isbana på 116 000 kvadratmeter mark, barnvagnsrum och föreningslokal för barnkalas – och förskola, kulturskola och stadslekplats inom gångavstånd.
 -->
 
 <main id="main">
@@ -24,68 +24,57 @@ description: Barnfamiljer i Brf Sjötungan: bilfria gårdar, lekplatser, fotboll
     <div class="container">
       <div class="grid grid--2">
 
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:kite}}</span>
-          <h3>Lekplatser</h3>
-          <p>
-            Flera lekplatser med sandlådor ligger utspridda på gårdarna. Katter
-            får inte gå lösa i föreningen, just för att sandlådorna ska gå att
-            leka i.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:ball}}</span>
-          <h3>Fotbollsplan</h3>
-          <p>
-            Föreningen har en egen fotbollsplan. Den ligger vid idrottsplatsen,
-            i samma del av området som hundrastgården.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:spark}}</span>
-          <h3>Isbana</h3>
-          <p>
-            Föreningen har en isbana inom området.
-          </p>
-        </article>
-
-        <article class="card">
-          <span class="card__icon" aria-hidden="true">{{icon:car}}</span>
-          <h3>Bilfria gårdar</h3>
-          <p>
-            Det är inte tillåtet att köra bil inne i området – bara att lasta i
-            och ur. Moped- och motorcykelåkning är förbjuden på samma sätt.
-          </p>
-        </article>
+        {{block:lekplatser}}
+        {{block:fotbollsplan}}
+        {{block:isbana}}
+        {{block:barnvagnsrum}}
+        {{block:foreningslokalen}}
+        {{block:bilfria-gardar}}
 
       </div>
 
       <p class="lead mt-lg">
-        Innehåll kommer: lekplatsernas läge och utrustning, och när isbanan är
-        i bruk.
+        Innehåll kommer: när isbanan är i bruk.
       </p>
     </div>
   </section>
 
   <section class="section section--alt">
     <div class="container">
+      <h2>Lekplatserna, en och en</h2>
+      <p class="lead">
+        De fyra lekplatserna ligger på var sin gård och har olika redskap.
+        Klicka på en bild för att se den i full storlek, eller på ”Visa på
+        karta” för att se var lekplatsen ligger.
+      </p>
+
+      <div class="mt-lg">
+        {{block:lekplatser-karta:subsection}}
+      </div>
+
+      <div class="mt-lg">
+        {{block:lekplats-m10:subsection}}
+      </div>
+
+      <div class="mt-lg">
+        {{block:lekplats-m62:subsection}}
+      </div>
+
+      <div class="mt-lg">
+        {{block:lekplats-m40:subsection}}
+      </div>
+
+      <div class="mt-lg">
+        {{block:lekplats-m110:subsection}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <div class="split">
         <div class="prose">
-          <h2>Gårdarna</h2>
-          <p>
-            Gårdarna är många hushålls enda uteplats, och de delas av barn som
-            leker i sandlådorna, grannar som odlar och boende som är hundrädda
-            eller allergiska. Därför gäller kopplingstvång för hund i hela
-            området, även på lokalgatan, och därför är gårdarna bilfria.
-          </p>
-          <p>
-            Undantaget från bilförbudet är i- och urlastning: tio minuter i
-            området i övrigt, en minut framför bom och framför miljöhusen under
-            hämtningsdagen på onsdagar mellan 06 och 12. Utryckningsfordon ska
-            alltid kunna nå portarna utan att hindras av parkerade bilar.
-          </p>
+          {{block:gardarna:prose}}
         </div>
 
         <aside class="aside-card">
@@ -96,6 +85,24 @@ description: Barnfamiljer i Brf Sjötungan: bilfria gårdar, lekplatser, fotboll
             <li><strong>Hundrastgården</strong> ligger intill idrottsplatsen, se <a href="dogs.html">För dig med hund</a>.</li>
           </ul>
         </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <h2>I närområdet</h2>
+      <p class="lead">
+        Det mesta som barn behöver ligger inom gångavstånd, och räknas i
+        praktiken in i vardagen här även om det inte är föreningens.
+      </p>
+
+      <div class="grid grid--3 mt-lg">
+
+        {{block:forskolan-gunghasten}}
+        {{block:tyreso-kulturskola}}
+        {{block:stadslekplatsen}}
+
       </div>
     </div>
   </section>
