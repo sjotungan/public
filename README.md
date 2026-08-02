@@ -11,7 +11,7 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 | [family.html](family.html) | För dig … med barn | Gårdarna, de fyra lekplatserna med bilder och kartlänkar, fotbollsplan, isbana, förskola och kulturskola i närområdet |
 | [car.html](car.html) | För dig … med bil eller MC | P-platser, garage, laddplatser, MC och moped, körning i området |
 | [bicycle.html](bicycle.html) | För dig … på cykel | Cykelrum i husen, långtidsförrådet, cykelvägarna utanför |
-| [dogs.html](dogs.html) | För dig … med hund | Kopplingstvång, hundrastgården med karta, katter |
+| [dogs.html](dogs.html) | För dig … med hund | Kopplingstvång, hundrastgården med bild och karta, kommunens rastgård i Wättinge, hundägarnas WhatsApp-grupp, katter |
 | [fitness.html](fitness.html) | För dig … som tränar | Gymmet med bilder och video, bastun, utegymmet med bilder, boulebana |
 
 Menyvalet **Årsredovisning 2025** är ingen sida utan en direktlänk till PDF:en
@@ -175,10 +175,9 @@ assets/css/style.css    designsystem (färger, typografi, komponenter)
 assets/js/site.js       enda skriptet: mobilmeny och undermenyer
 assets/images/courtyards/   bilder på gårdarna till index.html (JPEG): lusthuset
                         och äppelträdet
-assets/images/grill/    bilder på grillplatserna (JPEG), en fil per plats:
-                        img_2602.jpg vid Myggdalsvägen 16, img_2603.jpg vid 26
-                        img_2604.jpg är en ännu oidentifierad plats och visas
-                        i galleriet över gårdarna på index.html
+assets/images/grill/    bilder på grillplatserna på index.html (JPEG):
+                        img_2602.jpg vid Myggdalsvägen 16, img_2603.jpg vid 26,
+                        img_2604.jpg och img_2605.jpg vid 40, img_2606.jpg vid 46
 assets/images/car/       bild på laddboxen till car.html (JPEG)
 assets/images/gym/      bilder till gymavsnittet på fitness.html (JPEG) + posterbild
 assets/images/outdoor-gym/  bilder till utegymmet på fitness.html (JPEG)
@@ -359,7 +358,7 @@ inga påhittade uppgifter.
 | Cykelrum i nästan alla hus, långtidsförråd i M10 | Uppgift från styrelsen – A–Ö anger M6, se nedan |
 | Att grillplatserna är upprustade | Uppgift från styrelsen – står inte på sjotungan.se, se nedan |
 | Bilderna på gårdarna, grillplatserna, lekplatsen och äppelträdet på översikten | Egna bilder tagna på plats i juli–augusti 2026 |
-| Att grillplatserna i avsnittet ligger vid Myggdalsvägen 16 och 26 | Lokal uppgift – står inte i någon källa, se nedan |
+| Att grillplatserna i avsnittet ligger vid Myggdalsvägen 16, 26, 40 och 46 | Lokal uppgift – står inte i någon källa, se nedan |
 | Koordinaterna bakom ”Visa på karta” vid grillplatserna | Platsdata ur originalbilderna, se nedan |
 | Vad som står på grillplatserna: grill, bänkar, bänkbord och pergola | Framgår av bilderna |
 | Att lekplatserna är fyra, vid Myggdalsvägen 10, 40, 62 och 110 | Lokal uppgift – A–Ö säger inget om läge eller antal, se nedan |
@@ -369,6 +368,8 @@ inga påhittade uppgifter.
 | Var hundrastgården ligger på kartan | Lokal uppgift – A–Ö anger bara att rastgården finns, inte var, se nedan |
 | Koordinaterna bakom ”Visa på karta” vid hundrastgården | Lokal uppgift – stämmer mot bildens platsdata, se nedan |
 | Bilden på hundrastgården | Egen bild tagen på plats i augusti 2026 |
+| Wättinge hundrastgård, kommunens, vid Wättinge gårdsväg | [Hund i Tyresö](https://www.tyreso.se/uppleva--gora/natur-och-friluftsliv/hund-i-tyreso.html), Tyresö kommun |
+| ”Ungefär en kvarts promenad” till Wättinge | Uppgift från medlem, se nedan |
 | WhatsApp-gruppen ”Hundarna på Myggan” | Uppgift från medlem |
 | `assets/images/dogs/whatsapp.jpg` | Skärmbild ur gruppen, maskad – kvar att inhämta: deltagarnas ja, se nedan |
 | Att rastgården är inhägnad med nätstängsel och grind | Framgår av bilden |
@@ -401,26 +402,44 @@ Ett par saker att känna till innan sidorna publiceras:
 - **Grillplatserna.** Att de är upprustade är en uppgift från styrelsen och står
   varken i A–Ö eller i årsredovisningen. Stäm av den. Grillplatserna är flera
   och tas en och en, på samma sätt som lekplatserna: ett block per plats med
-  bild och kartlänk. Hittills finns **Myggdalsvägen 16** och **26**. Att de
-  ligger just där är en lokal uppgift som inte står i någon källa – vad som står
-  på platserna framgår däremot av bilderna.
-  **Koordinaterna** i ”Visa på karta” – 59.243267, 18.233162 vid nummer 16 och
-  59.242695, 18.232795 vid nummer 26 – är platsdata ur originalbilderna, alltså
-  var kameran stod, inte en inmätning av grillarna. Jämförda med lekplatsernas
-  koordinater stöder de adresserna olika väl. Sträckan från lekplatsen vid
-  nummer 10 till den vid nummer 40 går knappt 90 meter söderut och drygt 30
-  österut; grillplatsen vid 26 ligger ungefär två tredjedelar av vägen längs den
-  sträckan, vilket är precis vad numret säger. Grillplatsen vid 16 ligger
-  däremot på tiondelens breddgrad, 30 meter rakt österut, och ligger alltså
-  *öster* om den vid 26 trots det lägre numret. Numren växer med andra ord inte
-  entydigt åt något håll här, så koordinaterna bekräftar inte adresserna – de
-  motsäger dem inte heller, eftersom en grillplats hör till gården och kan ligga
-  en bit från den port den döps efter. Det är **ingen oberoende kontroll**: båda
-  adresserna behöver någon som känner området bekräfta.
-  De övriga grillplatserna har bara ett ”Innehåll kommer”. En av dem syns i
-  galleriet över gårdarna (`grill/img_2604.jpg`) – en murad grillplats av
-  kullersten, till skillnad från de runda stålgrillarna vid 16 och 26 – men var
-  den ligger är inte belagt.
+  bild och kartlänk. Hittills finns **Myggdalsvägen 16**, **26**, **40** och
+  **46**. Att de ligger just där är en lokal uppgift som inte står i någon källa
+  – vad som står på platserna framgår däremot av bilderna. Platsen vid 40 har en
+  murad grill av kullersten, de övriga varsin rund stålgrill på fot; det syns i
+  bilderna och sägs därför på sidan.
+  **Koordinaterna** i ”Visa på karta” – 59.243267, 18.233162 vid nummer 16,
+  59.242695, 18.232795 vid 26, 59.242446, 18.233441 vid 40 och 59.242583,
+  18.234425 vid 46 – är platsdata ur originalbilderna, alltså var kameran stod,
+  inte en inmätning av grillarna. Punkten vid 40 är mittpunkten mellan de två
+  bildernas platsdata, som ligger 8 meter isär på var sin sida om grillen.
+  Jämförda med lekplatsernas koordinater stöder de adresserna olika väl:
+  - **Nummer 40** ligger 15 meter från lekplatsen med samma nummer. Det är det
+    starkaste stödet av de tre, eftersom två oberoende bilder pekar ut samma
+    punkt och lekplatsens nummer kommer från annat håll.
+  - **Nummer 26** ligger ungefär två tredjedelar av vägen längs sträckan från
+    lekplatsen vid 10 till den vid 40 – knappt 90 meter söderut och drygt 30
+    österut – vilket är precis vad numret säger.
+  - **Nummer 16** ligger däremot på tiondelens breddgrad, 30 meter rakt
+    österut, alltså *öster* om platsen vid 26 trots det lägre numret.
+  - **Nummer 46** ligger halvvägs – 53 procent – längs sträckan från lekplatsen
+    vid 40 till den vid 62. Vore läget proportionellt mot numren skulle det
+    svara mot ungefär 52, alltså ett högre nummer än 46.
+
+  Numren växer med andra ord inte entydigt åt något håll här, så koordinaterna
+  bekräftar inte adresserna – de motsäger dem inte heller, eftersom en
+  grillplats hör till gården och kan ligga en bit från den port den döps efter.
+  Det är **ingen oberoende kontroll**: adresserna behöver någon som känner
+  området bekräfta, och särskilt den vid 16 och den vid 46.
+  **Bilden vid 46 säger något annat än sidan.** `IMG_2606.HEIC` har texten
+  `M48` i sitt beskrivningsfält, medan uppgiftslämnaren angav 46. Sidan följer
+  uppgiftslämnaren. De två tidigare bilder som har fältet ifyllt – `img_2602`
+  och `img_2605` – säger `M16` respektive `M40` och stämmer alltså med de
+  adresser som angavs, så fältet har varit tillförlitligt fram till nu.
+  Koordinaterna kan inte skilja de två numren åt: 46 och 48 är grannportar.
+  Kontrollera adressen på plats innan sidan publiceras, och rätta antingen
+  blocket `grillplats-m46.html` eller bildens beskrivningsfält.
+  Finns det fler grillplatser än de fyra står det kvar ett ”Innehåll kommer”
+  om dem.
 - **Gymavsnittet** på `fitness.html` bygger på bilder tagna i lokalen i juli
   2026 plus uppgifterna om öppettider, åldersgräns och medlemskap från A–Ö.
 - **Utegymmet.** Beskrivningen av redskapen bygger på bilder tagna på plats i
@@ -456,6 +475,15 @@ Ett par saker att känna till innan sidorna publiceras:
   fortfarande **ingen oberoende kontroll**: allt kommer från samma håll. Kartan
   är samma utsnitt som lekplatskartan, så måtten och rotationen nedan gäller
   även den.
+- **Wättinge hundrastgård.** Länken från medlem pekar på en Google Maps-plats
+  som heter ”Tyreso dog park”. Punkten, 59.23392, 18.24039, ligger vid Wättinge
+  gårdsväg, och kommunen listar en hundrastgård i Wättinge ”vid Dalhallen” – det
+  är alltså kommunens anläggning och inte föreningens. Att den ligger *ungefär
+  en kvarts promenad* bort är en uppgift från medlem, i samma klass som
+  gångavstånden till kulturskolan och stadslekplatsen. Fågelvägen är det 0,8–1,1
+  km från föreningens ändar, så en kvart är rimligt för en gångväg, men ingen
+  har gått sträckan och tagit tid. Kommunens två andra rastgårdar, Sofieberg och
+  Tyresö strand, ligger 3 km bort eller mer och står därför inte på sidan.
 - **Skärmbilden ur WhatsApp-gruppen.** `assets/images/dogs/whatsapp.jpg` är en
   maskad kopia av `IMG_2613.PNG`. Övertäckt med heltäckande rutor är: de tre
   raderna med avsändarnamn, mobilnumret i den mittersta bubblan,
