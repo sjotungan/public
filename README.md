@@ -7,7 +7,7 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 
 | Fil | Sida i menyn | Vad sidan samlar |
 | --- | --- | --- |
-| [index.html](index.html) | Översikt | Ansvarsfriskrivning, fem siffror om föreningen, och det som väger tyngst för en köpare: skötseln av området, parkeringsavgiften och grillplatserna |
+| [index.html](index.html) | Översikt | Ansvarsfriskrivning, fem siffror om föreningen, och det som väger tyngst för en köpare: skötseln av området, parkeringsavgiften, grillplatserna, borrmaskinen att låna och paketboxarna |
 | [family.html](family.html) | För dig … med barn | Gårdarna, de fyra lekplatserna med bilder och kartlänkar, fotbollsplan, isbana, förskola och kulturskola i närområdet |
 | [car.html](car.html) | För dig … med bil eller MC | P-platser, garage, laddplatser, MC och moped, körning i området |
 | [bicycle.html](bicycle.html) | För dig … på cykel | Cykelrum i husen, långtidsförrådet, cykelvägarna utanför |
@@ -145,9 +145,11 @@ varje stämma. Lägg inte tillbaka namn eller personliga adresser.
    föreningens officiella information.
 2. **Fem siffror** om föreningen – lägenheter, hus, byggår, markyta,
    medlemsantal. Inget mer.
-3. **Tre saker som faktiskt påverkar ett köpbeslut**: att området sköts om
-   (med bilder), att en bilplats kostar 250 kronor i månaden, och de nya
-   grillplatserna.
+3. **Fem saker som faktiskt påverkar ett köpbeslut**: att området sköts om
+   (med bilder och en länk till Instagram-kontot @sjotungan_grannar), att en bilplats
+   kostar 250 kronor i månaden, de nya grillplatserna, borrmaskinen som
+   lånas ut till medlemmarna, och paketboxarna som gör att en beställning kan
+   hämtas utan att lämna området.
 4. Sidfoten från `build.py`.
 
 Det som låg här tidigare – korten till rollsidorna, *Om föreningen* med
@@ -190,6 +192,9 @@ assets/images/dogs/     bild på hundrastgårdens grind till dogs.html (JPEG),
                         whatsapp.jpg är en maskad skärmbild ur hundgruppen (se nedan)
 assets/images/bicycle/   bild på cykelställen utanför porten till bicycle.html (JPEG)
 assets/images/cycle-routes/ kommunens avståndskartor på bicycle.html (JPEG, ej egna)
+assets/images/tools/     borrmaskin.jpg på index.html – genrebild hämtad från en
+                        annan webbplats, inte föreningens material (se nedan)
+assets/images/parcel/    bild på paketboxarna till index.html (JPEG)
 assets/video/           gym-tour.mp4
 ```
 
@@ -320,12 +325,18 @@ Två fallgropar om bilderna behöver göras om:
 - Kontrollera alltid resultatet i en **webbläsare**. Flera bildvisare roterar
   utifrån EXIF-taggen och visar därför något annat än vad sidan kommer att visa.
 
-#### Kartbilderna är inte våra
+#### Kartbilderna och borrmaskinsbilden är inte våra
 
-`assets/images/cycle-routes/` är det enda undantaget: fyra JPEG-filer hämtade
-rakt av från Tyresö kommuns sida *Cykelvägar i Tyresö*. De är kommunens
-material, inte föreningens, och används oförändrade med källhänvisning under
-bilderna. Se förbehållet under *Var uppgifterna kommer ifrån*.
+Två undantag från att bilderna är tagna på plats. `assets/images/cycle-routes/`
+är fyra JPEG-filer hämtade rakt av från Tyresö kommuns sida *Cykelvägar i
+Tyresö*. De är kommunens material, inte föreningens, och används oförändrade
+med källhänvisning under bilderna.
+
+`assets/images/tools/borrmaskin.jpg` är en genrebild kopierad från
+[757brick.com](https://757brick.com/), en amerikansk murarfirmas webbplats. Den
+visar ingenting i området – den föreställer inte föreningens maskin – och står
+därför med både bildtext om att det är en genrebild och källhänvisning under.
+Se förbehållet under *Var uppgifterna kommer ifrån*.
 
 De har egen CSS – `.gallery--map` i `style.css` – eftersom fotogalleriet
 beskär till 4:3 och zoomar vid hover. Kartorna har teckenförklaringen i nedre
@@ -381,6 +392,14 @@ inga påhittade uppgifter.
 | Cykelställen utanför porten | Egen bild tagen på plats i augusti 2026, se nedan |
 | Avstånden bil/cykel för Öringe, Krusboda, Trollbäcken och Tyresö strand | Avläsning ur kommunens fyra kartbilder, se nedan |
 | Kartbilderna i `assets/images/cycle-routes/` | Tyresö kommuns egna bilder, kopierade – tillstånd saknas, se nedan |
+| Att föreningen lånar ut borrmaskin, en vecka i taget | Uppgift från medlem – står inte på sjotungan.se |
+| `assets/images/tools/borrmaskin.jpg` | Genrebild kopierad från [757brick.com](https://757brick.com/) – tillstånd saknas, se nedan |
+| Att paket kan levereras till boxarna och hämtas utan att lämna området | Uppgift från medlem – står inte på sjotungan.se |
+| Att paketboxen är två skåp från Postnord med fack i flera storlekar | Framgår av bilden, se nedan |
+| Att luckan öppnas med Postnords app | Framgår av skylten på skåpet, se nedan |
+| Koordinaten bakom ”Visa på karta” vid paketboxarna | Platsdata ur originalbilden, se nedan |
+| `assets/images/parcel/img_2610.jpg` | Egen bild tagen på plats i augusti 2026 |
+| Instagram-kontot [@sjotungan_grannar](https://www.instagram.com/sjotungan_grannar) | Uppgift från medlem – vem som driver kontot och vad det innehåller är inte kontrollerat |
 
 Ett par saker att känna till innan sidorna publiceras:
 
@@ -392,6 +411,36 @@ Ett par saker att känna till innan sidorna publiceras:
   beskrivningen är därför kortare än föreningens egna lekplatser. Kulturskolans
   terminsavgift står inte på kommunens landningssida och är utelämnad. Kontrollera
   avstånden innan publicering; en spekulant som går sträckan märker om det är fel.
+- **Bilden på borrmaskinen** är hämtad från en annan firmas webbplats och är
+  upphovsrättsligt skyddad av någon annan än föreningen – troligen en
+  bildbyrå, eftersom 757brick.com knappast är originalkällan. Att stå med
+  källhänvisning räcker inte som tillstånd. Byt ut den mot en egen bild på
+  föreningens maskin innan sidorna publiceras, eller ta bort bilden och behåll
+  texten.
+- **Paketboxen.** Att den står i området och att paket kan levereras dit är en
+  uppgift från medlem; bilden visar två Postnord-skåp mot en tegelvägg och
+  belägger inte mer än så. **Ett eller två?** Skåpen är fysiskt åtskilda och
+  bär var sitt märke *Paketbox* och var sin skylt med ett nummer – 21740 och
+  21344, det andra suddigt. Om Postnord räknar det som två paketboxar eller
+  som en box i två skåp går inte att läsa ur bilden, och för den som hämtar ett
+  paket är det ett ställe. Sidan säger därför ”Postnords paketbox … två skåp
+  bredvid varandra”, som stämmer oavsett vilket. Skriv inte om det till ett
+  antal utan att ha kontrollerat hur boxen står i Postnords utlämningsställen.
+  **Koordinaten** 59.242172, 18.235938 är
+  platsdata ur originalbilden, alltså var kameran stod, inte en inmätning av
+  skåpen. Den ligger 27 meter öster om lekplatsen vid Myggdalsvägen 62, i
+  höghusdelen av området – men vilken adress skåpen hör till är inte fastställt,
+  och sidan namnger därför inget hus. Att luckan öppnas med **Postnords app** är
+  läst ur skylten på skåpet: rubriken *PostNord App*, en Bluetooth-symbol och en
+  numrerad instruktion. Den finstilta texten är för suddig i bilden för att
+  återges ord för ord, så sidan säger inget om stegen. Kontrollera vem som äger
+  boxarna – Postnord eller föreningen – och om de är öppna för alla eller bara
+  för dem som bor här, innan sidorna publiceras.
+- **Instagram-kontot @sjotungan_grannar** är en uppgift från en medlem. Vad
+  kontot innehåller går inte att kontrollera utan att vara inloggad på
+  Instagram, och sidan lovar därför inget mer än att kontot finns. Titta
+  igenom kontot innan publicering – sajten länkar till något den inte råder
+  över.
 - **Journumret** anges olika på två ställen på sjotungan.se: `08–657 64 50` på
   Felanmälan-sidan och i A–Ö, `010–550 21 65` på Förvaltning-sidan. Här används
   det förstnämnda, eftersom det står på två av tre ställen.

@@ -82,6 +82,8 @@ ICONS = {
     "home2": '<path d="M3.5 20V9.5L12 4l8.5 5.5V20"/><path d="M3.5 20h17"/><path d="M9 20v-5h6v5"/>',
     "kite": '<path d="M12 2.8 4.8 10 12 17.2 19.2 10Z"/><path d="M12 2.8V17.2"/><path d="M4.8 10h14.4"/><path d="M12 17.2v2.3a1.7 1.7 0 0 1-3.4 0"/>',
     "ball": '<circle cx="12" cy="12" r="8.6"/><path d="m12 7.4 3.9 2.8-1.5 4.6H9.6l-1.5-4.6Z"/><path d="M12 3.4v4"/><path d="m4 9.9 4.1.3"/><path d="m20 9.9-4.1.3"/><path d="m7.3 19 2.3-4.2"/><path d="m16.7 19-2.3-4.2"/>',
+    "drill": '<rect x="3" y="6.5" width="9.5" height="6" rx="1.6"/><rect x="12.5" y="8" width="3.5" height="3" rx="0.6"/><path d="M16 9.5h4.6"/><path d="M6 12.5v6h3v-6"/>',
+    "parcel": '<path d="M3.5 7.6 12 3.5l8.5 4.1v8.8L12 20.5l-8.5-4.1Z"/><path d="m3.5 7.6 8.5 4.1 8.5-4.1"/><path d="M12 11.7v8.8"/><path d="m7.75 5.55 8.5 4.1"/>',
 }
 
 FAVICON = (
