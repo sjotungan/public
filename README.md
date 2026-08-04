@@ -203,7 +203,11 @@ src/blocks/*.html       innehållsblocken, en anläggning per fil
 assets/css/style.css    designsystem (färger, typografi, komponenter)
 assets/js/site.js       enda skriptet: mobilmeny och undermenyer
 assets/images/courtyards/   bilder på gårdarna till index.html (JPEG): lusthuset
-                        och äppelträdet
+                        (img_2578.jpg) och äppelträdet (img_2573.jpg), plus tre
+                        bilder på skötseln: gångvägen med rabatter mellan
+                        låghus och höghus (img_2666.jpg), perennrabatten vid
+                        höghusen (img_2665.jpg) och planteringen närmast
+                        fasaden (img_2639.jpg)
 assets/images/grill/    bilder på grillplatserna på index.html (JPEG):
                         img_2602.jpg vid Myggdalsvägen 16, img_2603.jpg vid 26,
                         img_2604.jpg och img_2605.jpg vid 40, img_2606.jpg vid 46,
