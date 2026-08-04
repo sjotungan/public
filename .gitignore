@@ -11,7 +11,9 @@ IMG_*.PNG
 
 # Skärmbildsoriginalen till översiktskartorna, 6–7 MB styck. De nedskalade
 # webbversionerna som sidorna använder ligger i assets/images/playground/karta.jpg,
-# assets/images/dogs/karta.jpg och assets/images/nature/karta.jpg.
+# assets/images/dogs/karta.jpg, assets/images/grill/karta.jpg och
+# assets/images/nature/karta.jpg.
 sjotungan-playgrounds.png
 sjotungan-dogpark.png
+sjotungan-grill-places.png
 brf_and_neighbourhood.png

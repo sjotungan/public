@@ -211,6 +211,8 @@ assets/images/grill/    bilder på grillplatserna på index.html (JPEG):
                         img_2632.jpg vid 108,
                         img_2633.jpg vid 102, img_2635.jpg vid 100,
                         img_2637.jpg vid 114
+                        karta.jpg är översiktskartan med de tio platserna
+                        markerade (Googles material, se nedan)
 assets/images/car/       bild på laddboxen till car.html (JPEG)
 assets/images/gym/      bilder till gymavsnittet på fitness.html (JPEG) + posterbild
 assets/images/outdoor-gym/  bilder till utegymmet på fitness.html (JPEG)
@@ -423,6 +425,7 @@ inga påhittade uppgifter.
 | Koordinaterna bakom ”Visa på karta” vid varje lekplats | Lokal uppgift – stämmer mot översiktskartan, se nedan |
 | `assets/images/playground/karta.jpg` | Utsnitt ur Google Maps satellitvy – Googles material, tillstånd saknas, se nedan |
 | `assets/images/dogs/karta.jpg` | Samma utsnitt, med hundrastgården markerad – Googles material, tillstånd saknas, se nedan |
+| `assets/images/grill/karta.jpg` | Samma utsnitt, med de tio grillplatserna markerade – Googles material, tillstånd saknas, se nedan |
 | Var hundrastgården ligger på kartan | Lokal uppgift – A–Ö anger bara att rastgården finns, inte var, se nedan |
 | Koordinaterna bakom ”Visa på karta” vid hundrastgården | Lokal uppgift – stämmer mot bildens platsdata, se nedan |
 | Bilderna på hundrastgården | Egna bilder tagna på plats i juni och augusti 2026 |
@@ -676,9 +679,17 @@ Ett par saker att känna till innan sidorna publiceras:
   5 meter isär, alltså inom felmarginalen för en telefon, och kartlänkarna
   pekar i praktiken på samma punkt. Att det rör sig om två platser bygger på att
   bilderna visar olika möblering – två sittgrupper och en betongblockmur vid
-  102, en sittgrupp, papperskorg och tujahäck vid 100 – och på att fotografen
-  märkt bilderna `M102` respektive `M100`. Låt någon på plats bekräfta att det
-  verkligen är två grillplatser och inte en, innan sidan publiceras.
+  102, en sittgrupp, papperskorg och tujahäck vid 100 – på att fotografen märkt
+  bilderna `M102` respektive `M100`, och på att översiktskartan markerar dem som
+  två skilda fält tätt ovanför varandra. Tre led som pekar åt samma håll, men
+  alla tre kommer från samma person; låt någon annan på plats bekräfta att det
+  är två grillplatser och inte en, innan sidan publiceras.
+  **Kartan.** `assets/images/grill/karta.jpg` har tio markeringar, lika många
+  som blocken, och de ligger grupperade som koordinaterna säger: fyra i väster,
+  ett par i mitten, paret 100/102 tätt ihop i öster och tre i söder. Kartan är
+  alltså inbördes konsekvent med platsdata och adresserna – men den är ritad av
+  samma person som angav adresserna, så den bekräftar dem inte. Den utpekar
+  inte heller vilket nummer som hör till vilken markering.
   **Koordinaterna** i ”Visa på karta” – 59.243267, 18.233162 vid nummer 16,
   59.242695, 18.232795 vid 26, 59.242446, 18.233441 vid 40, 59.242583,
   18.234425 vid 46, 59.241775, 18.235414 vid 68, 59.241389, 18.236128 vid 76,
@@ -826,9 +837,10 @@ Ett par saker att känna till innan sidorna publiceras:
   vårt eget staket**. Sidan påstår därför ingenting om saken. Vill man ha bort
   frågetecknet räcker en mening från styrelsen om att hunden får vara lös i
   rastgården.
-- **Översiktskartorna `karta.jpg` är inte våra.** De två – lekplatserna och
-  hundrastgården – är utsnitt ur Google Maps satellitvy med gula markeringar
-  inlagda; lekplatskartan har fyra, hundkartan en. Google Maps-innehåll får
+- **Översiktskartorna `karta.jpg` är inte våra.** De tre – lekplatserna,
+  hundrastgården och grillplatserna – är utsnitt ur Google Maps satellitvy med
+  gula markeringar inlagda; lekplatskartan har fyra, hundkartan en och
+  grillkartan tio. Google Maps-innehåll får
   återges med korrekt källhänvisning, men **något tillstånd är inte inhämtat**,
   och skärmbilderna är beskurna så att Googles egen attributionsrad längst ned
   inte följde med. Sidorna anger källan i en `credit`-rad under bilden. Vill man
@@ -836,10 +848,15 @@ Ett par saker att känna till innan sidorna publiceras:
   ersättas med en egen ritad karta – se förbehållet om kommunens kartbilder
   ovan, det är samma sak en gång till. Bilden är ungefär 439 × 175 meter mark,
   roterad cirka 39 grader, så norr ligger snett upp åt vänster.
-- **Fotbollsplan, isbana, utegym och boulebana** finns belagda som
-  anläggningar, men A–Ö säger inget om läge eller säsong. Därför står bara att
-  de finns. Uppgifterna behöver hämtas från styrelsen innan styckena
-  ”Innehåll kommer” kan ersättas.
+- **Fotbollsplan, utegym och boulebana** finns belagda som anläggningar, men
+  A–Ö säger inget om läge eller säsong. Därför står bara att de finns.
+  Uppgifterna behöver hämtas från styrelsen innan styckena ”Innehåll kommer”
+  kan ersättas.
+- **Isbanan är inte en av föreningens anläggningar.** Den spolas av grannar på
+  frivillig väg när vädret tillåter, enligt lokal uppgift. Sidan säger det rakt
+  ut, så att ingen läser isbanan som något föreningen ansvarar för eller
+  utlovar. Vill man skriva mer – vilken yta som spolas, vilka vintrar det blivit
+  av – behöver uppgiften stämmas av med dem som spolar.
 - **Cykelförrådet.** A–Ö skriver att långtidsförvaringen finns i miljöhuset vid
   **M6** och rymmer ett tjugotal cyklar. Sidan anger **M10** enligt uppgift från
   styrelsen. Stäm av vilket som gäller, och rätta antingen sidan eller A–Ö.
