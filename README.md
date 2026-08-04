@@ -179,7 +179,11 @@ assets/images/courtyards/   bilder på gårdarna till index.html (JPEG): lusthus
                         och äppelträdet
 assets/images/grill/    bilder på grillplatserna på index.html (JPEG):
                         img_2602.jpg vid Myggdalsvägen 16, img_2603.jpg vid 26,
-                        img_2604.jpg och img_2605.jpg vid 40, img_2606.jpg vid 46
+                        img_2604.jpg och img_2605.jpg vid 40, img_2606.jpg vid 46,
+                        img_2630.jpg vid 68, img_2646.jpg vid 76,
+                        img_2632.jpg vid 108,
+                        img_2633.jpg vid 102, img_2635.jpg vid 100,
+                        img_2637.jpg vid 114
 assets/images/car/       bild på laddboxen till car.html (JPEG)
 assets/images/gym/      bilder till gymavsnittet på fitness.html (JPEG) + posterbild
 assets/images/outdoor-gym/  bilder till utegymmet på fitness.html (JPEG)
@@ -369,7 +373,7 @@ inga påhittade uppgifter.
 | Cykelrum i nästan alla hus, långtidsförråd i M10 | Uppgift från styrelsen – A–Ö anger M6, se nedan |
 | Att grillplatserna är upprustade | Uppgift från styrelsen – står inte på sjotungan.se, se nedan |
 | Bilderna på gårdarna, grillplatserna, lekplatsen och äppelträdet på översikten | Egna bilder tagna på plats i juli–augusti 2026 |
-| Att grillplatserna i avsnittet ligger vid Myggdalsvägen 16, 26, 40 och 46 | Lokal uppgift – står inte i någon källa, se nedan |
+| Att grillplatserna i avsnittet ligger vid Myggdalsvägen 16, 26, 40, 46, 68, 76, 100, 102, 108 och 114 | Lokal uppgift – står inte i någon källa, se nedan |
 | Koordinaterna bakom ”Visa på karta” vid grillplatserna | Platsdata ur originalbilderna, se nedan |
 | Vad som står på grillplatserna: grill, bänkar, bänkbord och pergola | Framgår av bilderna |
 | Att lekplatserna är fyra, vid Myggdalsvägen 10, 40, 62 och 110 | Lokal uppgift – A–Ö säger inget om läge eller antal, se nedan |
@@ -378,7 +382,7 @@ inga påhittade uppgifter.
 | `assets/images/dogs/karta.jpg` | Samma utsnitt, med hundrastgården markerad – Googles material, tillstånd saknas, se nedan |
 | Var hundrastgården ligger på kartan | Lokal uppgift – A–Ö anger bara att rastgården finns, inte var, se nedan |
 | Koordinaterna bakom ”Visa på karta” vid hundrastgården | Lokal uppgift – stämmer mot bildens platsdata, se nedan |
-| Bilden på hundrastgården | Egen bild tagen på plats i augusti 2026 |
+| Bilderna på hundrastgården | Egna bilder tagna på plats i juni och augusti 2026 |
 | Wättinge hundrastgård, kommunens, vid Wättinge gårdsväg | [Hund i Tyresö](https://www.tyreso.se/uppleva--gora/natur-och-friluftsliv/hund-i-tyreso.html), Tyresö kommun |
 | ”Ungefär en kvarts promenad” till Wättinge | Uppgift från medlem, se nedan |
 | WhatsApp-gruppen ”Hundarna på Myggan” | Uppgift från medlem |
@@ -451,16 +455,38 @@ Ett par saker att känna till innan sidorna publiceras:
 - **Grillplatserna.** Att de är upprustade är en uppgift från styrelsen och står
   varken i A–Ö eller i årsredovisningen. Stäm av den. Grillplatserna är flera
   och tas en och en, på samma sätt som lekplatserna: ett block per plats med
-  bild och kartlänk. Hittills finns **Myggdalsvägen 16**, **26**, **40** och
-  **46**. Att de ligger just där är en lokal uppgift som inte står i någon källa
-  – vad som står på platserna framgår däremot av bilderna. Platsen vid 40 har en
-  murad grill av kullersten, de övriga varsin rund stålgrill på fot; det syns i
-  bilderna och sägs därför på sidan.
+  bild och kartlänk. Hittills finns **Myggdalsvägen 16**, **26**, **40**, **46**,
+  **68**, **76**, **100**, **102**, **108** och **114**. Att de ligger just där
+  är en lokal uppgift som inte står i någon källa – vad som står på platserna
+  framgår däremot av bilderna. Platserna vid 40 och 108 har murade grillar av
+  kullersten, de vid 16, 26, 46, 76 och 114 varsin rund stålgrill på fot; det
+  syns i bilderna och sägs därför på sidan.
+  **Platserna vid 68, 100 och 102 skiljer ut sig.** Där finns ingen fast grill i
+  bild, utan en svart kolgrill på ben – samma modell på alla tre gårdarna – och
+  vid 68 dessutom en mindre klotgrill och ett föremål under ett grått överdrag
+  som inte går att bestämma. Att samma modell återkommer på tre gårdar talar för
+  att grillarna är föreningens snarare än enskilda boendes, men det är en
+  slutsats dragen ur bilderna och ingen uppgift. Sidan påstår därför ingenting
+  om vem de tillhör – den skriver bara att de står där. Stäm av med styrelsen om
+  de tre platserna hör till de upprustade grillplatserna eller om det är
+  sittplatser där grillar ställts ut. Blir svaret det senare hör blocken inte
+  hemma i avsnittet *Nya grillplatser*.
+  **Platsdata skiljer inte 100 från 102.** De två bildernas koordinater ligger
+  5 meter isär, alltså inom felmarginalen för en telefon, och kartlänkarna
+  pekar i praktiken på samma punkt. Att det rör sig om två platser bygger på att
+  bilderna visar olika möblering – två sittgrupper och en betongblockmur vid
+  102, en sittgrupp, papperskorg och tujahäck vid 100 – och på att fotografen
+  märkt bilderna `M102` respektive `M100`. Låt någon på plats bekräfta att det
+  verkligen är två grillplatser och inte en, innan sidan publiceras.
   **Koordinaterna** i ”Visa på karta” – 59.243267, 18.233162 vid nummer 16,
-  59.242695, 18.232795 vid 26, 59.242446, 18.233441 vid 40 och 59.242583,
-  18.234425 vid 46 – är platsdata ur originalbilderna, alltså var kameran stod,
-  inte en inmätning av grillarna. Punkten vid 40 är mittpunkten mellan de två
-  bildernas platsdata, som ligger 8 meter isär på var sin sida om grillen.
+  59.242695, 18.232795 vid 26, 59.242446, 18.233441 vid 40, 59.242583,
+  18.234425 vid 46, 59.241775, 18.235414 vid 68, 59.241389, 18.236128 vid 76,
+  59.241378, 18.236978 vid 100,
+  59.241331, 18.237008 vid 102, 59.240817, 18.236083 vid 108 och 59.241169,
+  18.235358 vid 114 – är platsdata ur originalbilderna, alltså
+  var kameran stod, inte en inmätning av grillarna. Punkten vid 40 är
+  mittpunkten mellan de två bildernas platsdata, som ligger 8 meter isär på var
+  sin sida om grillen.
   Jämförda med lekplatsernas koordinater stöder de adresserna olika väl:
   - **Nummer 40** ligger 15 meter från lekplatsen med samma nummer. Det är det
     starkaste stödet av de tre, eftersom två oberoende bilder pekar ut samma
@@ -473,17 +499,48 @@ Ett par saker att känna till innan sidorna publiceras:
   - **Nummer 46** ligger halvvägs – 53 procent – längs sträckan från lekplatsen
     vid 40 till den vid 62. Vore läget proportionellt mot numren skulle det
     svara mot ungefär 52, alltså ett högre nummer än 46.
+  - **Nummer 68** ligger 43 meter söder om lekplatsen vid 62, alltså 28 procent
+    av vägen mot lekplatsen vid 110 – proportionellt svarar det mot ungefär 75.
+    Ordningen stämmer: platsen ligger efter 62 och långt före 110.
+  - **Nummer 76** ligger 29 meter vid sidan av linjen, projicerat på 57 procent,
+    vilket svarar mot ungefär 89. Ordningen stämmer: platsen faller mellan 68
+    och 100.
+  - **Nummer 100 och 102** ligger 77 respektive 79 meter vid sidan av linjen
+    mellan lekplatserna vid 62 och 110 – på en gård öster om dem – och
+    jämförelsen säger därför mindre här än för de andra. Projicerade på linjen
+    hamnar punkterna på 61 och 64 procent, vilket svarar mot ungefär 91 och 93.
+  - **Nummer 108** ligger 21 meter från lekplatsen vid 110, alltså 98 procent
+    av vägen från lekplatsen vid 62 till den vid 110 – proportionellt svarar det
+    mot 109. Tillsammans med 40 är det den bäst passande punkten.
+  - **Nummer 114** ligger 50 meter *norr* om lekplatsen vid 110, alltså mellan
+    den och lekplatsen vid 62 – 71 procent av vägen dit, vilket proportionellt
+    skulle svara mot ungefär 96. Ett nummer över 110 väntas ligga bortom
+    lekplatsen vid 110, inte före den. Det här är den sämsta passningen, och den
+    blir sämre av att 108 faller så väl ut: de två grillplatserna ligger 57
+    meter isär, och den som fått det högre numret ligger på den sida där de
+    lägre numren väntas.
+
+  **Ordningen säger mer än siffrorna.** Projicerat på linjen söderut ligger
+  platserna 62, 68, 76, 100, 102, 114, 110, 108 – alla i nummerordning utom 114.
+  De uträknade ”proportionella numren” ligger däremot genomgående för högt i
+  mitten av sträckan (46 ger 52, 68 ger 75, 76 ger 89, 100 och 102 ger 91 och
+  93), vilket betyder att numren inte växer jämnt längs vägen: gårdarna breder
+  ut sig österut och gatan svänger. Använd alltså jämförelsen till att se om
+  ordningen stämmer, inte till att räkna fram vilket nummer en plats borde ha.
+  Notera dessutom att lekplatsernas egna nummer också är lokala uppgifter, så
+  jämförelsen görs mot något som inte heller är belagt.
 
   Numren växer med andra ord inte entydigt åt något håll här, så koordinaterna
   bekräftar inte adresserna – de motsäger dem inte heller, eftersom en
   grillplats hör till gården och kan ligga en bit från den port den döps efter.
   Det är **ingen oberoende kontroll**: adresserna behöver någon som känner
-  området bekräfta, och särskilt den vid 16 och den vid 46.
+  området bekräfta, och särskilt den vid 16, den vid 46 och den vid 114.
   **Bilden vid 46 säger något annat än sidan.** `IMG_2606.HEIC` har texten
   `M48` i sitt beskrivningsfält, medan uppgiftslämnaren angav 46. Sidan följer
-  uppgiftslämnaren. De två tidigare bilder som har fältet ifyllt – `img_2602`
-  och `img_2605` – säger `M16` respektive `M40` och stämmer alltså med de
-  adresser som angavs, så fältet har varit tillförlitligt fram till nu.
+  uppgiftslämnaren. Beskrivningsfältet är ifyllt i fem andra bilder –
+  `img_2602`, `img_2605`, `img_2632`, `img_2633` och `img_2635` – och säger där
+  `M16`, `M40`, `M108`, `M102` och `M100`, alltså samma nummer som angavs.
+  Fältet har med andra ord stämt i fem fall av sex.
   Koordinaterna kan inte skilja de två numren åt: 46 och 48 är grannportar.
   Kontrollera adressen på plats innan sidan publiceras, och rätta antingen
   blocket `grillplats-m46.html` eller bildens beskrivningsfält.
@@ -551,13 +608,23 @@ Ett par saker att känna till innan sidorna publiceras:
   för vem som helst som hittar den, alltså också för folk utanför föreningen.
   Hur man går med är i stället formulerat som ”fråga en granne med hund” – stäm
   av att det är den väg gruppen själv vill ha.
-- **Bilden på hundrastgården.** `assets/images/dogs/img_2611.jpg` är egen, tagen
-  på plats 2026-08-01. Att rastgården är inhägnad med nätstängsel, har en grind
-  och består av skogsmark med berg i dagen syns i bilden – A–Ö säger inget om
-  någotdera. Att bänkbordet en bit in står innanför staketet är däremot en
-  tolkning av bilden, inte något som säkert går att se. Platsdata följde inte med
-  in i webbversionen, till skillnad från de tidigare bilderna på lekplatser och
+- **Bilderna på hundrastgården.** Båda är egna: `img_2611.jpg` på grinden, tagen
+  2026-08-01, och `img_1740.jpg` på hällen inne i rastgården, tagen 2026-06-05.
+  Att rastgården är inhägnad med nätstängsel, har en grind och består av
+  skogsmark med berg i dagen syns i bilderna – A–Ö säger inget om någotdera. Att
+  bänkbordet en bit in står innanför staketet är däremot en tolkning av
+  grindbilden, inte något som säkert går att se. Platsdata följde inte med in i
+  webbversionerna, till skillnad från de tidigare bilderna på lekplatser och
   gym, som fortfarande har sina koordinater kvar i filen.
+- **Hundarna på hällbilden är okopplade**, och sidan säger på samma gång att
+  kommunens kopplingstvång gäller i hela Sjötungans område. Det är ingen
+  motsägelse i praktiken – en inhägnad rastgård är till just för att hunden ska
+  få gå lös, och för kommunens egna rastgårdar skriver Tyresö att ”innanför
+  stängslet behöver inte hunden vara kopplad”. Men föreningens rastgård är
+  föreningens, inte kommunens, och **ingen källa säger vad som gäller innanför
+  vårt eget staket**. Sidan påstår därför ingenting om saken. Vill man ha bort
+  frågetecknet räcker en mening från styrelsen om att hunden får vara lös i
+  rastgården.
 - **Översiktskartorna `karta.jpg` är inte våra.** De två – lekplatserna och
   hundrastgården – är utsnitt ur Google Maps satellitvy med gula markeringar
   inlagda; lekplatskartan har fyra, hundkartan en. Google Maps-innehåll får
