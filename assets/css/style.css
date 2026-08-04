@@ -1188,6 +1188,225 @@ tbody tr.is-total th {
   color: var(--muted);
 }
 
+/* --- Bildvisaren ---------------------------------------------------------- */
+
+/* Överlägget som öppnas när en bild i ett galleri klickas. Utan JavaScript
+   händer ingenting här: länken öppnar bilden som förut. Chromet är mörkt i
+   både ljust och mörkt läge – bilden ska vara det enda som lyser. */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200; /* över sidhuvudet (50) och hoppa-till-länken (100) */
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: rgba(9, 14, 13, 0.94);
+  color: #f2f5f3;
+  overscroll-behavior: contain;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+body.has-lightbox {
+  overflow: hidden;
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem clamp(0.75rem, 0.4rem + 1.5vw, 1.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Titeln tar överblivet utrymme och skjuter räkningen och Stäng åt höger. */
+.lightbox__title {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lightbox__count {
+  margin: 0 0 0 auto;
+  flex: none;
+  text-align: right;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(242, 245, 243, 0.72);
+}
+
+/* Knapparna i överlägget: samma form överallt, mörk yta på mörk botten. */
+.lightbox button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox button:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.lightbox button:focus-visible {
+  outline: 2px solid #f2f5f3;
+  outline-offset: 2px;
+}
+
+.lightbox button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+}
+
+.lightbox__close {
+  flex: none;
+}
+
+.lightbox__stage {
+  position: relative;
+  min-height: 0;
+  --lb-pad: clamp(0.5rem, 0.2rem + 1.5vw, 1.25rem);
+}
+
+/* Bilden är absolut placerad och centrerad med margin: auto. Ett vanligt
+   flödesbarn med max-height: 100% räcker inte: höjden här kommer från en
+   1fr-rad, och procenten mot den ger ingen begränsning – bilden växer då förbi
+   både bildtexten och fönstret. Mot ett absolut placerat barn räknas procenten
+   alltid mot ytan runt omkring, och bilden håller sig innanför. */
+.lightbox__img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: calc(100% - var(--lb-pad) * 2);
+  max-height: calc(100% - var(--lb-pad) * 2);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.is-loading .lightbox__img {
+  opacity: 0.35;
+}
+
+/* Pilarna ligger över bilden i kanterna och är runda – de tar ingen plats från
+   bilden på små skärmar, där utrymmet är som knappast. */
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.6rem;
+  background: rgba(9, 14, 13, 0.65);
+}
+
+.lightbox__nav--prev {
+  left: clamp(0.25rem, 0.5vw, 1rem);
+}
+
+.lightbox__nav--next {
+  right: clamp(0.25rem, 0.5vw, 1rem);
+}
+
+.lightbox__foot {
+  padding: 0.75rem clamp(0.75rem, 0.4rem + 1.5vw, 1.5rem) 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lightbox__caption {
+  margin: 0 auto;
+  max-width: 46rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(242, 245, 243, 0.86);
+}
+
+/* Övriga bilder i uppsättningen, som en rad att bläddra i. */
+.lightbox__thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+  padding: 0.25rem;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  justify-content: safe center;
+}
+
+.lightbox__thumbs li {
+  flex: none;
+}
+
+.lightbox__thumbs button {
+  padding: 0;
+  border-radius: var(--radius-sm);
+  border-color: transparent;
+  background: none;
+  overflow: hidden;
+  opacity: 0.55;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox__thumbs button:hover {
+  opacity: 0.85;
+  background: none;
+}
+
+.lightbox__thumbs button[aria-current="true"] {
+  opacity: 1;
+  border-color: #f2f5f3;
+}
+
+.lightbox__thumbs img {
+  display: block;
+  width: 76px;
+  height: 56px;
+  object-fit: cover;
+}
+
+/* En ensam bild har varken pilar, miniatyrer eller räkning att visa. */
+.lightbox.is-single .lightbox__nav,
+.lightbox.is-single .lightbox__thumbs,
+.lightbox.is-single .lightbox__count {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .lightbox__thumbs img {
+    width: 60px;
+    height: 44px;
+  }
+  /* På smal skärm får räkningen platsen ensam; titeln står kvar på sidan
+     bakom och behövs inte i listen. */
+  .lightbox__title {
+    display: none;
+  }
+  .lightbox__count {
+    margin-left: 0;
+  }
+  .lightbox__close {
+    margin-left: auto;
+  }
+}
+
 /* --- CTA band ------------------------------------------------------------- */
 
 .cta {

@@ -201,7 +201,7 @@ src/pages/*.html        sidorna, ett <main> per sida: ordning och layout
 src/blocks/*.html       innehållsblocken, en anläggning per fil
 *.html                  genererade filer (checkas in, skrivs över vid bygge)
 assets/css/style.css    designsystem (färger, typografi, komponenter)
-assets/js/site.js       enda skriptet: mobilmeny och undermenyer
+assets/js/site.js       enda skriptet: mobilmeny, undermenyer och bildvisaren
 assets/images/courtyards/   bilder på gårdarna till index.html (JPEG): lusthuset
                         (img_2578.jpg) och äppelträdet (img_2573.jpg), plus tre
                         bilder på skötseln: gångvägen med rabatter mellan
@@ -396,6 +396,25 @@ beskär till 4:3 och zoomar vid hover. Kartorna har teckenförklaringen i nedre
 vänstra hörnet och skulle förlora den vid beskärning. Bilderna har dessutom
 `width`/`height` i HTML, och utan `height: auto` sätter `height`-attributet
 höjden till 460 px så att `object-fit` lägger tomma fält över och under kartan.
+
+### Bildvisaren
+
+Ett klick på en bild i ett `.gallery` öppnar den i ett överlägg i stället för
+att lämna sidan. Där finns bildtexten under bilden, de övriga bilderna i samma
+galleri som miniatyrer, en räkning ("Bild 3 av 10") och en Stäng-knapp. Man
+bläddrar med pilarna, piltangenterna, miniatyrerna eller ett svep på pekskärm,
+och stänger med Esc, Stäng eller ett klick utanför bilden. Fokus lämnas till
+den bild som visades sist, så läsaren står kvar på samma ställe i galleriet.
+
+Visaren finns i `site.js` och kräver ingen märkning utöver den som redan finns:
+den läser `<figure>`-elementen i varje `.gallery`, tar länkens `href` som
+originalbild och `<figcaption>` som bildtext, och använder rubriken närmast
+ovanför galleriet som namn på uppsättningen. **Ett galleri är en uppsättning** –
+vill man att bilder ska bläddras ihop ska de ligga i samma `.gallery`. Utan
+JavaScript händer ingenting: länken öppnar bilden som förut.
+
+Ett galleri med bara en bild visas utan pilar, miniatyrer och räkning
+(`.lightbox.is-single`).
 
 ## Kör lokalt
 
@@ -921,3 +940,5 @@ till `main` och slå på Pages med `main` / `/ (root)` under *Settings → Pages
 - Layouten är responsiv utan brytpunktshopp: kortrutnät använder `auto-fit`,
   menyn fälls ihop till en hamburgermeny under 860 px och breda tabeller
   scrollar i sin egen behållare.
+- Bildvisaren har mörkt chrome i både ljust och mörkt läge – bilden ska vara
+  det enda som lyser. Se *Bildvisaren* under *Struktur och bygge*.
