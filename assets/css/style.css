@@ -187,6 +187,10 @@ hr {
   padding-block: var(--section-gap);
 }
 
+.section--tight {
+  padding-block: clamp(1.25rem, 1rem + 1vw, 1.9rem);
+}
+
 .section--alt {
   background: var(--bg-alt);
   border-block: 1px solid var(--line);
@@ -903,6 +907,35 @@ tbody tr.is-total th {
   color: var(--highlight);
 }
 
+/* Ansvarsfriskrivningen står som en not, inte som en ruta: ingen bakgrund och
+   ingen ram, bara liten text i dämpad ton. */
+.disclaimer {
+  display: flex;
+  gap: 0.55rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.disclaimer svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin-top: 0.22rem;
+  color: var(--muted);
+}
+
+.disclaimer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+  color: var(--accent);
+}
+
 /* --- FAQ / accordion ------------------------------------------------------ */
 
 .faq {
@@ -1481,18 +1514,7 @@ body.has-lightbox {
   color: var(--muted);
 }
 
-.site-footer__name {
-  font-weight: 600;
-  color: var(--ink);
-}
-
-.site-footer__sep {
-  margin-inline: 0.45rem;
-  color: var(--line-strong);
-}
-
 .site-footer p.site-footer__note {
-  margin-top: 0.9rem;
   max-width: 46ch;
   font-size: 0.875rem;
   line-height: 1.6;

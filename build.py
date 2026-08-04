@@ -25,9 +25,6 @@ PAGES = os.path.join(ROOT, "src", "pages")
 BLOCKS = os.path.join(ROOT, "src", "blocks")
 
 SITE_NAME = "BRF Sjötungan"
-LEGAL_NAME = "HSB Brf Sjötungan i Tyresö"
-ADDRESS = "Myggdalsvägen 102, 135 43 Tyresö"
-EMAIL = "info@sjotungan.se"
 OFFICIAL_SITE = "https://www.sjotungan.se"
 
 ANNUAL_REPORT_PDF = (
@@ -383,13 +380,6 @@ def render(meta, content, current):
 
 <footer class="site-footer">
   <div class="container site-footer__inner">
-    <p class="site-footer__name">{legal}</p>
-    <p>{address}</p>
-    <p>
-      <a href="mailto:{email}">{email}</a>
-      <span class="site-footer__sep" aria-hidden="true">·</span>
-      <a href="{official}">sjotungan.se</a>
-    </p>
     <p class="site-footer__note">
       <a href="{official}">sjotungan.se</a> är föreningens officiella webbplats.
       Den här sidan är inte officiell utan är skapad och underhålls av aktiva
@@ -410,9 +400,6 @@ def render(meta, content, current):
         menuicon=icon("menu", width="2"),
         nav=render_nav(current),
         content=expand_icons(content),
-        legal=LEGAL_NAME,
-        address=ADDRESS,
-        email=EMAIL,
         official=OFFICIAL_SITE,
     )
 
