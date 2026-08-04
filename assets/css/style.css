@@ -137,6 +137,15 @@ svg {
   max-width: 100%;
 }
 
+/* Pilen efter en textlänk. En <svg> utan mått är 300 × 150 px stor, så utan den
+   här regeln blir pilen större än stycket den står i. Ikoner med egen storlek –
+   sidhuvudets märke, kortens pil, knapparna – har egna regler som tar över. */
+a svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.14em;
+}
+
 hr {
   border: 0;
   border-top: 1px solid var(--line);
@@ -1088,6 +1097,15 @@ tbody tr.is-total th {
   font-size: 0.875rem;
   line-height: 1.5;
   color: var(--muted);
+}
+
+/* Bildsidan: hela sajtens bilder i ett enda galleri, alla lika stora. Kartorna
+   och skärmbilderna har width och height i HTML, och height-attributet skulle
+   annars sätta höjden i stället för beskärningen – samma skäl som nedan. Här
+   ska de beskäras som fotografierna: det är miniatyren som ska bli fyrkantig,
+   och hela bilden syns ändå när den öppnas. */
+.gallery--all img {
+  height: auto;
 }
 
 /* Kartbilder, till skillnad från fotografierna: de har teckenförklaringen i ett

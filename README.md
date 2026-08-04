@@ -8,6 +8,7 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 | Fil | Sida i menyn | Vad sidan samlar |
 | --- | --- | --- |
 | [index.html](index.html) | Översikt | Ansvarsfriskrivning, fem siffror om föreningen, och det som väger tyngst för en köpare: skötseln av området, parkeringsavgiften, grillplatserna, *Grannarna emellan* med loppisen och grillfredagarna, borrmaskinen att låna, paketboxarna och *Gemensamt för alla* med tvättstugorna och sopsorteringen |
+| [bilder.html](bilder.html) | Bilder | Alla bilder på sajten i ett enda galleri, för den som hellre tittar än läser. Sidan skrivs inte för hand utan samlas in vid bygget – se *Bildsidan* nedan |
 | [family.html](family.html) | För dig … med barn | Gårdarna, de fyra lekplatserna med bilder och kartlänkar, fotbollsplan, isbana, förskola och kulturskola i närområdet |
 | [car.html](car.html) | För dig … med bil eller MC | P-platser, garage, laddplatser, MC och moped, körning i området |
 | [bicycle.html](bicycle.html) | För dig … på cykel | Cykelrum i husen, långtidsförrådet, cykelvägarna utanför |
@@ -198,6 +199,7 @@ anläggning står därmed på ett ställe även när den syns på flera sidor.
 ```text
 build.py                bygger sajten – här bor meny, sidhuvud, sidfot och ikoner
 src/pages/*.html        sidorna, ett <main> per sida: ordning och layout
+src/pages/bilder.html   bildsidan: rubrik och ingress, bilderna samlas in vid bygget
 src/blocks/*.html       innehållsblocken, en anläggning per fil
 *.html                  genererade filer (checkas in, skrivs över vid bygge)
 assets/css/style.css    designsystem (färger, typografi, komponenter)
@@ -396,6 +398,31 @@ beskär till 4:3 och zoomar vid hover. Kartorna har teckenförklaringen i nedre
 vänstra hörnet och skulle förlora den vid beskärning. Bilderna har dessutom
 `width`/`height` i HTML, och utan `height: auto` sätter `height`-attributet
 höjden till 460 px så att `object-fit` lägger tomma fält över och under kartan.
+
+### Bildsidan
+
+`bilder.html` samlar alla bilder på sajten på ett ställe, för den som hellre
+tittar än läser. Sidan **skrivs inte för hand**. `src/pages/bilder.html`
+innehåller bara rubriken och ingressen plus `{{gallery}}` ensamt på en rad; där
+skriver `build.py` in bilderna.
+
+Insamlingen sker efter att blocken hämtats in, så det spelar ingen roll om en
+bild står på sidan eller i ett block. Skriptet går igenom sidorna i menyns
+ordning, plockar ut varje `<figure>` och lägger dem i **ett enda galleri** –
+inga avsnitt, inga rubriker emellan. En bild som står på flera sidor tas med en
+gång, där den kommer först. Sidan är därmed också en enda uppsättning i
+bildvisaren: man öppnar en bild och bläddrar igenom hela samlingen.
+
+Figurerna skrivs in precis som de står, med samma bildtext och alt-text.
+Texterna finns alltså kvar på ett enda ställe – i blocket eller på sidan där
+bilden hör hemma – och bildsidan fylls på av sig själv när en bild läggs till
+någon annanstans. Det finns inget att uppdatera här.
+
+Priset för ett enhetligt rutnät är att kartorna beskärs till 4:3 som
+fotografierna, så teckenförklaringen i hörnet kan hamna utanför miniatyren.
+Hela bilden syns när den öppnas. `.gallery--all img` sätter `height: auto`
+eftersom kartornas `height`-attribut annars styr höjden i stället för
+beskärningen.
 
 ### Bildvisaren
 

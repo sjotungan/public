@@ -44,6 +44,7 @@ ANNUAL_REPORT_PDF = (
 # läsare att peka ut hör inte hemma i menyn alls.
 NAV = [
     {"href": "index.html", "label": "Översikt"},
+    {"href": "bilder.html", "label": "Bilder"},
     {"href": ANNUAL_REPORT_PDF, "label": "Årsredovisning 2025", "external": True},
     {
         # Ingen "href": posten är enbart en meny som fälls ut vid klick.
@@ -254,6 +255,59 @@ def expand_blocks(html, stack=()):
     return html
 
 
+# Bildsidan. Sidan skriver inga bilder själv utan samlar in dem: när blocken
+# hämtats in går skriptet igenom de andra sidorna i menyns ordning och plockar
+# ut varje <figure>. Bilderna hamnar i ett enda galleri – en uppsättning att
+# bläddra igenom, utan avsnitt och rubriker emellan. Bildtexten står kvar på ett
+# enda ställe – i blocket eller på sidan där bilden hör hemma – och bildsidan
+# fylls på av sig själv när en bild läggs till någon annanstans.
+#
+# Sidfragmentet markerar platsen med {{gallery}}, ensamt på en rad.
+GALLERY_PAGE = "bilder.html"
+GALLERY_MARK_RE = re.compile(r"^[ \t]*\{\{gallery\}\}[ \t]*$", re.M)
+
+FIGURE_RE = re.compile(r"^([ \t]*)<figure>.*?</figure>", re.M | re.S)
+HREF_RE = re.compile(r'<a href="([^"]+)"')
+
+
+def dedent_to(text, pad):
+    return "\n".join(line[len(pad):] if line.startswith(pad) else line.lstrip()
+                     for line in text.splitlines())
+
+
+def collect_figures(pages, order):
+    """Alla bilder på sajten, i den ordning läsaren möter dem.
+
+    Blocken är redan inhämtade, så det spelar ingen roll om en bild står på
+    sidan eller i ett block. En bild som står på flera sidor tas med en gång."""
+    seen = set()
+    figures = []
+    for name in order:
+        if name == GALLERY_PAGE:
+            continue
+        for found in FIGURE_RE.finditer(pages[name][1]):
+            figure = dedent_to(found.group(0), found.group(1))
+            href = HREF_RE.search(figure)
+            key = href.group(1) if href else figure
+            if key in seen:
+                continue
+            seen.add(key)
+            figures.append(figure)
+    return figures
+
+
+def render_gallery_page(figures):
+    """Ett enda galleri: hela sajtens bilder i en följd."""
+    return "\n".join(
+        ['  <section class="section">',
+         '    <div class="container">',
+         '      <div class="gallery gallery--all">']
+        + [indent(figure, "        ") for figure in figures]
+        + ["      </div>",
+           "    </div>",
+           "  </section>"])
+
+
 def nav_link(item, current):
     aria = ' aria-current="page"' if item["href"] == current else ""
     return '<a href="%s"%s>%s</a>' % (item["href"], aria, item["label"])
@@ -355,7 +409,7 @@ def render(meta, content, current):
         brandmark=icon("house", width="1.9", extra=""),
         menuicon=icon("menu", width="2"),
         nav=render_nav(current),
-        content=expand_icons(expand_blocks(content)),
+        content=expand_icons(content),
         legal=LEGAL_NAME,
         address=ADDRESS,
         email=EMAIL,
@@ -363,19 +417,47 @@ def render(meta, content, current):
     )
 
 
+def page_order(names):
+    """Sidorna i menyns ordning – den ordning läsaren möter dem i."""
+    wanted = []
+    for item in NAV:
+        if item.get("external"):
+            continue
+        for entry in [item] + item.get("children", []):
+            if "href" in entry and entry["href"] in names:
+                wanted.append(entry["href"])
+    return wanted + [n for n in sorted(names) if n not in wanted]
+
+
 def main():
     if not os.path.isdir(PAGES):
         sys.exit("hittar inte %s" % PAGES)
-    written = 0
-    for name in sorted(os.listdir(PAGES)):
-        if not name.endswith(".html"):
-            continue
+
+    names = [n for n in os.listdir(PAGES) if n.endswith(".html")]
+    pages = {}
+    for name in names:
         meta, content = read_fragment(os.path.join(PAGES, name))
+        pages[name] = (meta, expand_blocks(content))
+
+    order = page_order(names)
+    if GALLERY_PAGE in pages:
+        figures = collect_figures(pages, order)
+        meta, content = pages[GALLERY_PAGE]
+        if not GALLERY_MARK_RE.search(content):
+            sys.exit("%s saknar {{gallery}} på egen rad" % GALLERY_PAGE)
+        pages[GALLERY_PAGE] = (
+            meta,
+            # Funktionen som ersättning: innehållet skrivs in som det står.
+            GALLERY_MARK_RE.sub(lambda m: render_gallery_page(figures), content),
+        )
+        print("bildsidan: %d bilder" % len(figures))
+
+    for name in order:
+        meta, content = pages[name]
         html = render(meta, content, name)
         open(os.path.join(ROOT, name), "w", encoding="utf-8").write(html)
         print("skrev %-24s %6d bytes" % (name, len(html)))
-        written += 1
-    print("%d sidor" % written)
+    print("%d sidor" % len(order))
 
 
 if __name__ == "__main__":
