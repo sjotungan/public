@@ -7,12 +7,13 @@ CSS, inga externa beroenden – sidorna fungerar även offline.
 
 | Fil | Sida i menyn | Vad sidan samlar |
 | --- | --- | --- |
-| [index.html](index.html) | Översikt | Ansvarsfriskrivning, fem siffror om föreningen, och det som väger tyngst för en köpare: skötseln av området, parkeringsavgiften, grillplatserna, borrmaskinen att låna och paketboxarna |
+| [index.html](index.html) | Översikt | Ansvarsfriskrivning, fem siffror om föreningen, och det som väger tyngst för en köpare: skötseln av området, parkeringsavgiften, grillplatserna, *Grannarna emellan* med loppisen och grillfredagarna, borrmaskinen att låna, paketboxarna och *Gemensamt för alla* med tvättstugorna och sopsorteringen |
 | [family.html](family.html) | För dig … med barn | Gårdarna, de fyra lekplatserna med bilder och kartlänkar, fotbollsplan, isbana, förskola och kulturskola i närområdet |
 | [car.html](car.html) | För dig … med bil eller MC | P-platser, garage, laddplatser, MC och moped, körning i området |
 | [bicycle.html](bicycle.html) | För dig … på cykel | Cykelrum i husen, långtidsförrådet, cykelvägarna utanför |
 | [dogs.html](dogs.html) | För dig … med hund | Kopplingstvång, hundrastgården med bild och karta, kommunens rastgård i Wättinge, hundägarnas WhatsApp-grupp, katter |
 | [fitness.html](fitness.html) | För dig … som tränar | Gymmet med bilder och video, bastun, utegymmet med bilder, boulebana |
+| [nature.html](nature.html) | För dig … i naturen | Läget mellan Tyresö centrum och skogen, karta över området och närområdet, film på rådjuren i skogsbrynet |
 
 Menyvalet **Årsredovisning 2025** är ingen sida utan en direktlänk till PDF:en
 hos sjotungan.se. Ekonomin behöver ingen egen sida så länge dokumentet finns.
@@ -31,10 +32,11 @@ Det får några konsekvenser att hålla fast vid:
   idrottsplatsen och nämns därför både under hund och under barn. Bilförbudet i
   området hör lika mycket hemma på barnsidan som på bilsidan. Upprepa det korta
   och länka till sidan som har detaljerna.
-- **Anläggningar utan läsare får ingen sida.** Tvättstugor, grillplatser,
-  gästlägenheten och miljöhusen är sådant alla har, inte en roll man känner
-  igen sig i. De ligger som korta punkter under *Gemensamt för alla* på
-  översikten.
+- **Anläggningar utan läsare får ingen sida.** Tvättstugor, gästlägenheten och
+  miljöhusen är sådant alla har, inte en roll man känner igen sig i. De ligger
+  som korta kort under *Gemensamt för alla* på översikten – i dag tvätt och
+  sopsortering. Grillplatserna hör till samma kategori men har vuxit ur den och
+  har ett eget avsnitt.
 - **En ny sida kräver en ny roll**, inte en ny anläggning. Frågan att ställa är
   ”vem är det som söker det här?”. Finns rollen inte redan i menyn, och är den
   inte tillräckligt vanlig för att bära en egen sida, hör uppgiften hemma på en
@@ -138,7 +140,7 @@ varje stämma. Lägg inte tillbaka namn eller personliga adresser.
 
 ### Översikten är avsiktligt nästan tom
 
-`index.html` innehåller fyra saker och ingenting annat:
+`index.html` innehåller sex saker och ingenting annat:
 
 1. **Rubrik och ansvarsfriskrivning.** Att sajten inte är styrelsens, med länk
    till sjotungan.se. Det står överst för att ingen ska tro att de läser
@@ -146,17 +148,42 @@ varje stämma. Lägg inte tillbaka namn eller personliga adresser.
 2. **Fem siffror** om föreningen – lägenheter, hus, byggår, markyta,
    medlemsantal. Inget mer.
 3. **Fem saker som faktiskt påverkar ett köpbeslut**: att området sköts om
-   (med bilder och en länk till Instagram-kontot @sjotungan_grannar), att en bilplats
+   (med bilder), att en bilplats
    kostar 250 kronor i månaden, de nya grillplatserna, borrmaskinen som
    lånas ut till medlemmarna, och paketboxarna som gör att en beställning kan
    hämtas utan att lämna området.
-4. Sidfoten från `build.py`.
+4. **Grannarna emellan** – fyra kort om sådant de boende ordnar själva: den
+   årliga loppisen, skräpplockarpromenaden, grillfredagarna och de grupper och
+   konton grannarna håller kontakt i. Se förbehållen längre ned.
+5. **Gemensamt för alla** – två kort om sådant som hör till boendet oavsett vem
+   läsaren är: de sex tvättstugorna och sopsorteringen. Hit hör bara det som
+   alla i föreningen har och som ingen rollsida äger.
+6. Sidfoten från `build.py`.
 
 Det som låg här tidigare – korten till rollsidorna, *Om föreningen* med
 org.nr och fastighetsbeteckningar, *Bra att veta*, innehavstabellen, *Aktuellt*
 och styrelseavsnittet – är borttaget. Rollsidorna nås via menyn, och resten
 finns i årsredovisningen som menyn länkar till. Lägg inte tillbaka något av det
 utan att först svara på vem utifrån som letar efter det.
+
+### Gemenskapen är ett avsnitt, inte en sida
+
+*Grannarna emellan* ligger på översikten och inte under *För dig…*, eftersom
+granne inte är en roll: alla som bor här är det, precis som med tvättstugorna.
+Att grannarna ordnar loppis och grillfredag hör ändå till det som formar
+vardagen mest av allt på sajten, så avsnittet står högt upp och inte som en
+fotnot.
+
+**Värderingen ska inte skrivas ut.** Ingen rubrik säger att gemenskap är viktigt
+för föreningen, och ingen text påstår att grannarna är trevliga. Avsnittet
+räknar upp vad som faktiskt görs och låter läsaren dra slutsatsen – samma ton
+som resten av sajten.
+
+Växer avsnittet ur översikten – säg fler än sex, sju kort – bryts det ut till en
+egen sida som ligger **bredvid Översikt i menyn**, inte i rollmenyn. Det är
+undantaget från regeln att en ny sida kräver en ny roll: sidan bär ett ämne, inte
+en läsare. Kraven är desamma som för allt annat: varje uppgift ska gå att
+motivera med vem utifrån som letar efter den.
 
 ## Struktur och bygge
 
@@ -199,6 +226,16 @@ assets/images/cycle-routes/ kommunens avståndskartor på bicycle.html (JPEG, ej
 assets/images/tools/     borrmaskin.jpg på index.html – genrebild hämtad från en
                         annan webbplats, inte föreningens material (se nedan)
 assets/images/parcel/    bild på paketboxarna till index.html (JPEG)
+assets/images/laundry/   bilder från två av tvättstugorna på index.html (JPEG).
+                        Myggdalsvägen 52, fristående: img_2664.jpg är huset
+                        utifrån, img_2662.jpg rummet, img_2661.jpg
+                        tvättmaskinerna, img_2659.jpg torkskåpet, img_2658.jpg
+                        mangeln. Myggdalsvägen 64, källarplan, rummet för
+                        vanlig tvätt: img_2652.jpg är rummet, img_2651.jpg
+                        tvättmaskinerna, img_2649.jpg torkskåpet, img_2650.jpg
+                        kallmangeln, img_2648.jpg torktumlaren. Samma stuga,
+                        grovtvätt: img_2647.jpg är maskinen, img_2656.jpg
+                        torkrummet
 assets/video/           gym-tour.mp4
 ```
 
@@ -308,7 +345,8 @@ och den uppdateras på alla sidor.
 
 ### Bilderna och videon
 
-Originalen till gymmet, utegymmet och lekplatserna kommer från en iPhone. De ligger inte i
+Originalen till gymmet, utegymmet, lekplatserna och rådjursfilmen kommer från en
+iPhone. De ligger inte i
 repot – `.gitignore` håller
 `IMG_*.HEIC` och `IMG_*.MOV` utanför, och det är webbversionerna under `assets/`
 som sidan använder. Behöver bilderna göras om från original tas de fram så här,
@@ -320,7 +358,12 @@ sips -s format jpeg -s formatOptions 72 -Z 1600 IMG_2546.HEIC --out img_2546.jpg
 
 # HEVC-video -> H.264 i 540x960, utan ljudspår (AVFoundation via swift)
 swift strip.swift IMG_2556.MOV assets/video/gym-tour.mp4
+swift strip.swift IMG_0900.MOV assets/video/wildlife.mp4
 ```
+
+`strip.swift` lägger bara videospåret i en `AVMutableComposition` och exporterar
+med `AVAssetExportPreset960x540`; ljudet följer alltså aldrig med ut. Videon på
+natursidan är stum av det skälet, inte för att originalet saknar ljud.
 
 Två fallgropar om bilderna behöver göras om:
 
@@ -403,12 +446,134 @@ inga påhittade uppgifter.
 | Att luckan öppnas med Postnords app | Framgår av skylten på skåpet, se nedan |
 | Koordinaten bakom ”Visa på karta” vid paketboxarna | Platsdata ur originalbilden, se nedan |
 | `assets/images/parcel/img_2610.jpg` | Egen bild tagen på plats i augusti 2026 |
+| Bilderna i `assets/images/laundry/` | Egna bilder tagna på plats 2026-08-04 |
+| Att de fotograferade stugorna är de vid Myggdalsvägen 52 och 64 | Uppgift från medlem – står inte i någon källa, se nedan |
+| Vad som står i stugan vid 52: två tvättmaskiner, torktumlare, torkskåp, mangel och utslagsback | Framgår av bilderna |
+| Att huset vid 52 har sedumtak och väggar av grånat timmer | Framgår av bilden |
+| Att Myggdalsvägen 64 har två rum att boka var för sig, ett för vanlig tvätt och ett för grovtvätt | Uppgift från medlem – A–Ö säger bara att grovtvättstuga finns, se nedan |
+| Fraktionerna i grovsophusen: tidningar, wellpapp, elektronik, ljuskällor och grovsopor | Uppgift från medlem – A–Ö säger ”papper, kartong” och nämner inga ljuskällor, se nedan |
+| Grovtvättmaskinen, doseringsschemat och torkrummets linor, fläkt och avfuktare vid 64 | Framgår av bilderna |
+| Vad som står i rummet för vanlig tvätt vid 64: två tvättmaskiner på sockel, torktumlare, torkskåp, kallmangel, utslagsback och tvättvagnar | Framgår av bilderna |
+| Maskinernas modellbeteckningar – W475H LE, T4190, TS 5121, KM480 och W4130H | Avlästa på maskinerna i bilderna |
 | Instagram-kontot [@sjotungan_grannar](https://www.instagram.com/sjotungan_grannar) | Uppgift från medlem – vem som driver kontot och vad det innehåller är inte kontrollerat |
+| Facebook-grupperna ”Vi som äger Sjötungan” och ”Vi med anknytning till Myggdalsvägen” | Uppgift från medlem – grupperna är inte besökta, se nedan |
+| Att loppisen hålls varje år och 2026 i september | Uppgift från medlem – står inte på sjotungan.se |
+| Att grannarna går en skräpplockarpromenad en gång om året | Uppgift från medlem – årstiden är inte fastställd, se nedan |
+| Att grillfredag hålls några gånger om året, oftast vid Myggdalsvägen 46 | Uppgift från medlem – står inte på sjotungan.se, se nedan |
+| Att området gränsar till skogsmark i söder och har Tyresö centrum åt andra hållet | Framgår av `assets/images/nature/karta.jpg` |
+| Butiker, Stadsparken och bussar i Tyresö centrum | Uppgift från medlem – inte kontrollerad mot kommunens sidor, se nedan |
+| `assets/images/nature/karta.jpg` | Utsnitt ur Google Maps satellitvy med föreningens mark markerad – Googles material, tillstånd saknas, se nedan |
+| Att djuren i filmen är rådjur | Bestämt ur filmen, ingen uppgift – se nedan |
+| `assets/video/wildlife.mp4` | Egen film tagen från ett fönster i området |
 
 Ett par saker att känna till innan sidorna publiceras:
 
 - **Avgifter och tider** på A–Ö-sidan var senast uppdaterade 2024-06. Stäm av
-  att de fortfarande gäller.
+  att de fortfarande gäller. Det gäller också tvättstugornas öppettider och
+  grovsophusens 06–19.
+- **Tvättstugorna och sopsorteringen.** Allt i de två korten står i A–Ö: sex
+  tvättstugor (M20, M64 och M98 i källarplan, M26, M52 och M74 i egna hus),
+  åtta miljöhus, tre grovsophus och matavfallskärlen längs lokalgatan. Två
+  saker är medvetet utelämnade som handhavande: att tvättstugan bokas med tagg
+  mot bokningstavlan, och att miljöhusen och grovsophusen öppnas med
+  nyckelbricka. Att snabbtvättstugan *inte* behöver bokas står däremot kvar –
+  det är en skillnad i vad man får, inte i hur man gör. **Antalet maskiner per
+  tvättstuga står ingenstans**, så sidan säger inget om kapacitet; det är den
+  uppgift en spekulant med 604 lägenheter i huvudet närmast kommer att fråga
+  efter, och den behöver hämtas från styrelsen.
+- **Fraktionerna i grovsophusen.** A–Ö räknar upp ”papper, kartong” och att
+  elavfall läggs i egna vagnar. En medlem har preciserat listan till
+  **tidningar, wellpapp, elektronik, ljuskällor och grovsopor**, och kortet
+  följer den. Tre saker att veta om ändringen. *Tidningar och wellpapp* är
+  rimligen samma sak som A–Ö:s ”papper, kartong”, bara med de namn som står på
+  kärlen – men om det dessutom finns ett eget kärl för **pappersförpackningar**
+  är inte utrett, och kortet nämner därför inga. *Elektronik* är A–Ö:s elavfall
+  under ett annat namn; att det ligger i vagnar är utelämnat som handhavande.
+  *Ljuskällor* är den enda helt nya fraktionen och står inte i någon skriven
+  källa. Stäm av hela listan mot skyltningen i ett grovsophus innan sajten
+  publiceras, och kontrollera samtidigt om ljuskällor och batterier står
+  tillsammans – batterierna anges i miljöhusen, och står lamporna bredvid dem
+  hör de meningen ovan till i stället.
+- **Bilderna från tvättstugorna.** Två av de sex stugorna är fotograferade, en
+  av varje typ: **Myggdalsvägen 52**, fristående, med fem bilder, och
+  **Myggdalsvägen 64**, i källarplan, med sju – fem från rummet för vanlig
+  tvätt och två från grovtvätten. Vad som står i rummen är läst ur bilderna och
+  gäller därför bara den stuga bilden är tagen i. Skriv inte om
+  utrustningslistorna till något som gäller alla sex; **M20, M26, M74 och M98**
+  är inte fotograferade, och A–Ö säger ingenting om vad som står i någon av dem.
+  De två stugorna skiljer sig dessutom åt på en punkt som syns i bild: vid 52
+  står en vanlig mangel, vid 64 en **kallmangel**. Antag inte att någon av dem
+  är standard.
+  **Tre block, inte ett.** M64 har två rum som bokas var för sig, och de ligger
+  därför i var sitt block – `tvattstuga-m64.html` för vanlig tvätt och
+  `grovtvattstuga-m64.html` för grovtvätten – på samma sätt som varje grillplats
+  har ett eget. Kommer bilder från fler stugor blir det ett block till per
+  stuga; växer avsnittet mycket mer bör tvättstugorna brytas ut ur *Gemensamt
+  för alla* till ett eget avsnitt, så som grillplatserna redan är.
+  **Två rum att boka vid 64** är en uppgift från medlem. A–Ö säger bara att det
+  finns grovtvättstuga vid M20, M64 och M98, inte att den bokas för sig. Att
+  samma uppdelning gäller vid 20 och 98 är alltså inte belagt, och kortet
+  *Tvättstugor* påstår det inte heller; den uppgiften står bara i M64-blocken.
+  **Doseringen motsäger kanske A–Ö.** A–Ö uppger att maskinerna vid M20 och M64
+  doserar tvättmedlet själva, och kortet *Tvättstugor* skriver det. Men
+  `img_2647` visar ett doseringsschema för förtvätt, huvudtvätt och sköljmedel
+  på grovtvättmaskinen, alltså en anvisning om att fylla på själv, och
+  maskinerna i `img_2651` bär en liknande dekal som är för liten för att läsas.
+  Det kan stämma ändå – självdoseringen kan gälla de vanliga maskinerna men inte
+  grovtvättmaskinen – men det kan också vara en föråldrad uppgift. Sidorna
+  påstår ingenting om dosering utöver den mening som kommer från A–Ö. Kontrollera
+  vid maskinerna innan sajten publiceras och stryk meningen om den inte stämmer.
+  **Hör torkrummet till grovtvättstugan?** `img_2656` lämnades in tillsammans
+  med bilden på grovtvättmaskinen och är tagen fem minuter senare, två meter
+  därifrån enligt platsdatan. Att rummen ligger bredvid varandra är därför
+  rimligt, och bildtexten säger ”torkrummet bredvid”. Om torkrummet ingår i
+  grovtvättsbokningen eller är ett eget utrymme är **inte** utrett – blocket
+  påstår ingetdera. Stäm av innan sidan publiceras.
+  **Koordinaterna stöder adressen ovanligt väl.** Bildernas platsdata ligger
+  samlade kring 59.242405, 18.234850. Projicerat på sträckan mellan
+  grillplatserna vid 46 och 68 hamnar punkten på 28 procent, 10 meter vid sidan
+  av linjen, vilket proportionellt svarar mot nummer **52,1**. Det är den bästa
+  passningen på hela sajten. Håll ändå tre saker i minnet: grillplatsernas egna
+  adresser är också lokala uppgifter, den vid 46 är dessutom den som kan vara 48
+  (räknat från 48 blir svaret 53,7, alltså fortfarande i rätt trakt), och
+  uppgiften att stugan är M52 kommer från samma håll som bilderna. Det är
+  **ingen oberoende kontroll**, bara ett internt konsekvent underlag.
+  **Även 64 stämmer mot kartan.** De två källarbilderna ligger samlade kring
+  59.242154, 18.235992, alltså 30 meter rakt öster om lekplatsen vid
+  Myggdalsvägen 62 och 53 meter nordost om grillplatsen vid 68 – precis där ett
+  nummer strax över 62 väntas. Passningen är god, men väg in att bilderna är
+  tagna **inomhus i källarplan**, där telefonen inte har fri sikt till
+  satelliterna. Att de två punkterna ligger två meter isär talar för att fixen
+  var stabil, men platsdata från en källare är svagare belägg än från en gård.
+  **Bilderna är rensade.** Originalen `IMG_2658`, `2659`, `2660`, `2647`,
+  `2648`, `2649`, `2650` och `2656` bar EXIF-taggen `Orientation` = 6, alltså
+  stående bilder lagrade liggande; `2651`, `2652`, `2661`, `2662` och `2664` var
+  redan liggande med taggen 1.
+  Webbversionerna har rotationen inbakad i bildpunkterna och taggen borttagen,
+  så `sips` och webbläsaren är överens om formatet. All EXIF är struken, även
+  platsdatan – till skillnad från lekplats- och gymbilderna, som har kvar sina
+  koordinater i filen. Sätt inga `width`/`height` på bilder i en vanlig
+  `.gallery`: `.gallery img` saknar `height: auto`, så attributen skulle slå ut
+  4:3-beskärningen på samma sätt som beskrivs för kartorna ovan.
+  **En bild är medvetet utelämnad.** `IMG_2660` visar torktumlaren med två
+  handskrivna lappar uppsatta, på engelska och svenska, om att rensa filtret
+  efter sig. Ingenting känsligt och inga namn, men lappar som tillrättavisar
+  grannar ger ett annat intryck av föreningen än vad bilden är värd, och
+  torktumlaren syns ändå i två av de andra bilderna. Vill man ha med den, ta om
+  bilden utan lapparna.
+  **Ingen bokningstavla syns i någon av de tolv bilderna**, och det var
+  avsiktligt: en sådan visar ofta namn och lägenhetsnummer. Ingen människa,
+  ingen tvätt i maskinerna och inga personliga anslag finns i bild heller. Det
+  enda som är uppsatt på väggarna är tillverkarnas egna anvisningar –
+  torkanvisningen på torkskåpet och bruksanvisningen till kallmangeln – plus
+  föreningens trivselregler, oläsliga i webbstorlek. Kontrollera samma sak i
+  bilder från de fyra stugor som återstår.
+- **Bastun går kanske att boka.** A–Ö säger bara att bastun är öppen dagligen
+  12–21 för medlemmar och nämner ingen bokning. Sidan påstår därför varken att
+  den går att boka eller att den inte gör det. Tystnad i en källa är inget
+  belägg – fråga styrelsen om bastun kan bokas av ett hushåll eller om den är
+  öppen för alla medlemmar samtidigt, och skriv in svaret i `bastu.html` bara
+  om det blir det förstnämnda.
 - **Närområdet.** ”Ungefär fem minuters promenad” till kulturskolan och
   stadslekplatsen är en uppgift från styrelsen och inte kontrollerad mot karta.
   Stadslekplatsen har ingen sida hos kommunen – länken går till Google Maps och
@@ -445,6 +610,42 @@ Ett par saker att känna till innan sidorna publiceras:
   Instagram, och sidan lovar därför inget mer än att kontot finns. Titta
   igenom kontot innan publicering – sajten länkar till något den inte råder
   över.
+- **Grannarnas grupper och konton.** De fyra i kortet *Grupperna på nätet* –
+  två Facebook-grupper, Instagram-kontot och hundägarnas WhatsApp-grupp – är
+  alla uppgifter från medlemmar, och ingen av dem drivs av styrelsen. Kortet
+  säger det uttryckligen, av samma skäl som ansvarsfriskrivningen överst finns:
+  ingen ska tro att grupperna är föreningens kanaler.
+  **Inga inbjudningslänkar**, till någon av dem. En sådan länk fungerar för vem
+  som helst som hittar den, alltså också för folk utanför föreningen – samma
+  resonemang som redan gäller WhatsApp-gruppen. Grupperna namnges så att de går
+  att söka fram, och där slutar det.
+  **Grupperna är inte besökta.** Vad som skrivs i dem, hur aktiva de är och om
+  de över huvud taget lever är inte kontrollerat, lika lite som Instagram-kontot.
+  Titta i båda innan publicering. Kontrollera samtidigt att *Vi som äger
+  Sjötungan* verkligen är avgränsad till ägare och att *Vi med anknytning till
+  Myggdalsvägen* omfattar hela gatan – kortet skriver just den skillnaden, och
+  den är läst ur namnen, inte ur grupperna.
+- **Loppisen, skräpplockarpromenaden och grillfredagen** står inte i någon
+  skriven källa. Tre saker att veta:
+  **Årtalet åldras.** Kortet säger ”År 2026 hålls den i september”, alltså ett
+  datum som måste bytas eller strykas efter årets loppis. Att den hålls varje år
+  är det stabila; september är bara i år, så skriv inte om det till en regel
+  utan att veta att den brukar ligga då.
+  **Årstiden för skräpplockarpromenaden är inte fastställd.** Uppgiften från
+  medlem lyder ”efter våren”, vilket rimligen betyder vårstädning efter vintern
+  men lika gärna kan vara försommar. Kortet säger därför bara ”en gång om året”.
+  Fyll i årstiden när någon vet, och kontrollera samtidigt om promenaden hänger
+  ihop med Håll Sverige Rents skräpplockardagar – gör den det hör en länk dit
+  hemma i blocket.
+  **Grillfredagens plats ärver ett osäkert husnummer.** Kortet pekar ut
+  grillplatsen vid Myggdalsvägen 46 och länkar till avsnittet, men den platsens
+  adress är själv oklar – bildens beskrivningsfält säger `M48`, se
+  grillplatsstycket nedan. Rättas grillplatsen måste `grillfredag.html` rättas
+  med den.
+  **Inga bilder.** Fotona som skulle illustrera avsnittet bäst – folk vid
+  grillen, bord på loppisen – visar identifierbara grannar och kräver deras ja,
+  precis som WhatsApp-skärmbilden. Tas sådana bilder in, se till att de är
+  tagna på håll eller att alla som syns har sagt ja.
 - **Journumret** anges olika på två ställen på sjotungan.se: `08–657 64 50` på
   Felanmälan-sidan och i A–Ö, `010–550 21 65` på Förvaltning-sidan. Här används
   det förstnämnda, eftersom det står på två av tre ställen.
@@ -669,6 +870,18 @@ Ett par saker att känna till innan sidorna publiceras:
 - **Kilometer- och minutsiffrorna i bildtexterna** är avlästa ur bilderna, som
   är daterade 2024 i filnamnet (`-24`). Kommunen anger inget mätdatum. Stäm av
   om bilderna byts ut.
+- **Natursidan.** Sidan säger avsiktligt lite: ett stycke om läget, kartan och
+  filmen. Tre saker att stämma av innan publicering. **Djuren** är bestämda som
+  rådjur ur filmen, som är tagen på håll genom ett fönster – ingen har sagt
+  vilken art det är, och dovhjort går inte att utesluta på det bildunderlaget.
+  Byt till ”hjortdjur” om det inte går att få bekräftat. Att de syns *ofta* står
+  det inte på sidan, eftersom det bara är en filmad förekomst som är belagd.
+  **Stadsparken, butikerna och bussarna** i centrum är en uppgift från medlem;
+  inget gångavstånd anges, av samma skäl som för kulturskolan ovan. **Kartan**
+  är samma sorts skärmbild ur Google Maps som de två andra – samma förbehåll om
+  tillstånd och samma sak med attributionsraden, som inte följde med i utsnittet.
+  Till skillnad från dem säger sidan ingenting om vädersträck, bara var saker
+  ligger i bilden, så bildens rotation behöver inte anges.
 - **Länkarna till årsredovisningen** – i menyn och på översiktssidan – pekar på
   PDF:en hos sjotungan.se. Sökvägen innehåller årtalet `2026`, så den måste
   bytas när nästa års handlingar publiceras. Den står på ett ställe i koden:

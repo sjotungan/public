@@ -9,8 +9,9 @@ IMG_*.MOV
 # originalet ska inte checkas in – i git ligger det kvar även efter en radering.
 IMG_*.PNG
 
-# Skärmbildsoriginalen till översiktskartorna, 6 MB styck. De beskurna
-# webbversionerna som sidorna använder ligger i assets/images/playground/karta.jpg
-# och assets/images/dogs/karta.jpg.
+# Skärmbildsoriginalen till översiktskartorna, 6–7 MB styck. De nedskalade
+# webbversionerna som sidorna använder ligger i assets/images/playground/karta.jpg,
+# assets/images/dogs/karta.jpg och assets/images/nature/karta.jpg.
 sjotungan-playgrounds.png
 sjotungan-dogpark.png
+brf_and_neighbourhood.png
