@@ -46,34 +46,31 @@ description: Bil, MC och moped i Brf Sjötungan: avgifter för bilplats och gara
 
   <section class="section section--alt" id="fees">
     <div class="container">
-      <!-- Att platserna hyrs ut till självkostnad är skälet till att de kostar
-           250 kronor och inte marknadspris, och det är den uppgiften som
-           förklarar prislistan under. Den står därför före avgifterna. -->
-      <div class="prose">
-        {{block:parkering:prose}}
-      </div>
+      {{block:parkeringsavgifter:section}}
 
-      <div class="mt-lg">
-        {{block:parkeringsavgifter:section}}
+      <div class="mt-md">
+        {{block:hyra-plats:text}}
       </div>
-
     </div>
   </section>
 
-  <!-- Hur man ställer sig i kö, tecknar laddavtal eller vad Parkit har för
-       telefonnummer är sådant man behöver när man redan bor här. För en
-       spekulant säger det ingenting om hur det är att bo här, och
-       parkeringsövervakning läses dessutom som en varning snarare än som en
-       upplysning. Blocken finns kvar och hör hemma på sjotungan.se. -->
   <section class="section" id="charging">
     <div class="container">
       <div class="split">
         <div class="prose">
           {{block:elbilsladdning:prose}}
+
+          {{block:laddkabel:subsection}}
+
+          {{block:laddavtal:subsection}}
         </div>
 
         <aside class="aside-card">
           {{block:gastparkering:subsection}}
+
+          <div class="mt-lg">
+            {{block:parkeringsovervakning:subsection}}
+          </div>
         </aside>
       </div>
     </div>
@@ -87,12 +84,17 @@ description: Bil, MC och moped i Brf Sjötungan: avgifter för bilplats och gara
     </div>
   </section>
 
-  <section class="section" id="area">
+  <section class="section" id="rules">
     <div class="container container--narrow">
       <div class="prose">
-        {{block:bilfria-gardar:prose}}
+        {{block:korning-i-omradet:prose}}
+
+        {{block:uppstallningstider:subsection}}
+
+        {{block:parkera-pa-sin-plats:subsection}}
 
         {{block:mopeder-och-mc:subsection}}
+
       </div>
     </div>
   </section>

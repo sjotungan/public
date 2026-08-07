@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Läget – BRF Sjötungan</title>
+<meta name="description" content="Brf Sjötungan ligger mellan Tyresö centrum och skogen i Bollmora. Karta över området, kommunikationer, förskola och skola i närområdet.">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f5c4a'/><path d='M22 52 50 28l28 24' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/><path d='M30 48v26h40V48' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/></svg>">
+</head>
+<body>
+<a class="skip-link" href="#main">Hoppa till innehållet</a>
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="brand" href="index.html">
+      <span class="brand__mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V21h14V9.6"/><path d="M9.5 21v-6h5v6"/></svg></span>
+      BRF Sjötungan
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>
+      Meny
+    </button>
+
+    <nav class="nav" id="site-nav" aria-label="Huvudmeny">
+      <ul class="nav__list">
+        <li><a href="index.html">Översikt</a></li>
+        <li><a href="laget.html" aria-current="page">Läget</a></li>
+        <li><a href="bilder.html">Bilder</a></li>
+        <li class="nav__has-sub">
+          <button class="nav__sub-button" type="button" aria-expanded="false">
+            För dig…
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <ul class="nav__sub">
+            <li><a href="family.html">med barn</a></li>
+            <li><a href="car.html">med bil eller MC</a></li>
+            <li><a href="bicycle.html">på cykel</a></li>
+            <li><a href="dogs.html">med hund</a></li>
+            <li><a href="fitness.html">som tränar</a></li>
+          </ul>
+        </li>
+        <li><a href="ekonomi.html">Ekonomi och underhåll</a></li>
+        <li><a href="fakta.html">Fakta</a></li>
+        <li><a href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf" target="_blank" rel="noopener">Årsredovisning 2025<span class="sr-only"> (öppnas i ny flik)</span></a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head__inner">
+      <h1>Läget</h1>
+      <p>
+        Området har butikerna, Stadsparken och bussarna i Tyresö centrum åt ena
+        hållet och skogen åt det andra: husen i söder gränsar till skogsmark, och
+        gårdarna fortsätter ut i den utan att någon gata ligger emellan. Det
+        märks på djuren – rådjur i skogsbrynet syns från fönstren.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="karta">
+    <div class="container">
+      <div class="section__head">
+        <h2>Området och närområdet</h2>
+        <p>
+          Föreningens mark markerad i gult på en satellitbild. Tyresö centrum
+          ligger uppe till vänster i bilden, skogen och grönstråket nedanför och
+          till höger.
+        </p>
+      </div>
+
+      <div class="gallery gallery--wide mt-md">
+        <figure>
+          <a href="assets/images/nature/karta.jpg">
+            <img src="assets/images/nature/karta.jpg" alt="Satellitbild över Bollmora med föreningens husrader markerade i ett gult fält mitt i bilden. Uppe till vänster ligger Tyresö centrum med butikskvarter och stora parkeringar, nedanför och till höger tar skog och öppna grönytor vid. Utsatta namn i bilden är Tyresöhallen, Fårdala skola, Förskola Pusslet och Frejs lekplats." loading="lazy" decoding="async" width="1600" height="901">
+          </a>
+          <figcaption>Husen ligger mellan centrum och skogen – kvartersstaden på ena sidan, grönytorna på den andra.</figcaption>
+        </figure>
+      </div>
+
+      <p class="credit">
+        Kartbilden är ett utsnitt ur Google Maps satellitvy och är Googles
+        material, inte föreningens.
+      </p>
+    </div>
+  </section>
+
+  <!-- Pendlingen är den vanligaste frågan från någon som väger adresser mot
+       varandra, och avsnittet står därför högt på sidan – direkt efter kartan.
+       Vad som är belagt och vad som ännu saknas står i blocket. -->
+  <section class="section section--alt" id="kommunikationer">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Till city på 33 minuter</h2>
+      </div>
+
+      <!-- Källor:
+
+           * SL:s reseplanerare, uppslagning 2026-08-07 för avgång 08:01 från Tyresö
+             centrum till Vattugatan (Stockholm):
+               08:01 → 08:34, 33 min, buss 813C mot Stockholm C, utan byte,
+                 två hållplatser på vägen (Silvervägen och Norra Sköndal),
+                 och "Sittplatser finns" på avgången
+               08:10 → 08:43, 33 min, 873 + 812C, ett byte
+               08:04 → 08:38, 35 min, 875 + spårvagn 17 till T-Centralen
+           * Direktbussarna går bara i pendlingstid på morgonen. Uppgift från boende.
+           * Restiden Gullmarsplan–Tyresö centrum, cirka 15 minuter: Tyresö kommun.
+           * Vattugatan ligger cirka 220 meter från T-Centralen, tre minuters promenad.
+
+           SKRIV INTE UT ETT LINJENUMMER SOM *DEN* DIREKTBUSSEN. En tidigare version
+           påstod att 812C gick direkt hela vägen på vardagar – 812C är i själva
+           verket andra sträckan i en resa med byte. 813C står här som den avgång
+           uppslagningen gällde, inte som den enda. C-linjerna varierar mellan turer.
+
+           TILLFÄLLIGT: SL noterar att linje 840 och 813C flyttats från hållplatsläge
+           E till Bollmoravägen norra under ombyggnaden av busstorget. Det står inte
+           på sidan – det är en byggplatsuppgift som är inaktuell om ett år.
+
+           EJ KONTROLLERAT: hemresan från city på eftermiddagen, samt vilka linjer som
+           stannar vid hållplatsen på Myggdalsvägen och gångavståndet dit. -->
+
+      <p>
+        På morgonen går direktbussar från Tyresö centrum in till city. Avgången 08:01
+        – buss 813C mot Stockholm C – är framme på Vattugatan 08:34: 33 minuter, utan
+        byte och med bara två hållplatser på vägen. Därifrån är det drygt två hundra
+        meter till T-Centralen, ungefär tre minuters promenad.
+      </p>
+
+      <p>
+        SL anger dessutom att det finns sittplatser på avgången. Man reser alltså in
+        till stan sittande, inte stående i en full tunnelbanevagn.
+        <a href="https://sl.se/?datetime=2026-08-07T08%3A01&amp;timeType=DEPARTURE&amp;destPlaceId=OTA5MTAwMTAwMDAwMTAwMw%3D%3D&amp;origPlaceId=OTA5MTAwMTAwMDAwODAwMA%3D%3D&amp;destName=Vattugatan+%28Stockholm%29&amp;origName=Tyres%C3%B6+centrum+%28Tyres%C3%B6%29&amp;transportTypes=%5B%22METRO%22%2C%22TRAIN%22%2C%22TRAM%22%2C%22SHIP%22%2C%22BUS%22%2C%22LOCALBUS%22%5D" target="_blank" rel="noopener">Visa
+        sökningen på sl.se<span class="sr-only"> (öppnas i ny flik)</span></a>.
+      </p>
+
+      <div class="facts">
+        <div class="facts__item">
+          <span class="facts__value">33 min</span>
+          <span class="facts__label">Till Vattugatan i city</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">0</span>
+          <span class="facts__label">Byten med morgonbussen</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">2</span>
+          <span class="facts__label">Hållplatser på vägen</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">15 min</span>
+          <span class="facts__label">Till Gullmarsplan</span>
+        </div>
+      </div>
+
+      <div class="gallery gallery--wide mt-lg">
+        <figure>
+          <a href="assets/images/transit/sl-813c.jpg">
+            <img src="assets/images/transit/sl-813c.jpg" alt="Skärmbild ur SL:s reseplanerare. Resan går 08:01 från Tyresö centrum till 08:34 vid Vattugatan och tar 33 minuter med buss 813C mot Stockholm C, utan byte. Vid avgången står Läge E och Sittplatser finns. Till höger visas en karta där bussens sträcka går från Tyresö via Norra Sköndal in mot centrala Stockholm." loading="lazy" decoding="async" width="1600" height="1097">
+          </a>
+          <figcaption>Morgonresan in till city, uppslagen i SL:s reseplanerare den 7 augusti 2026.</figcaption>
+        </figure>
+      </div>
+
+      <p class="credit">
+        Skärmbilden är hämtad ur SL:s reseplanerare på sl.se och är SL:s material,
+        inte föreningens. Kartan i bilden är © Lantmäteriet.
+      </p>
+
+      <p class="mt-lg">
+        Direktbussarna går i pendlingstid på morgonen. Övrig tid reser man via
+        Gullmarsplan, dit resan från Tyresö centrum tar cirka 15 minuter enligt Tyresö
+        kommun, och byter där till tunnelbanans gröna linje eller till tvärbanan. Den
+        resan tar drygt en halvtimme den vägen också. Nattetid går bussar direkt
+        mellan Tyresö och centrala Stockholm, och det finns förbindelser mot Nacka och
+        Haninge.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="bil">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Med bil in till stan</h2>
+      </div>
+
+      <!-- Källa: Google Maps, uppslagning 2026-08-07 med avfärd 07:59 från
+           Myggdalsplan 6 till T-Centralen:
+             via Tyresövägen/väg 229            typiskt 18–30 min, 18,3 km
+             via 229 + Nynäsvägen/väg 73        typiskt 20–35 min, 18,6 km
+             via 229, 73 och Söderledstunneln   typiskt 20–35 min, 18,9 km
+           Samma uppslagning anger 35 min med kollektivtrafik och 1 tim 5 min med
+           cykel till T-Centralen.
+
+           Sidan skriver Googles egna "typiskt"-intervall och inte den enskilda
+           dagens siffra. Uppslagningen gjordes en fredagmorgon i augusti, då
+           Stockholmstrafiken är lättare än normalt – intervallet bygger på historik
+           och håller därför bättre än dagsvärdet. Skriv inte om det till en enda
+           siffra.
+
+           Cykeltiden, 1 tim 5 min till T-Centralen, står medvetet ingenstans på
+           sajten. Det är ingen pendling någon flyttar hit för, och att redovisa den
+           vore att sälja in ett dåligt alternativ. Cykelsidan handlar om cykeln i
+           vardagen, inte om att ta sig till stan. -->
+
+      <p>
+        Från området till T-Centralen är det 18,3 kilometer. Google Maps anger typiskt
+        18–30 minuter i morgonrusningen, med Tyresövägen – väg 229 – hela vägen ut och
+        in på Nynäsvägen mot city.
+        <a href="https://maps.app.goo.gl/emE6FvcRiB8MFU826" target="_blank" rel="noopener">Visa rutten i Google Maps<span class="sr-only"> (öppnas i ny flik)</span></a>.
+      </p>
+
+      <div class="facts">
+        <div class="facts__item">
+          <span class="facts__value">18,3 km</span>
+          <span class="facts__label">Till T-Centralen</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">18–30 min</span>
+          <span class="facts__label">Med bil i rusningstid</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">33 min</span>
+          <span class="facts__label">Med morgonbussen</span>
+        </div>
+        <div class="facts__item">
+          <span class="facts__value">250 kr</span>
+          <span class="facts__label">Bilplats i månaden</span>
+        </div>
+      </div>
+
+      <div class="gallery gallery--wide mt-lg">
+        <figure>
+          <a href="assets/images/transit/bil-tcentralen.jpg">
+            <img src="assets/images/transit/bil-tcentralen.jpg" alt="Skärmbild ur Google Maps. Bilresan från Myggdalsplan 6 i Tyresö till T-Centralen i Stockholm är 18,3 kilometer och tar typiskt 18–30 minuter vid avfärd klockan 07:59. Kartan visar sträckan i blått från Bollmora i sydost, via Älta och väg 229, förbi Skarpnäck och norrut genom Söderort in till centrala Stockholm." loading="lazy" decoding="async" width="1600" height="1052">
+          </a>
+          <figcaption>Bilvägen in till T-Centralen, uppslagen i Google Maps den 7 augusti 2026.</figcaption>
+        </figure>
+      </div>
+
+      <p class="credit">
+        Kartbilden är en skärmbild ur Google Maps och är Googles material, inte
+        föreningens.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="tillganglighet">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Hiss och tillgänglighet</h2>
+      </div>
+
+      <!-- Vilka av de 24 husen som har hiss är inte belagt och står därför inte här.
+           Uppgiften är viktig för den som säljer villa och söker lägenhet, och bör
+           kompletteras – men som en färdig mening, inte som en lucka i texten. -->
+
+      <p>
+        Samtliga hissar i föreningen renoverades 2023. Nya entrépartier sattes in 2018
+        och byts igen enligt underhållsplanen 2027. Belysningen i trapphus och andra
+        allmänna utrymmen är sensorstyrd LED sedan 2021.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="naromradet">
+    <div class="container">
+      <div class="section__head">
+        <h2>I närområdet</h2>
+        <p>
+          Sådant som inte ägs av föreningen men som ligger inom gångavstånd och
+          påverkar vardagen lika mycket.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V21h14V9.6"/><path d="M9.5 21v-6h5v6"/></svg></span>
+          <h3>Förskolan Gunghästen</h3>
+          <p>
+            Förskolan ligger precis intill föreningen.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.4 3.5 6.6v13L9 17.4l6 2.2 5.5-2.2v-13L15 6.6z"/><path d="M9 4.4v13"/><path d="M15 6.6v13"/></svg></span>
+          <h3>Stadslekplatsen</h3>
+          <p>
+            Kommunens stora lekplats, också den ungefär fem minuters promenad
+            bort. <a href="https://maps.app.goo.gl/PXRe4N9Asi4kBAgWA" target="_blank" rel="noopener">Visa på
+            karta<span class="sr-only"> (öppnas i ny flik)</span></a>.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 3.5 12.8 8l4.5 1.8L12.8 11.6 11 16.1 9.2 11.6 4.7 9.8 9.2 8Z"/><path d="m18.2 14.6.9 2.3 2.3.9-2.3.9-.9 2.3-.9-2.3-2.3-.9 2.3-.9Z"/></svg></span>
+          <h3>Tyresö kulturskola</h3>
+          <p>
+            Musik, dans, teater, bild, cirkus och film för barn och unga mellan
+            5 och 19 år. Kulturskolan håller till i Kulturcentrum Kvarnhjulet
+            vid Tyresö centrum, ungefär fem minuters promenad bort. Se
+            <a href="https://www.tyreso.se/tyreso-kulturskola.html" target="_blank" rel="noopener">kommunens sida
+            om kulturskolan<span class="sr-only"> (öppnas i ny flik)</span></a>.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.4 3.5 6.6v13L9 17.4l6 2.2 5.5-2.2v-13L15 6.6z"/><path d="M9 4.4v13"/><path d="M15 6.6v13"/></svg></span>
+          <h3>Wättinge hundrastgård</h3>
+          <p>
+            Kommunens hundrastgård vid Wättinge gårdsväg, intill Dalhallen, ungefär en
+            kvarts promenad bort – ett alternativ till föreningens egen när man ändå är
+            ute och går.
+            <a href="https://maps.app.goo.gl/TLfqPwdh7QW2fTQf8" target="_blank" rel="noopener">Visa på karta<span class="sr-only"> (öppnas i ny flik)</span></a>.
+            Reglerna för kommunens rastgårdar står på
+            <a href="https://www.tyreso.se/uppleva--gora/natur-och-friluftsliv/hund-i-tyreso.html" target="_blank" rel="noopener">Hund i Tyresö<span class="sr-only"> (öppnas i ny flik)</span></a>.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 4.4 3.5 6.6v13L9 17.4l6 2.2 5.5-2.2v-13L15 6.6z"/><path d="M9 4.4v13"/><path d="M15 6.6v13"/></svg></span>
+          <h3>Tyresös cykelkarta</h3>
+          <p>
+            Kommunens digitala karta över hela cykelnätet, med service och
+            utflyktsmål längs vägen.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8.5 3.5 6 20.5"/><path d="m15.5 3.5 2.5 17"/><path d="M12 4.5v2.6"/><path d="M12 10.7v2.6"/><path d="M12 16.9v2.6"/></svg></span>
+          <h3>Cykelväg längs Myggdalsvägen</h3>
+          <p>
+            Myggdalsvägen, gatan som föreningen ligger vid, har cykelväg. Där
+            ansluter du till de övriga cykelvägarna i kommunen.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="djuren">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Rådjur utanför fönstret</h2>
+        <p>
+          Skogen börjar där gårdarna slutar, och djuren stannar inte vid gränsen.
+          Filmen är tagen från ett fönster i området.
+        </p>
+      </div>
+
+      <div class="video mt-md">
+        <video controls preload="none" playsinline
+               poster="assets/images/nature/video-poster.jpg"
+               width="540" height="960">
+          <source src="assets/video/wildlife.mp4" type="video/mp4">
+          Din webbläsare kan inte spela upp videon.
+        </video>
+      </div>
+      <p class="video-note">40 sekunder, utan ljud.</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="container site-footer__inner">
+    <p class="site-footer__note">
+      <a href="https://www.sjotungan.se" target="_blank" rel="noopener">sjotungan.se<span class="sr-only"> (öppnas i ny flik)</span></a> är föreningens officiella webbplats.
+      Den här sidan är inte officiell utan är skapad och underhålls av aktiva
+      medlemmar i föreningen.
+    </p>
+    <p class="site-footer__note">
+      Innehållet är sammanställt efter bästa förmåga, men kan innehålla fel och
+      hinner bli inaktuellt. Vi tar inget ansvar för felaktiga uppgifter – det
+      som formellt gäller står i föreningens stadgar och årsredovisning och på
+      den officiella webbplatsen.
+    </p>
+  </div>
+</footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>

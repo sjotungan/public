@@ -1,0 +1,90 @@
+<!--
+title: För dig med hund
+description: Vad som gäller för hundägare i Brf Sjötungan: kopplingstvång i hela området, plocka upp efter hunden och hundrastgården vid idrottsplatsen.
+-->
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head__inner">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Översikt</a></li>
+        <li>För dig med hund</li>
+      </ol>
+      <h1>För dig med hund</h1>
+      <p>
+        Hundar hör hemma i Sjötungan. Två regler gäller i hela området, och de
+        är enkla: hunden ska vara kopplad, och du plockar upp efter den.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="grid grid--2">
+
+        {{block:kopplingstvang}}
+        {{block:plocka-upp}}
+        {{block:hundrastgarden}}
+        {{block:katter}}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="hundrastgarden">
+    <div class="container">
+      {{block:hundrastgarden-bilder:section}}
+    </div>
+  </section>
+
+  <section class="section" id="karta">
+    <div class="container">
+      {{block:hundrastgarden-karta:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt" id="naromradet">
+    <div class="container">
+      <h2>I närområdet</h2>
+      <p class="lead">
+        Föreningens rastgård är inte den enda inom räckhåll – kommunen har en
+        till på gångavstånd.
+      </p>
+
+      <div class="grid grid--2 mt-lg">
+
+        {{block:wattinge-hundrastgard}}
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="gruppen">
+    <div class="container">
+      {{block:hundgruppen:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container container--narrow">
+      <div class="prose">
+        {{block:varfor-reglerna:prose}}
+
+        <div class="callout">
+          {{icon:info}}
+          <p>
+            <strong>Något som inte fungerar?</strong>
+            Prata i första hand med grannen. Kvarstår problemet hör du av dig
+            till styrelsen på
+            <a href="mailto:info@sjotungan.se">info@sjotungan.se</a>. Frågor om
+            djurhållning i övrigt hanteras av Tyresö kommun.
+          </p>
+        </div>
+
+        {{block:mer-information:prose}}
+      </div>
+    </div>
+  </section>
+
+</main>

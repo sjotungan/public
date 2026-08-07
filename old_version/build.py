@@ -34,38 +34,15 @@ ANNUAL_REPORT_PDF = (
 
 # Menyn. "children" ger en undermeny; "external" länkar utanför sajten.
 #
-# Menyn är byggd för två besök, inte för två målgrupper. Det är samma person
-# båda gångerna:
-#
-# 1. Första besöket – en spekulant som tittar på många lägenheter, kommer från
-#    mäklarens länk, läser tre minuter i mobilen och scrollar. Det besöket rör
-#    aldrig menyn. Hela argumentet ligger på index.html i fallande ordning
-#    efter hur mycket det påverkar ett köpbeslut.
-# 2. Andra besöket – samma person med två, tre lägenheter kvar på listan, som
-#    ska försvara några miljoner kronor. Nu är läsaren skeptisk och letar efter
-#    det som är fel. Det besöket *navigerar*: man kommer tillbaka för en
-#    bestämd fråga.
-#
-# Menyn följer ändå samma ordning som översikten: det som lockar först, det som
-# ska kontrolleras sist. Ekonomi och underhåll låg tidigare direkt efter
-# Översikt, med motiveringen att det andra besöket letar efter den. Det var fel
-# av två skäl. Menyn syns för *båda* besöken, och en meny som inleds med
-# "Ekonomi och underhåll" säger en förstagångsbesökare att sajten handlar om
-# föreningens siffror – vilket den inte gör. Och den som återvänder för just
-# ekonomin letar aktivt och hittar posten var den än står.
-#
-# Ekonomi och Fakta står bredvid varandra i slutet, före årsredovisningen: de
-# tre hör ihop som det man kontrollerar med, och den som är i det ärendet vill
-# ha dem samlade.
-#
-# Undermenyn "För dig…" är indelad efter vem läsaren är, inte efter vilka
-# anläggningar som finns. Den är inte till för att besökaren ska välja profil –
-# den sorteringen gör mäklaren, som har träffat köparen och länkar direkt till
-# rätt sida. Etiketterna läses ihop med föräldern: "För dig" + "med barn".
+# Undermenyn är indelad efter vem läsaren är, inte efter vilka anläggningar som
+# finns. Etiketterna är skrivna för att läsas ihop med föräldern: "För dig" +
+# "med barn". En anläggning kan därför dyka upp på flera sidor – lekplatsen hör
+# till barnsidan, gymmet till träningssidan – och en sida som inte har någon
+# läsare att peka ut hör inte hemma i menyn alls.
 NAV = [
     {"href": "index.html", "label": "Översikt"},
-    {"href": "laget.html", "label": "Läget"},
     {"href": "bilder.html", "label": "Bilder"},
+    {"href": ANNUAL_REPORT_PDF, "label": "Årsredovisning 2025", "external": True},
     {
         # Ingen "href": posten är enbart en meny som fälls ut vid klick.
         "label": "För dig…",
@@ -75,11 +52,9 @@ NAV = [
             {"href": "bicycle.html", "label": "på cykel"},
             {"href": "dogs.html", "label": "med hund"},
             {"href": "fitness.html", "label": "som tränar"},
+            {"href": "nature.html", "label": "i naturen"},
         ],
     },
-    {"href": "ekonomi.html", "label": "Ekonomi och underhåll"},
-    {"href": "fakta.html", "label": "Fakta"},
-    {"href": ANNUAL_REPORT_PDF, "label": "Årsredovisning 2025", "external": True},
 ]
 
 # Ikoner används i sidfragmenten som {{icon:namn}}.
@@ -112,14 +87,6 @@ ICONS = {
     "leaf": '<path d="M20 4.2c-9.2 0-15.2 3.6-15.2 10.1a4.9 4.9 0 0 0 4.9 4.9c6.5 0 10.3-6 10.3-15Z"/><path d="M4.5 19.8C7 15.3 11 11.8 15.4 9.8"/>',
     "flame": '<path d="M12 3.2c1.1 3.3 3 4.9 4.3 6.5a6.5 6.5 0 0 1 1.7 4.2 6 6 0 0 1-12 0c0-2 .8-3.7 2-5.1.3 1.3.9 2.1 1.7 2.6C10 8.6 10.9 5.9 12 3.2Z"/>',
     "chat": '<path d="M20.5 12.2c0 3.9-3.8 7.1-8.5 7.1-1 0-2-.15-2.9-.4L4 20.5l1.7-3.9a6.8 6.8 0 0 1-2.2-4.4C3.5 8.3 7.3 5.1 12 5.1s8.5 3.2 8.5 7.1Z"/>',
-    "chart": '<path d="M4 20V4"/><path d="M4 20h16"/><path d="M8 20v-5.5"/><path d="M12.7 20V9.5"/><path d="M17.3 20v-8"/>',
-    "coin": '<ellipse cx="12" cy="6.6" rx="7.5" ry="3.1"/><path d="M4.5 6.6v10.8c0 1.7 3.4 3.1 7.5 3.1s7.5-1.4 7.5-3.1V6.6"/><path d="M4.5 12c0 1.7 3.4 3.1 7.5 3.1s7.5-1.4 7.5-3.1"/>',
-    "wrench": '<path d="M15.2 7.4a3.9 3.9 0 0 1 5.1-5.1l-2.9 2.9.6 2.4 2.4.6 2.9-2.9a3.9 3.9 0 0 1-5.1 5.1" transform="translate(-2.2 .6)"/><path d="M14.1 9.9 4.6 19.4a2 2 0 0 0 2.8 2.8l9.5-9.5"/>',
-    "lift": '<rect x="5" y="3" width="14" height="18" rx="2"/><path d="M12 3v18"/><path d="m8.6 9.6 1.4-1.8 1.4 1.8"/><path d="m14.6 14.4 1.4 1.8 1.4-1.8" transform="translate(-1.5)"/>',
-    "shield": '<path d="M12 3.2 5 6v5.6c0 4.2 2.8 7.6 7 9.2 4.2-1.6 7-5 7-9.2V6Z"/><path d="m9 12.2 2.1 2.1L15 10.5"/>',
-    "wifi": '<path d="M2.8 9.1a14 14 0 0 1 18.4 0"/><path d="M6 12.4a9.2 9.2 0 0 1 12 0"/><path d="M9.2 15.7a4.5 4.5 0 0 1 5.6 0"/><path d="M12 19.2h.01"/>',
-    "bus": '<rect x="4" y="4" width="16" height="12.5" rx="2.2"/><path d="M4 10.5h16"/><path d="M7.5 13.6h.01"/><path d="M16.5 13.6h.01"/><path d="M7 16.5v2.3"/><path d="M17 16.5v2.3"/>',
-    "pin": '<path d="M12 21c4-4.4 6-7.6 6-10.3A6 6 0 0 0 6 10.7C6 13.4 8 16.6 12 21Z"/><circle cx="12" cy="10.6" r="2.3"/>',
 }
 
 FAVICON = (
@@ -143,40 +110,6 @@ def icon(name, width="1.8", extra=' aria-hidden="true"'):
 def expand_icons(html):
     return re.sub(r"\{\{icon:([a-z0-9]+)\}\}",
                   lambda m: icon(m.group(1)), html)
-
-
-# Länkar ut från sajten öppnas i en ny flik. Sajten finns för att någon ska
-# stanna kvar och läsa färdigt, och en spekulant som klickar på kartan eller på
-# årsredovisningen ska inte behöva hitta tillbaka.
-#
-# Tre saker följer med automatiskt, och därför sker det här och inte för hand i
-# ett femtiotal block:
-#
-#   target="_blank"   öppnar i ny flik
-#   rel="noopener"    hindrar den öppnade sidan från att komma åt window.opener
-#                     och styra om vår flik – annars en känd fiskemetod
-#   "(öppnas i ny flik)"  läses upp av skärmläsare men syns inte. Utan den vet
-#                     den som inte ser skärmen inte varför bakåtknappen slutade
-#                     fungera; WCAG förutsätter att det framgår i förväg.
-#
-# mailto: rörs inte – de öppnar e-postklienten, inte en flik. Relativa länkar
-# inom sajten rörs inte heller, och därför inte bildernas länkar till
-# originalfilerna: de öppnas i samma flik och stängs med bakåtknappen.
-EXTERNAL_LINK_RE = re.compile(
-    r'<a\s+([^>]*href="https?://[^"]*"[^>]*)>(.*?)</a>', re.S)
-
-NEW_TAB_NOTE = '<span class="sr-only"> (öppnas i ny flik)</span>'
-
-
-def open_external_in_new_tab(html):
-    def rewrite(m):
-        attrs, inner = m.group(1), m.group(2)
-        if "target=" in attrs:
-            return m.group(0)
-        return '<a %s target="_blank" rel="noopener">%s%s</a>' % (
-            attrs, inner, NEW_TAB_NOTE)
-
-    return EXTERNAL_LINK_RE.sub(rewrite, html)
 
 
 def read_fragment(path):
@@ -410,7 +343,7 @@ def render_nav(current):
 def render(meta, content, current):
     title = meta.get("title", SITE_NAME)
     description = meta.get("description", "")
-    page = """<!DOCTYPE html>
+    return """<!DOCTYPE html>
 <html lang="sv">
 <head>
 <meta charset="utf-8">
@@ -452,12 +385,6 @@ def render(meta, content, current):
       Den här sidan är inte officiell utan är skapad och underhålls av aktiva
       medlemmar i föreningen.
     </p>
-    <p class="site-footer__note">
-      Innehållet är sammanställt efter bästa förmåga, men kan innehålla fel och
-      hinner bli inaktuellt. Vi tar inget ansvar för felaktiga uppgifter – det
-      som formellt gäller står i föreningens stadgar och årsredovisning och på
-      den officiella webbplatsen.
-    </p>
   </div>
 </footer>
 
@@ -475,9 +402,6 @@ def render(meta, content, current):
         content=expand_icons(content),
         official=OFFICIAL_SITE,
     )
-    # Sist av allt, på hela dokumentet: då täcks även årsredovisningen i menyn
-    # och länken till sjotungan.se i sidfoten, inte bara sidornas eget innehåll.
-    return open_external_in_new_tab(page)
 
 
 def page_order(names):

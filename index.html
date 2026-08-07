@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Översikt – BRF Sjötungan</title>
-<meta name="description" content="HSB Brf Sjötungan i Tyresö: 604 lägenheter vid Myggdalsvägen i Bollmora, på 116 000 kvm mark. Välskött område, bilplats från 250 kr i månaden och nya grillplatser.">
+<meta name="description" content="HSB Brf Sjötungan i Tyresö: 604 lägenheter vid Myggdalsvägen i Bollmora. Äkta förening som äger marken, värme, vatten och bredband i avgiften, bilplats från 250 kr i månaden.">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f5c4a'/><path d='M22 52 50 28l28 24' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/><path d='M30 48v26h40V48' fill='none' stroke='white' stroke-width='8' stroke-linecap='round' stroke-linejoin='round'/></svg>">
 </head>
@@ -26,8 +26,8 @@
     <nav class="nav" id="site-nav" aria-label="Huvudmeny">
       <ul class="nav__list">
         <li><a href="index.html" aria-current="page">Översikt</a></li>
+        <li><a href="laget.html">Läget</a></li>
         <li><a href="bilder.html">Bilder</a></li>
-        <li><a href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf">Årsredovisning 2025</a></li>
         <li class="nav__has-sub">
           <button class="nav__sub-button" type="button" aria-expanded="false">
             För dig…
@@ -39,9 +39,11 @@
             <li><a href="bicycle.html">på cykel</a></li>
             <li><a href="dogs.html">med hund</a></li>
             <li><a href="fitness.html">som tränar</a></li>
-            <li><a href="nature.html">i naturen</a></li>
           </ul>
         </li>
+        <li><a href="ekonomi.html">Ekonomi och underhåll</a></li>
+        <li><a href="fakta.html">Fakta</a></li>
+        <li><a href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf" target="_blank" rel="noopener">Årsredovisning 2025<span class="sr-only"> (öppnas i ny flik)</span></a></li>
       </ul>
     </nav>
   </div>
@@ -49,15 +51,19 @@
 
 <main id="main">
 
-  <section class="hero">
+  <section class="hero hero--photo">
+    <div class="hero__media">
+      <img src="assets/images/courtyards/img_2666.jpg" alt="Bred asfalterad gångväg mellan husen. Till vänster en rabatt med perenner och vitblommande buskar framför ett trevåningshus i beige, till höger ett höghus i gult och laxrosa med inglasade balkonger och en rad klippta buskar längs fasaden." fetchpriority="high" decoding="async">
+    </div>
     <div class="container hero__inner">
       <span class="eyebrow">HSB-förening i Tyresö sedan 1965</span>
       <h1>BRF Sjötungan</h1>
       <p class="hero__lead">
         604 lägenheter i sjutton låghus och sju höghus vid Myggdalsvägen i
-        Bollmora.
+        Bollmora, på 116 000 kvadratmeter egen mark.
       </p>
     </div>
+    <p class="hero__credit">Gångvägarna mellan husen, sommaren 2025.</p>
   </section>
 
   <section class="section section--tight">
@@ -66,7 +72,7 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11.5V16"/><path d="M12 8h.01"/></svg>
         <span>
           Det här är ingen officiell sida. Föreningens officiella webbplats är
-          <a href="https://www.sjotungan.se">sjotungan.se</a>, som styrelsen
+          <a href="https://www.sjotungan.se" target="_blank" rel="noopener">sjotungan.se<span class="sr-only"> (öppnas i ny flik)</span></a>, som styrelsen
           ansvarar för. Den här sidan är skapad och underhålls av aktiva
           medlemmar i föreningen.
         </span>
@@ -74,6 +80,8 @@
     </div>
   </section>
 
+  <!-- Siffrorna först. De gäller alla som läser, oavsett vem de är, och de är
+       det snabbaste sättet att avgöra om föreningen är värd tio minuter till. -->
   <section class="section">
     <div class="container">
       <div class="facts">
@@ -90,16 +98,41 @@
           <span class="facts__label">Året husen stod färdiga</span>
         </div>
         <div class="facts__item">
+          <span class="facts__value">Äkta</span>
+          <span class="facts__label">Förening, äger marken</span>
+        </div>
+        <div class="facts__item">
           <span class="facts__value">116 000</span>
           <span class="facts__label">Kvm markyta</span>
         </div>
+        <!-- Sex uppgifter och inte fem: med ett udda antal blir den sista cellen
+             tom i tvåkolumnsläget på mobil, och tomrummet syns som en grå ruta.
+
+             Marken per lägenhet står här i stället för medlemsantalet. 116 000
+             kvm är abstrakt; 192 kvm per lägenhet är drygt dubbla bostadsytan
+             och går att föreställa sig. Antalet medlemmar säger en spekulant
+             ingenting och finns kvar på fakta.html. -->
         <div class="facts__item">
-          <span class="facts__value">809</span>
-          <span class="facts__label">Medlemmar vid årets slut</span>
+          <span class="facts__value">192</span>
+          <span class="facts__label">Kvm mark per lägenhet</span>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- Ordningen på översikten följer vad som faktiskt lockar, inte vad som är
+       viktigast att kontrollera.
+
+       Ekonomin låg tidigare här, näst högst upp. Det var fel prioritering:
+       nyckeltalen är normala snarare än anmärkningsvärda – skuldsättningen är
+       medelmåttig, soliditeten måttlig och avgiften har stigit 30 procent på
+       tre år. Sådana tal får ingen att välja Sjötungan; de gör bara att inget
+       diskvalificerar föreningen. Ekonomin är alltså ett hygienkrav, inte ett
+       säljargument, och den ligger därför sist på sidan som avslutande
+       lugnande besked, och sist i menyn av samma skäl.
+
+       Det som faktiskt skiljer föreningen från andra är ytan, skötseln och
+       allt det gemensamma. Det står först. -->
 
   <section class="section section--alt" id="area">
     <div class="container">
@@ -107,8 +140,8 @@
         <h2>Ett område som sköts om</h2>
         <p>
           De 24 husen står på 116 000 kvadratmeter mark, och det mesta av den är
-          gård. Bilkörning inne i området är inte tillåten, så ytorna mellan
-          husen är till för dem som bor här.
+          gård. Det går inga gator mellan husen, så ytorna däremellan är till för
+          dem som bor här. Innergårdarna byggdes om 2021–2023.
         </p>
       </div>
 
@@ -120,22 +153,10 @@
           <figcaption>Gårdarna ligger mellan husen, utan genomfartstrafik.</figcaption>
         </figure>
         <figure>
-          <a href="assets/images/playground/m62/img_2583.jpg">
-            <img src="assets/images/playground/m62/img_2583.jpg" alt="Lekplats på grusytan mellan höghusen, med ett lektorn med tak och rutschkana i förgrunden och balansbana och gungställning längre bort." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Lekplatserna ligger på gårdarna, en av dem mellan höghusen vid Myggdalsvägen 62.</figcaption>
-        </figure>
-        <figure>
           <a href="assets/images/courtyards/img_2573.jpg">
             <img src="assets/images/courtyards/img_2573.jpg" alt="Äppelträd fullt med gröna äpplen på en gräsmatta, med nedfallna äpplen i gräset under och ett bänkbord vid en hög häck intill. Bakom träden skymtar ett höghus med balkonger." loading="lazy" decoding="async">
           </a>
           <figcaption>Fruktträd och klippta gräsytor hör till gårdarna.</figcaption>
-        </figure>
-        <figure>
-          <a href="assets/images/courtyards/img_2666.jpg">
-            <img src="assets/images/courtyards/img_2666.jpg" alt="Bred asfalterad gångväg mellan husen. Till vänster en rabatt med perenner och vitblommande buskar framför ett trevåningshus i beige, till höger ett höghus i gult och laxrosa med inglasade balkonger och en rad klippta buskar längs fasaden." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Gångvägarna mellan husen kantas av planterade rabatter.</figcaption>
         </figure>
         <figure>
           <a href="assets/images/courtyards/img_2665.jpg">
@@ -143,302 +164,225 @@
           </a>
           <figcaption>Perenner och prydnadsgräs i en av rabatterna vid höghusen.</figcaption>
         </figure>
-        <figure>
-          <a href="assets/images/courtyards/img_2639.jpg">
-            <img src="assets/images/courtyards/img_2639.jpg" alt="Träd och en rabatt med funkia vid en stor sten i förgrunden, intill en öppen asfalterad yta mellan husen. Till höger ett trevåningshus i beige med klippta buskar längs fasaden, i fonden ett höghus i tegelrött och vitt." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Även ytorna närmast husen är planterade.</figcaption>
-        </figure>
       </div>
-
     </div>
   </section>
 
-  <section class="section" id="parking">
+  <!-- Registret över vad som ingår ligger högt och inte som en fotnot längst ned.
+       Varken spekulanten eller mäklaren vet på förhand att föreningen har ett
+       gym för 50 kronor i månaden, en bastu eller en borrmaskin att låna – det
+       står inte i annonsen och går inte att läsa sig till någon annanstans. Det
+       är sajtens tydligaste skäl att finnas. -->
+  <section class="section" id="included">
     <div class="container">
-      <div class="split">
-        <div class="prose">
-          <h2>Parkering till självkostnad</h2>
-          <p>
-            En bilplats kostar 250 kronor i månaden och en garageplats 500
-            kronor, samma avgift för alla. Föreningen har 287 parkeringsplatser
-            och 285 garage till 604 lägenheter, och priserna är satta för att
-            täcka kostnaderna, inte för att gå med vinst.
-          </p>
-          <p>
-            <a href="car.html">Avgifter, laddplatser och gästparkering <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
-          </p>
+      <div class="section__head">
+        <h2>Det här ingår i boendet</h2>
+      </div>
+
+      <!-- Grupperna står i fallande ordning efter hur ovanliga de är, inte efter hur
+           de hör ihop logiskt.
+
+           "Ingår i avgiften" låg först och var fel öppning: värme och vatten ingår i
+           så gott som varje svensk bostadsrättsförening, och att inleda med dem
+           bjuder in läsaren att tänka "än sen?" precis där listan ska imponera. De
+           står kvar sist, för fullständighetens skull och för mäklaren som behöver
+           kryssa av dem – men de leder inte.
+
+           Först står det som en spekulant faktiskt inte hittar någon annanstans: ett
+           gym för 50 kronor i månaden, en bastu, en föreningslokal utan kostnad och
+           en borrmaskin att låna. -->
+
+      <p>
+        Mycket av det föreningen har står varken i annonsen eller i årsredovisningen,
+        och en mäklare kan inte gärna nämna det som ingen berättat om. Här är allt
+        samlat på ett ställe.
+      </p>
+
+      <div class="perks">
+
+        <div class="perks__group">
+          <h3>Träning och bad</h3>
+          <ul>
+            <li><strong>Gym</strong> – eget, inne i området, 50 kr i månaden</li>
+            <li><strong>Bastu</strong> – med duschrum och relaxrum i M90</li>
+            <li><strong>Utegym</strong> – redskap på gräsmattan intill husen</li>
+            <li><strong>Boulebana</strong> – grusbana med bänkbord intill</li>
+            <li><strong>Fotbollsplan</strong> – egen plan vid idrottsplatsen</li>
+            <li><strong>Isbana</strong> – grannar spolar is på planen vintertid</li>
+          </ul>
         </div>
 
-        <aside class="aside-card">
+        <div class="perks__group">
+          <h3>Att låna och boka</h3>
           <ul>
-            <li><strong>Bilplats</strong> – 250 kr/mån</li>
-            <li><strong>Garageplats</strong> – 500 kr/mån</li>
-            <li><strong>MC-garage</strong> – 150 kr/mån</li>
-            <li><strong>Laddplats</strong> – 445 kr/mån utöver garageavgiften, 34 platser i Garage B</li>
+            <li><strong>Borrmaskin</strong> – lånas ut en vecka i taget</li>
+            <li><strong>Föreningslokal</strong> – bokas utan kostnad, för kalas och fest</li>
+            <li><strong>Tvättstugor</strong> – sex stycken, varav en grovtvättstuga</li>
+            <li><strong>Paketbox</strong> – Postnord, inne i området</li>
           </ul>
-        </aside>
+        </div>
+
+        <div class="perks__group">
+          <h3>Ute i området</h3>
+          <ul>
+            <li><strong>Elva grillplatser</strong> – nybyggda, utspridda över området</li>
+            <li><strong>Fyra lekplatser</strong> – på bilfria gårdar</li>
+            <li><strong>Hundrastgård</strong> – egen och inhägnad, vid idrottsplatsen</li>
+            <li><strong>Bilfria gårdar</strong> – inga gator mellan husen</li>
+            <li><strong>Nya innergårdar</strong> – ombyggda 2021–2023</li>
+          </ul>
+        </div>
+
+        <div class="perks__group">
+          <h3>Bil och parkering</h3>
+          <ul>
+            <li><strong>287 p-platser</strong> – självkostnad, från 250 kr i månaden</li>
+            <li><strong>285 garageplatser</strong> – 500 kr i månaden, renoverade 2016–2019</li>
+            <li><strong>Elbilsladdning</strong> – laddboxar i Garage B sedan 2023</li>
+            <li><strong>MC-garage</strong> – 150 kr i månaden</li>
+            <li><strong>Gästparkering</strong> – för besökare</li>
+          </ul>
+        </div>
+
+        <div class="perks__group">
+          <h3>Förvaring</h3>
+          <ul>
+            <li><strong>Cykelrum</strong> – inomhus i husen, plus cykelställ vid porten</li>
+            <li><strong>Cykelförråd</strong> – långtidsförvaring i M10</li>
+            <li><strong>Barnvagnsrum</strong> – på nedre botten i de flesta trapphus</li>
+            <li><strong>Däckförvaring</strong> – säsongsförvaring i C-garaget</li>
+          </ul>
+        </div>
+
+        <div class="perks__group">
+          <h3>Ingår i avgiften</h3>
+          <ul>
+            <li><strong>Bredband och TV</strong> – fibern uppgraderad 2021</li>
+            <li><strong>Bostadsrättstillägg</strong> – ingår i föreningens försäkring</li>
+            <li><strong>Värme och vatten</strong> – ingen separat räkning</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="grill">
+  <!-- Tesen står direkt efter listan, som förklaring till den: allt det där
+       finns för att 604 hushåll delar på kostnaden. Den meningen gör dessutom
+       avgiften begriplig, vilket ingen siffra i ekonomiavsnittet klarar. -->
+  <section class="section section--alt" id="size">
     <div class="container container--narrow">
       <div class="prose">
-        <h2>Nya grillplatser</h2>
+        <h2>Därför finns det så mycket här</h2>
+        <!-- Sajtens egentliga tes, och den enda meningen som förklarar allt det andra.
+             Skriv inte om den till en sida om "föreningens organisation" – det här är
+             ett säljargument, inte en beskrivning. -->
+
         <p>
-          Föreningen har rustat upp grillplatserna på de gemensamma ytorna
-          mellan husen. De är till för alla som bor här.
+          Nästan allt på listan ovan finns för att föreningen är stor. Ett gym, en
+          bastu, en föreningslokal, sex tvättstugor, elva grillplatser och en borrmaskin
+          att låna kostar nästan ingenting per hushåll när 604 lägenheter delar på dem.
+          I en förening med fyrtio lägenheter går de inte att ha alls.
+        </p>
+
+        <p>
+          Samma sak gäller marken. De 116 000 kvadratmeterna motsvarar 192 kvadratmeter
+          per lägenhet – drygt dubbla bostadsytan – och där ryms lekplatser, fotbollsplan,
+          hundrastgård, boulebana och gårdar utan en enda gata emellan. Parkeringen hyrs
+          ut till självkostnad, och det finns nästan en plats per lägenhet.
+        </p>
+
+        <p>
+          Det förklarar också vad årsavgiften innehåller. Värme, vatten, bredband och TV
+          ingår, liksom bostadsrättstillägget i försäkringen, och ovanpå det driften av
+          allt det gemensamma. Avgiften ska jämföras mot vad den täcker, inte mot en
+          förening där det mesta av det här tillkommer separat.
+        </p>
+
+        <p>
+          Till det hör att föreningen äger marken. Det finns ingen tomträttsavgäld som
+          kan skrivas upp vid nästa omförhandling – en post som annars kan flytta
+          avgiften rejält i föreningar som arrenderar sin mark av kommunen.
         </p>
       </div>
-
-      <div class="mt-lg">
-        <h3>Var grillplatserna ligger</h3>
-        <p>
-          De tio grillplatserna markerade i gult på en satellitbild över området. De
-          ligger utspridda över gårdarna, från Myggdalsvägen 16 i väster till 108 och
-          114 i söder. De två markeringarna som ligger tätt ihop är platserna vid 100
-          och 102 – de ligger några steg från varandra. Observera att norr inte är
-          rakt uppåt i bilden utan snett upp åt vänster.
-        </p>
-
-        <div class="gallery gallery--wide mt-md">
-          <figure>
-            <a href="assets/images/grill/karta.jpg">
-              <img src="assets/images/grill/karta.jpg" alt="Satellitbild över föreningens gårdar med husen i rader och grönytor emellan. Tio gula fält markerar grillplatserna: fyra i den västra halvan, ett par i mitten, två tätt ihop uppe till höger och tre i den södra delen. Förskolan Gunghästen syns i nederkanten." loading="lazy" decoding="async" width="1600" height="603">
-            </a>
-            <figcaption>Grillplatserna ligger på var sin gård, med en tätare grupp i den östra delen av området.</figcaption>
-          </figure>
-        </div>
-
-        <p class="credit">
-          Kartbilden är ett utsnitt ur Google Maps satellitvy och är Googles
-          material, inte föreningens.
-        </p>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 16</h3>
-        <p>
-          Grillplatsen ligger på en stensatt yta mitt på gården, med en rund grill
-          på fot, bänkar och ett bänkbord åt ena hållet och en pergola med bänkar
-          under åt det andra. En stor gammal en står bakom, och en lekplats ligger
-          en bit bort på samma gård.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.243267,18.233162">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2602.jpg">
-              <img src="assets/images/grill/img_2602.jpg" alt="Stensatt gårdsyta med en rund grill på fot i mitten, en bänk och ett bänkbord till vänster och en pergola i svart metall med bänkar under till höger. Bakom står en stor gammal en, och längre bort syns en lekplats och husen med sina balkonger." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Grillen står fritt på stensättningen, med sittplatser åt båda hållen – i sol vid bänkbordet och i skugga under pergolan.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 26</h3>
-        <p>
-          Grillplatsen ligger på en stensatt yta vid gångvägen, med en rund grill på
-          fot av samma modell som vid nummer 16, en bänk och ett bänkbord intill.
-          Över den större delen av ytan står en pergola med kraftiga bjälkar och
-          bänkar under, och en klätterväxt i en cortenlåda är satt att växa upp i
-          den.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.242695,18.232795">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2603.jpg">
-              <img src="assets/images/grill/img_2603.jpg" alt="Stensatt yta mellan husen med en stor mörk pergola med kraftiga bjälkar och bänkar under. Till vänster står en rund grill på fot, en bänk och ett bänkbord, och vid en av pergolans stolpar en cortenlåda med en klätterväxt. Bakom ligger en gräsmatta, ett ungt träd och ett gult lamellhus; till vänster ett höghus med inglasade balkonger." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Pergolan täcker större delen av ytan och ger skugga över bänkarna, med grillen och bänkbordet strax intill.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 40</h3>
-        <p>
-          Grillplatsen ligger på gräsmattan, med en murad grill av kullersten mitt på
-          en rund stensättning av smågatsten – inte en stålgrill på fot som vid nummer
-          16 och 26. Runt omkring står två bänkbord och en bänk, och ett rödmålat
-          spaljéstaket med låga buskar framför skärmar av mot gången. Utanför staketet
-          tar höga träd vid.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.242446,18.233441">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2604.jpg">
-              <img src="assets/images/grill/img_2604.jpg" alt="Gräsmatta med en murad grillplats av kullersten mitt på en rund stensättning, två bänkbord och en bänk runt omkring, och ett rödmålat spaljéstaket med låga buskar framför. Bakom staketet står ett tvåvånings bostadshus i beige och gult." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Den murade grillen står mitt på stensättningen, med bänkbord på var sin sida.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/grill/img_2605.jpg">
-              <img src="assets/images/grill/img_2605.jpg" alt="Samma grillplats sedd åt andra hållet: den murade grillen till vänster med ett bänkbord intill och ett bänkbord i förgrunden till höger, spaljéstaketet längs hela bakkanten och höga lövträd och tallar utanför." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Åt andra hållet ligger ytan mot träden, med spaljéstaketet som gräns.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 46</h3>
-        <p>
-          Grillplatsen ligger på den stensatta ytan mellan husen, under en pergola som
-          täcker hela sittplatsen: ett bänkbord och två bänkar med ryggstöd i skuggan
-          under taket, och en rund grill på fot i andra änden. Ytterligare ett bänkbord
-          står strax bortom pergolan, och rabatter med buskar ramar in ytan på båda
-          sidor.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.242583,18.234425">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2606.jpg">
-              <img src="assets/images/grill/img_2606.jpg" alt="Stensatt gång mellan husen med en pergola i mörkgrått trä över hela ytan. Under taket står ett bänkbord och två bänkar med ryggstöd, och längre bort en rund grill på fot och ännu ett bänkbord. På båda sidor växer buskar, till höger blommande vita buskar, och bakom syns ett rött tegelhus med balkonger och ljusa putsade hus." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Pergolan står över hela sittplatsen, med grillen i andra änden av den stensatta ytan.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 68</h3>
-        <p>
-          Grillplatsen ligger på en stensatt yta i skogsbrynet, med två bord och
-          bänkar med ryggstöd runt omkring, en del i sol och en del i skuggan under
-          träden. Grillarna står lösa i kanten mot staketet – en svart kolgrill och en
-          mindre klotgrill – i stället för att vara murade eller fast monterade som på
-          de andra gårdarna. Bakom staketet tar berghällen och tallskogen vid, och
-          klätterväxter växer upp längs ett nätstaket i kanten.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.241775,18.235414">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2630.jpg">
-              <img src="assets/images/grill/img_2630.jpg" alt="Stensatt uteplats med två bord och flera bänkar med ryggstöd i mörkbetsat trä. I kanten står en svart kolgrill och en mindre klotgrill vid ett nätstaket, bredvid ett föremål under ett grått överdrag. Klätterväxter växer upp längs staketet, och bakom det höjer sig en berghäll med tallar och lövträd." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Sittplatsen ligger mot skogen, med grillarna vid staketet i kanten.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 76</h3>
-        <p>
-          Grillplatsen ligger på den stensatta ytan mellan husen, med en rund grill på
-          fot och ett bord med två bänkar med ryggstöd intill. En bit bort står en
-          pergola med ett bänkbord i ljust trä under och en bänk vid sidan, och mellan
-          ytorna löper en gång av gatsten. I kanten mot gräsmattan ligger en rabatt med
-          vita blommor.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.241389,18.236128">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2646.jpg">
-              <img src="assets/images/grill/img_2646.jpg" alt="Stensatt gårdsyta med en rund grill på fot, ett bord och två bänkar med ryggstöd i mörkt trä. Längre bort står en pergola i grått trä med ett bänkbord i ljust furu under, en bänk och en cortenlåda med växter. I förgrunden en rabatt med vita blommor, till höger en gång av gatsten, och runt om ljusa bostadshus med entréer och en gräsmatta." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Grillen och sittplatsen ligger på gården, med pergolan och dess bänkbord en bit bort.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 100</h3>
-        <p>
-          Grillplatsen ligger på en stensatt yta intill husgaveln, med ett bord och två
-          bänkar med ryggstöd i grånat trä och en papperskorg intill. Grillen är en
-          svart kolgrill på ben, samma modell som vid nummer 68 och 102. En hög tujahäck
-          skärmar av ytan mot gången bakom.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.241378,18.236978">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2635.jpg">
-              <img src="assets/images/grill/img_2635.jpg" alt="Stensatt yta framför en hög tujahäck, med ett bord och två bänkar med ryggstöd i grånat trä. Till vänster står en svart kolgrill på ben och en papperskorg, och bakom dem syns gaveln på ett hus i grå betong och ett ungt träd." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Sittgruppen ligger i lä bakom häcken, med grillen vid kanten mot gaveln.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 102</h3>
-        <p>
-          Grillplatsen ligger på en stensatt yta mellan husen, med två sittgrupper –
-          ett bord och två bänkar med ryggstöd i varje. Grillen står i kanten mot
-          buskarna: en svart kolgrill på ben med hylla under, samma modell som vid
-          nummer 68. Bakom ytan reser sig en mur av betongblock med planteringar
-          ovanför, och längre bort står höghusen.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.241331,18.237008">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2633.jpg">
-              <img src="assets/images/grill/img_2633.jpg" alt="Stensatt yta med två sittgrupper i mörkbetsat trä, var och en med ett bord och två bänkar med ryggstöd. Till vänster bakom buskarna står en svart kolgrill på ben, till höger löper en låg mur av betongblock med planteringar ovanför, och bakom syns unga träd, höga häckar och gula och vita höghus." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Två sittgrupper på den stensatta ytan, med grillen i kanten mot planteringen.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 108</h3>
-        <p>
-          Grillplatsen ligger i gräset under äppelträden, med en murad grill av
-          kullersten – samma slag som vid nummer 40, men utan stensättning under. Två
-          bänkbord och en bänk med ryggstöd står runt omkring, det ena bordet i sol och
-          det andra i skuggan under träden. Bakom löper ett grönt nätstängsel.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.240817,18.236083">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2632.jpg">
-              <img src="assets/images/grill/img_2632.jpg" alt="Gräsmatta med en rund murad grill av kullersten stående direkt i gräset, ett bänkbord i mörkt trä till vänster och ytterligare ett bänkbord och en bänk med ryggstöd till höger under träden. Runt omkring står äppelträd med gröna äpplen, bakom löper ett grönt nätstängsel och till vänster står ett gulputsat trevåningshus med balkonger." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Den murade grillen står i gräset mellan äppelträden, med bänkbord på var sin sida.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grillplatsen vid Myggdalsvägen 114</h3>
-        <p>
-          Grillplatsen ligger på en rund stensatt yta på gården, med en rund grill på
-          fot och ett bänkbord i ljust trä intill. På andra sidan ytan står en pergola
-          med två bänkar under och cortenlådor med planteringar vid stolparna, och i
-          kanten en klätterbåge i metall. Runt om ligger gräsmattor och låga häckar
-          mot husen.
-          <a href="https://www.google.com/maps/search/?api=1&amp;query=59.241169,18.235358">Visa på karta</a>.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/grill/img_2637.jpg">
-              <img src="assets/images/grill/img_2637.jpg" alt="Rund stensatt gårdsyta med en rund grill på fot och ett bänkbord i ljust trä till vänster, och till höger en pergola i mörkt trä med två bänkar under och cortenlådor med växter vid stolparna. En klätterbåge i metall står i kanten, och bakom ligger gräsmattor, buskar och trevånings bostadshus i ljust puts och gult." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Grillen och bänkbordet står på den stensatta ytan, med pergolans bänkar en bit bort i skuggan.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <p class="lead mt-lg">
-        Innehåll kommer: var de övriga grillplatserna ligger och vad som
-        står på dem.
-      </p>
     </div>
   </section>
 
-  <section class="section" id="neighbours">
+  <!-- Rollerna ligger som kort med en rad var, inte som utskrivna avsnitt. Den
+       som inte har hund ska kunna hoppa över hunden på en halv sekund i stället
+       för att scrolla förbi fem stycken – och den som har hund klickar. Det är
+       hela vinsten med att dela upp efter läsare, utan att be någon välja profil
+       i förväg. -->
+  <section class="section" id="everyday">
+    <div class="container">
+      <div class="section__head">
+        <h2>Vardagen här</h2>
+        <p>
+          Det mesta i området berör bara en del av dem som bor här. Välj det som
+          gäller dig.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        <a class="card card--link" href="family.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2.8 4.8 10 12 17.2 19.2 10Z"/><path d="M12 2.8V17.2"/><path d="M4.8 10h14.4"/><path d="M12 17.2v2.3a1.7 1.7 0 0 1-3.4 0"/></svg></span>
+          <h3>Med barn</h3>
+          <p>
+            Fyra lekplatser på bilfria gårdar, fotbollsplan och isbana, förskola granne
+            med området.
+          </p>
+          <span class="card__more">Lekplatser, gårdar och skolor <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card--link" href="car.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 13.5 1.9-5.6A2 2 0 0 1 6.8 6.5h10.4a2 2 0 0 1 1.9 1.4L21 13.5"/><path d="M3 13.5h18V18h-3v-1.5H6V18H3z"/><path d="M6.5 16h.01"/><path d="M17.5 16h.01"/></svg></span>
+          <h3>Med bil eller MC</h3>
+          <p>
+            287 p-platser och 285 garage. Bilplats från 250 kronor i månaden, laddplatser
+            i garaget sedan 2023.
+          </p>
+          <span class="card__more">Platser, garage och laddning <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card--link" href="bicycle.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="5.8" cy="16" r="3.2"/><circle cx="18.2" cy="16" r="3.2"/><path d="M8.5 8.5h3.5l2.8 7.5"/><path d="m9.5 16 3.5-6"/><path d="M15 8.5h2.5"/></svg></span>
+          <h3>På cykel</h3>
+          <p>
+            Cykelrum i husen och ett långtidsförråd, med cykelvägar mot Tyresö centrum och
+            vidare in mot stan.
+          </p>
+          <span class="card__more">Cykelrum och cykelvägar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card--link" href="dogs.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6.8" cy="9" r="1.9"/><circle cx="12" cy="6.9" r="1.9"/><circle cx="17.2" cy="9" r="1.9"/><path d="M12 11.4c2.5 0 4.6 2 4.6 4.4 0 1.6-1.2 2.6-2.7 2.6-.9 0-1.4-.4-1.9-.4s-1 .4-1.9.4c-1.5 0-2.7-1-2.7-2.6 0-2.4 2.1-4.4 4.6-4.4Z"/></svg></span>
+          <h3>Med hund</h3>
+          <p>
+            Egen hundrastgård i området, kommunens större rastgård i Wättinge, och en
+            WhatsApp-grupp för hundägarna.
+          </p>
+          <span class="card__more">Rastgård och regler <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card--link" href="fitness.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9v6"/><path d="M20 9v6"/><path d="M7 6.5v11"/><path d="M17 6.5v11"/><path d="M7 12h10"/></svg></span>
+          <h3>Som tränar</h3>
+          <p>
+            Gym i området för 50 kronor i månaden, bastu, utegym och boulebana – utan att
+            lämna kvarteret.
+          </p>
+          <span class="card__more">Gym, bastu och utegym <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+        <a class="card card--link" href="laget.html">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21c4-4.4 6-7.6 6-10.3A6 6 0 0 0 6 10.7C6 13.4 8 16.6 12 21Z"/><circle cx="12" cy="10.6" r="2.3"/></svg></span>
+          <h3>Läget</h3>
+          <p>
+            Direktbuss in till city på morgonen, 33 minuter utan byte – och skogen börjar
+            där gårdarna slutar.
+          </p>
+          <span class="card__more">Kommunikationer och närområdet <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="neighbours">
     <div class="container">
       <div class="section__head">
         <h2>Grannarna emellan</h2>
@@ -494,7 +438,7 @@
               för hela gatan, alltså vidare än föreningen.
             </li>
             <li>
-              <strong><a href="https://www.instagram.com/sjotungan_grannar">@sjotungan_grannar</a></strong>
+              <strong><a href="https://www.instagram.com/sjotungan_grannar" target="_blank" rel="noopener">@sjotungan_grannar<span class="sr-only"> (öppnas i ny flik)</span></a></strong>
               – konto på Instagram med bilder från gårdarna och området.
             </li>
             <li>
@@ -507,67 +451,16 @@
     </div>
   </section>
 
-  <section class="section section--alt" id="tools">
-    <div class="container container--narrow">
-      <div class="section__head">
-        <h2>Borrmaskin att låna</h2>
-        <p>
-          Den som behöver borra i väggen lånar föreningens borrmaskin i stället för att
-          köpa en egen. Lånetiden är en vecka.
-        </p>
-      </div>
-
-      <div class="gallery gallery--wide mt-md">
-        <figure>
-          <a href="assets/images/tools/borrmaskin.jpg">
-            <img src="assets/images/tools/borrmaskin.jpg" alt="Närbild på en hand i gul arbetshandske som håller en silverfärgad borrmaskin med lång borr mot en tegelvägg." loading="lazy" decoding="async" width="1024" height="678">
-          </a>
-          <figcaption>Genrebild. Det är inte föreningens egen maskin som syns på bilden.</figcaption>
-        </figure>
-      </div>
-
-      <p class="credit">
-        Bilden är hämtad från <a href="https://757brick.com/">757brick.com</a> och är
-        inte föreningens material.
-      </p>
-    </div>
-  </section>
-
-  <section class="section" id="parcel">
-    <div class="container container--narrow">
-      <div class="section__head">
-        <h2>Paketbox i området</h2>
-        <p>
-          Postnords paketbox står vid en husvägg inne i området. Paket kan levereras
-          hit, så den som väntar på en beställning hämtar den utan att lämna området.
-        </p>
-      </div>
-
-      <p>
-        Boxen är två skåp bredvid varandra, utomhus på den stensatta ytan intill
-        väggen, med fack i flera storlekar. Luckan öppnas med Postnords app i mobilen.
-        <a href="https://www.google.com/maps/search/?api=1&amp;query=59.242172,18.235938">Visa på karta</a>.
-      </p>
-
-      <div class="gallery">
-        <figure>
-          <a href="assets/images/parcel/img_2610.jpg">
-            <img src="assets/images/parcel/img_2610.jpg" alt="Två grå paketboxar från Postnord står sida vid sida mot en vägg av rött tegel, med texten Paketbox och Postnords logotyp i blått överst. Varje skåp har en rad fack i olika höjd och en skylt med instruktioner. Framför skåpen ligger en stensatt yta, till vänster syns ett svart trappräcke och till höger en gräskant och en parkering." loading="lazy" decoding="async">
-          </a>
-          <figcaption>Skåpen står vid husväggen, med gångyta framför.</figcaption>
-        </figure>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="common">
+  <section class="section" id="common">
     <div class="container">
       <div class="section__head">
         <h2>Gemensamt för alla</h2>
-        <p>Tvätt och sophantering hör till boendet oavsett vem man är.</p>
+        <p>
+          Sådant som hör till boendet oavsett vem man är.
+        </p>
       </div>
 
-      <div class="grid grid--2">
+      <div class="grid grid--3">
         <article class="card">
           <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><circle cx="12" cy="14" r="4"/><path d="M8 6.5h.01"/><path d="M11 6.5h.01"/></svg></span>
           <h3>Tvättstugor</h3>
@@ -598,117 +491,161 @@
             ljuskällor och grovsopor.
           </p>
         </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.6 12 3.5l8.5 4.1v8.8L12 20.5l-8.5-4.1Z"/><path d="m3.5 7.6 8.5 4.1 8.5-4.1"/><path d="M12 11.7v8.8"/><path d="m7.75 5.55 8.5 4.1"/></svg></span>
+          <h3>Paketbox i området</h3>
+          <p>
+            Postnords paketbox står vid en husvägg inne i området. Paket kan levereras
+            hit, så den som väntar på en beställning hämtar den utan att lämna området.
+          </p>
+
+          <p>
+            Boxen är två skåp bredvid varandra, utomhus på den stensatta ytan intill
+            väggen, med fack i flera storlekar. Luckan öppnas med Postnords app i mobilen.
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=59.242172,18.235938" target="_blank" rel="noopener">Visa på karta<span class="sr-only"> (öppnas i ny flik)</span></a>.
+          </p>
+
+          <div class="gallery">
+            <figure>
+              <a href="assets/images/parcel/img_2610.jpg">
+                <img src="assets/images/parcel/img_2610.jpg" alt="Två grå paketboxar från Postnord står sida vid sida mot en vägg av rött tegel, med texten Paketbox och Postnords logotyp i blått överst. Varje skåp har en rad fack i olika höjd och en skylt med instruktioner. Framför skåpen ligger en stensatt yta, till vänster syns ett svart trappräcke och till höger en gräskant och en parkering." loading="lazy" decoding="async">
+              </a>
+              <figcaption>Skåpen står vid husväggen, med gångyta framför.</figcaption>
+            </figure>
+          </div>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="6.5" width="9.5" height="6" rx="1.6"/><rect x="12.5" y="8" width="3.5" height="3" rx="0.6"/><path d="M16 9.5h4.6"/><path d="M6 12.5v6h3v-6"/></svg></span>
+          <h3>Borrmaskin att låna</h3>
+          <p>
+            Den som behöver borra i väggen lånar föreningens borrmaskin i stället för att
+            köpa en egen. Lånetiden är en vecka.
+          </p>
+
+          <div class="gallery gallery--wide mt-md">
+            <figure>
+              <a href="assets/images/tools/borrmaskin.jpg">
+                <img src="assets/images/tools/borrmaskin.jpg" alt="Närbild på en hand i gul arbetshandske som håller en silverfärgad borrmaskin med lång borr mot en tegelvägg." loading="lazy" decoding="async" width="1024" height="678">
+              </a>
+              <figcaption>Genrebild. Det är inte föreningens egen maskin som syns på bilden.</figcaption>
+            </figure>
+          </div>
+
+          <p class="credit">
+            Bilden är hämtad från <a href="https://757brick.com/" target="_blank" rel="noopener">757brick.com<span class="sr-only"> (öppnas i ny flik)</span></a> och är
+            inte föreningens material.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2.8 9.1a14 14 0 0 1 18.4 0"/><path d="M6 12.4a9.2 9.2 0 0 1 12 0"/><path d="M9.2 15.7a4.5 4.5 0 0 1 5.6 0"/><path d="M12 19.2h.01"/></svg></span>
+          <h3>Bredband och TV</h3>
+          <!-- Leverantör och hastighet framgår inte av årsredovisningen och bör
+               kompletteras. Skriv in dem i meningen ovan när de är belagda. -->
+
+          <p>
+            Bredband och TV ingår i årsavgiften, och den inkommande fiberanslutningen
+            uppgraderades 2021.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.2 5 6v5.6c0 4.2 2.8 7.6 7 9.2 4.2-1.6 7-5 7-9.2V6Z"/><path d="m9 12.2 2.1 2.1L15 10.5"/></svg></span>
+          <h3>Lås och kameraövervakning</h3>
+          <p>
+            Föreningen bytte lås och installerade kameraövervakning 2022. Det elektroniska
+            låssystemet sattes in 2018, källardörrarna byttes 2021 och belysningen i
+            allmänna utrymmen är sensorstyrd LED sedan samma år.
+          </p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="grill">
+    <div class="container container--narrow">
+      <div class="prose">
+        <h2>Nya grillplatser</h2>
+        <p>
+          Föreningen har rustat upp grillplatserna på de gemensamma ytorna
+          mellan husen. De är till för alla som bor här.
+        </p>
       </div>
 
       <div class="mt-lg">
-        <h3>Tvättstugan vid Myggdalsvägen 52</h3>
+        <h3>Var grillplatserna ligger</h3>
         <p>
-          En av de tre tvättstugor som ligger i egna hus. Huset
-          är en låg träbyggnad med sedumtak, och inne i det står två tvättmaskiner,
-          torktumlare, torkskåp, mangel och en utslagsback. Klicka på en bild för att se
-          den i full storlek och bläddra vidare bland de andra.
+          De tio grillplatserna markerade i gult på en satellitbild över området. De
+          ligger utspridda över gårdarna, från Myggdalsvägen 16 i väster till 108 och
+          114 i söder. De två markeringarna som ligger tätt ihop är platserna vid 100
+          och 102 – de ligger några steg från varandra. Observera att norr inte är
+          rakt uppåt i bilden utan snett upp åt vänster.
         </p>
 
-        <div class="gallery">
+        <div class="gallery gallery--wide mt-md">
           <figure>
-            <a href="assets/images/laundry/img_2664.jpg">
-              <img src="assets/images/laundry/img_2664.jpg" alt="Fristående låg träbyggnad med väggar av grånad liggande timmer och röda detaljer: en röd dörr med runt fönster, röda fönsterfoder och röda spaljéer under takfoten. Taket är täckt av sedum i grönt och rött, med en åttkantig takhuv av plåt i mitten. En kärra står lutad mot väggen vid dörren, och bakom huset syns ett höghus och ett lägre bostadshus." loading="lazy" decoding="async">
+            <a href="assets/images/grill/karta.jpg">
+              <img src="assets/images/grill/karta.jpg" alt="Satellitbild över föreningens gårdar med husen i rader och grönytor emellan. Tio gula fält markerar grillplatserna: fyra i den västra halvan, ett par i mitten, två tätt ihop uppe till höger och tre i den södra delen. Förskolan Gunghästen syns i nederkanten." loading="lazy" decoding="async" width="1600" height="603">
             </a>
-            <figcaption>Huset står för sig självt inne i området, med sedumtak och röd dörr.</figcaption>
+            <figcaption>Grillplatserna ligger på var sin gård, med en tätare grupp i den östra delen av området.</figcaption>
           </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2662.jpg">
-              <img src="assets/images/laundry/img_2662.jpg" alt="Tvättstugan inifrån: terrakottafärgat klinkergolv, ljusgrått kakel på väggarna och fönster längs vänstra sidan. Vid fönstret står en utslagsback i rostfritt med kran och en pall under, och en mopp lutad mot väggen. Längre in står två tvättmaskiner mot väggen och i förgrunden till höger en torktumlare. En tvättanvisning sitter uppsatt på väggen mellan dem." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Rummet har dagsljus från fönstren, utslagsback med kran och en bänk att arbeta vid.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2661.jpg">
-              <img src="assets/images/laundry/img_2661.jpg" alt="Två tvättmaskiner av märket Electrolux Professional står bredvid varandra mot en ljusgrå kakelvägg, båda med luckorna öppna och tomma trummor. Mellan dem står ett smalt skåp och framför dem en golvbrunn i rostfritt. Till höger skymtar torktumlarens lucka." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Två tvättmaskiner, med torktumlaren till höger i bild.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2659.jpg">
-              <img src="assets/images/laundry/img_2659.jpg" alt="Ett öppet torkskåp i rostfritt, tomt, med en utdragbar hylla av runda stänger i mitten och hängare för smådelar på insidan av dörren. Ovanför skåpet löper ventilationsrör av plåt upp mot betongtaket, och på väggen till höger sitter ett anslag med föreningens trivselregler." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Torkskåpet, med utdragbara stänger och ventilationen dragen upp i taket.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2658.jpg">
-              <img src="assets/images/laundry/img_2658.jpg" alt="En mangel av märket Electrolux Professional står vid en gul vägg under ett fönster, med ett vitt strykjärn ovanpå och en duk hängande över valsen. Golvet är terrakottafärgad klinker och i fönsterbrädan intill står en rad böcker." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Mangel och strykjärn vid fönstret.</figcaption>
-          </figure>
+        </div>
+
+        <p class="credit">
+          Kartbilden är ett utsnitt ur Google Maps satellitvy och är Googles
+          material, inte föreningens.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ekonomin sist, och med en rubrik som säger vad avsnittet är till för.
+       Att skriva ut att ekonomin inte är skälet att flytta hit kostar ingenting
+       – spekulanten har redan sett siffrorna hos tre andra föreningar och vet
+       hur de ser ut – och det gör beskedet som följer trovärdigt. -->
+  <section class="section" id="economy">
+    <div class="container">
+      <div class="section__head">
+        <h2>Ordning på ekonomin</h2>
+        <p>
+          Ekonomin är sällan skälet att välja en förening, men den ska kunna
+          vara skälet att låta bli. Det är den inte här. Uppgifterna kommer ur
+          årsredovisningen för 2025: föreningen är en äkta bostadsrättsförening,
+          äger marken den står på och redovisade ett resultat på +4,7 miljoner
+          kronor efter två år med underskott.
+        </p>
+      </div>
+
+      <div class="metrics">
+        <div class="metric">
+          <span class="metric__value">4 462 kr</span>
+          <span class="metric__label">Skuldsättning per kvm</span>
+          <span class="metric__note">Sjönk under 2025 sedan föreningen amorterat. Bedöms som normal nivå för en större förening.</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value">306 kr</span>
+          <span class="metric__label">Sparande per kvm</span>
+          <span class="metric__note">Har stigit varje år sedan 2022. Över genomsnittet i Tyresö.</span>
+        </div>
+        <div class="metric">
+          <span class="metric__value">5 %</span>
+          <span class="metric__label">Räntekänslighet</span>
+          <span class="metric__note">Låg till normal nivå. Lånen är spridda över flera bindningstider.</span>
+        </div>
+        <!-- Stambytet står kvar, men vänt rätt. Varje hus från 1968 har ett
+             stambyte framför sig, och en spekulant som jämför tre av dem
+             jämför tre som alla har det. Skillnaden är att här är det beslutat,
+             upphandlat och finansierat – hos de andra ligger det som en
+             oprissatt post i framtiden. Formulerat så är uppgiften ett skäl att
+             köpa, inte ett förbehåll. -->
+        <div class="metric">
+          <span class="metric__value">Igång</span>
+          <span class="metric__label">Stambytet, klart 2030</span>
+          <span class="metric__note">Första etappen färdig i mars 2026. Finansieringen klar hos Handelsbanken, och de boende bor kvar under arbetet.</span>
         </div>
       </div>
 
-      <div class="mt-lg">
-        <h3>Tvättstugan vid Myggdalsvägen 64</h3>
-        <p>
-          En av de tre tvättstugorna i källarplan. Här finns två rum att boka var för
-          sig: ett för vanlig tvätt och ett för grovtvätt. Rummet för vanlig tvätt är
-          långsmalt, med två tvättmaskiner på en gjuten sockel, torktumlare, torkskåp,
-          kallmangel och en utslagsback längst in. Tvättvagnar står framme att rulla
-          mellan maskinerna och mangeln.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/laundry/img_2652.jpg">
-              <img src="assets/images/laundry/img_2652.jpg" alt="Ett långsmalt tvättrum i källarplan med vita väggar, beige klinkergolv och lysrör i taket. Till höger står två tvättmaskiner uppställda på en gjuten sockel, till vänster hänger moppar och skaftredskap på väggen bredvid ett bord med grå skiva, och längst in mot kortväggen står en utslagsback i rostfritt under ventilationsrör." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Rummet är långt och smalt, med maskinerna längs ena väggen och utslagsbacken längst in.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2651.jpg">
-              <img src="assets/images/laundry/img_2651.jpg" alt="Två tvättmaskiner från Electrolux i blått och grått, modellbeteckningen W475H LE på panelen, står bredvid varandra på en gjuten sockel. Båda luckorna är öppna och trummorna tomma. Ovanför maskinerna löper vattenrör längs väggen och mellan dem står ett smalt skåp." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Två tvättmaskiner på en gjuten sockel, som lyfter luckorna till bekväm höjd.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2649.jpg">
-              <img src="assets/images/laundry/img_2649.jpg" alt="Ett torkskåp från Electrolux, modell TS 5121, med båda de blå dörrarna öppna och skåpet tomt. Inuti sitter tre rader utdragbara stänger med vita ändknoppar och överst en rad krokar. På skåpets överdel sitter en skylt med torkanvisning och skötselinstruktioner, och ovanför löper ventilationsrör längs taket." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Torkskåpet har utdragbara stänger i tre nivåer.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2650.jpg">
-              <img src="assets/images/laundry/img_2650.jpg" alt="En kallmangel i grått och blått står mot väggen med en duk inmatad mellan valsarna. Ovanför den sitter ett anslag med bruksanvisning för Kallmangel KM480. Framför mangeln står två tvättvagnar av vit metalltråd på hjul, och bakom dem ett bord med grå skiva." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Kallmangeln, med bruksanvisningen på väggen och tvättvagnar framför.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2648.jpg">
-              <img src="assets/images/laundry/img_2648.jpg" alt="En torktumlare från Electrolux i blått och grått, modellbeteckningen T4190 på panelen, står i ett hörn på beige klinkergolv. På panelen sitter knappar märkta Extra torrt och Stryktorrt, och till höger på väggen en säkerhetsbrytare." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Torktumlaren, med lägena Extra torrt och Stryktorrt.</figcaption>
-          </figure>
-        </div>
-      </div>
-
-      <div class="mt-lg">
-        <h3>Grovtvättstugan vid Myggdalsvägen 64</h3>
-        <p>
-          Det andra av de två rummen. Här står en stor frontmatad maskin för grovtvätt,
-          och bredvid ligger ett torkrum med linor i taket.
-        </p>
-
-        <div class="gallery">
-          <figure>
-            <a href="assets/images/laundry/img_2647.jpg">
-              <img src="assets/images/laundry/img_2647.jpg" alt="En stor frontmatad tvättmaskin i rostfritt från Electrolux, modellbeteckningen W4130H på panelen, står fritt på ett beige klinkergolv mot en ljus vägg. Luckan är stängd och trumman tom. Till vänster på panelen sitter ett doseringsschema för förtvätt, huvudtvätt och sköljmedel. Bakom maskinen skymtar en bänkskiva och i golvet till höger finns en golvbrunn." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Grovtvättmaskinen står för sig själv, med doseringsschema på panelen.</figcaption>
-          </figure>
-          <figure>
-            <a href="assets/images/laundry/img_2656.jpg">
-              <img src="assets/images/laundry/img_2656.jpg" alt="Ett tomt torkrum med vita väggar och beige klinkergolv. Torklinor är spända i flera rader längs rummet och fästa i skenor i taket. Uppe till vänster sitter en fläkt i ett metallgaller, bredvid ett lysrör, och längst in mot väggen står en vit avfuktare på hjul. Till höger står dörren öppen ut mot korridoren." loading="lazy" decoding="async">
-            </a>
-            <figcaption>Torkrummet bredvid, med linor i taket, fläkt och avfuktare.</figcaption>
-          </figure>
-        </div>
-      </div>
+      <p class="lead mt-lg">
+        <a href="ekonomi.html">Nyckeltalen, stambytet och allt underhåll år för år <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m13 6 6 6-6 6"/></svg></a>
+      </p>
     </div>
   </section>
 
@@ -717,9 +654,15 @@
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <p class="site-footer__note">
-      <a href="https://www.sjotungan.se">sjotungan.se</a> är föreningens officiella webbplats.
+      <a href="https://www.sjotungan.se" target="_blank" rel="noopener">sjotungan.se<span class="sr-only"> (öppnas i ny flik)</span></a> är föreningens officiella webbplats.
       Den här sidan är inte officiell utan är skapad och underhålls av aktiva
       medlemmar i föreningen.
+    </p>
+    <p class="site-footer__note">
+      Innehållet är sammanställt efter bästa förmåga, men kan innehålla fel och
+      hinner bli inaktuellt. Vi tar inget ansvar för felaktiga uppgifter – det
+      som formellt gäller står i föreningens stadgar och årsredovisning och på
+      den officiella webbplatsen.
     </p>
   </div>
 </footer>

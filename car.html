@@ -26,8 +26,8 @@
     <nav class="nav" id="site-nav" aria-label="Huvudmeny">
       <ul class="nav__list">
         <li><a href="index.html">Översikt</a></li>
+        <li><a href="laget.html">Läget</a></li>
         <li><a href="bilder.html">Bilder</a></li>
-        <li><a href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf">Årsredovisning 2025</a></li>
         <li class="nav__has-sub">
           <button class="nav__sub-button is-active" type="button" aria-expanded="false">
             För dig…
@@ -39,9 +39,11 @@
             <li><a href="bicycle.html">på cykel</a></li>
             <li><a href="dogs.html">med hund</a></li>
             <li><a href="fitness.html">som tränar</a></li>
-            <li><a href="nature.html">i naturen</a></li>
           </ul>
         </li>
+        <li><a href="ekonomi.html">Ekonomi och underhåll</a></li>
+        <li><a href="fakta.html">Fakta</a></li>
+        <li><a href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf" target="_blank" rel="noopener">Årsredovisning 2025<span class="sr-only"> (öppnas i ny flik)</span></a></li>
       </ul>
     </nav>
   </div>
@@ -90,71 +92,79 @@
 
   <section class="section section--alt" id="fees">
     <div class="container">
-      <div class="section__head">
-        <h2>Avgifter</h2>
-        <p>Avgiften debiteras på din avgiftsavi från Fastighetsägarna.</p>
+      <!-- Att platserna hyrs ut till självkostnad är skälet till att de kostar
+           250 kronor och inte marknadspris, och det är den uppgiften som
+           förklarar prislistan under. Den står därför före avgifterna. -->
+      <div class="prose">
+        <h2>Parkering till självkostnad</h2>
+        <p>
+          En bilplats kostar 250 kronor i månaden och en garageplats 500
+          kronor, samma avgift för alla. Föreningen har 287 parkeringsplatser
+          och 285 garage till 604 lägenheter, och priserna är satta för att
+          täcka kostnaderna, inte för att gå med vinst.
+        </p>
       </div>
 
-      <div class="table-wrap">
-        <table>
-          <caption>Avgifter för parkering och garage.</caption>
-          <thead>
-            <tr>
-              <th scope="col">Typ av plats</th>
-              <th scope="col" class="num">Avgift</th>
-              <th scope="col">Att tänka på</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Bilplats utomhus</th>
-              <td class="num">250 kr/mån</td>
-              <td>Tjänstebil debiteras dubbel avgift plus moms</td>
-            </tr>
-            <tr>
-              <th scope="row">Garageplats</th>
-              <td class="num">500 kr/mån</td>
-              <td>6 000 kr per år, samma avgift för alla</td>
-            </tr>
-            <tr>
-              <th scope="row">Laddplats</th>
-              <td class="num">445 kr/mån</td>
-              <td>Utöver den ordinarie garageavgiften</td>
-            </tr>
-            <tr>
-              <th scope="row">Mobilapp för laddning</th>
-              <td class="num">69 kr/mån</td>
-              <td>Extern app som styr laddningen, plus elförbrukning</td>
-            </tr>
-            <tr>
-              <th scope="row">MC-garage</th>
-              <td class="num">150 kr/mån</td>
-              <td>Bokas via Fastighetsägarna</td>
-            </tr>
-            <tr>
-              <th scope="row">Mopedgarage</th>
-              <td class="num">0 kr</td>
-              <td>Ring fastighetsskötaren så uppdateras din nyckelbricka</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
+      <div class="mt-lg">
+        <div class="section__head">
+          <h2>Avgifter</h2>
+          <p>Avgiften debiteras på din avgiftsavi från Fastighetsägarna.</p>
+        </div>
 
-      <div class="mt-md">
-        <div class="callout">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11.5V16"/><path d="M12 8h.01"/></svg>
-          <p>
-            <strong>Hyra eller säga upp en plats</strong>
-            Ring Fastighetsägarna på 08–617 76 00 eller mejla
-            <a href="mailto:kundservice@fastighetsagarna.se">kundservice@fastighetsagarna.se</a>.
-            De hanterar kön till garage, bilplats, förråd och lokaler. Behöver du
-            uppdatera din nyckelbricka kontaktar du fastighetsskötaren.
-          </p>
+        <div class="table-wrap">
+          <table>
+            <caption>Avgifter för parkering och garage.</caption>
+            <thead>
+              <tr>
+                <th scope="col">Typ av plats</th>
+                <th scope="col" class="num">Avgift</th>
+                <th scope="col">Att tänka på</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Bilplats utomhus</th>
+                <td class="num">250 kr/mån</td>
+                <td>Tjänstebil debiteras dubbel avgift plus moms</td>
+              </tr>
+              <tr>
+                <th scope="row">Garageplats</th>
+                <td class="num">500 kr/mån</td>
+                <td>6 000 kr per år, samma avgift för alla</td>
+              </tr>
+              <tr>
+                <th scope="row">Laddplats</th>
+                <td class="num">445 kr/mån</td>
+                <td>Utöver den ordinarie garageavgiften</td>
+              </tr>
+              <tr>
+                <th scope="row">Mobilapp för laddning</th>
+                <td class="num">69 kr/mån</td>
+                <td>Extern app som styr laddningen, plus elförbrukning</td>
+              </tr>
+              <tr>
+                <th scope="row">MC-garage</th>
+                <td class="num">150 kr/mån</td>
+                <td>Bokas via Fastighetsägarna</td>
+              </tr>
+              <tr>
+                <th scope="row">Mopedgarage</th>
+                <td class="num">0 kr</td>
+                <td>Ring fastighetsskötaren så uppdateras din nyckelbricka</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </div>
+
     </div>
   </section>
 
+  <!-- Hur man ställer sig i kö, tecknar laddavtal eller vad Parkit har för
+       telefonnummer är sådant man behöver när man redan bor här. För en
+       spekulant säger det ingenting om hur det är att bo här, och
+       parkeringsövervakning läses dessutom som en varning snarare än som en
+       upplysning. Blocken finns kvar och hör hemma på sjotungan.se. -->
   <section class="section" id="charging">
     <div class="container">
       <div class="split">
@@ -171,43 +181,6 @@
             Utöver garageavgiften och laddplatsavgiften betalar du för
             laddboxens elförbrukning samt en fast månadsavgift för appen.
           </p>
-
-          <h3>Uttag och laddkabel</h3>
-          <p>
-            Laddboxarna har uttag av <strong>typ 2</strong> (Mennekes, formellt
-            IEC 62196-2) – standarden för växelströmsladdning i Sverige och
-            övriga Europa. Boxen har ett uttag med lock och ingen fast kabel, så
-            du använder din egen laddkabel med typ 2-kontakt mot laddboxen.
-          </p>
-
-          <div class="gallery mt-md">
-            <figure>
-              <a href="assets/images/car/img_2587.jpg">
-                <img src="assets/images/car/img_2587.jpg" alt="Svart väggmonterad laddbox märkt Waybler i garaget, med en inkopplad typ 2-kontakt som lyser blått och en gul laddkabel som hänger ner." loading="lazy" decoding="async">
-              </a>
-              <figcaption>Laddboxen sitter på väggen vid platsen. Lampan runt uttaget visar laddningens status.</figcaption>
-            </figure>
-          </div>
-
-          <h3>Så tecknar du laddavtal</h3>
-          <ol class="steps mt-md">
-            <li>
-              <strong>Kontrollera hyresavtalet</strong>
-              Du behöver ha ett giltigt hyresavtal för garageplatsen för att
-              kunna teckna avtal för elbilsladdning.
-            </li>
-            <li>
-              <strong>Kontakta Fastighetsägarna Service</strong>
-              Mejla <a href="mailto:kundservice@fastighetsagarna.se">kundservice@fastighetsagarna.se</a>
-              och meddela att du vill teckna avtal för laddboxen. Uppge
-              mejladress, namn och platsnummer.
-            </li>
-            <li>
-              <strong>Följ välkomstmejlet</strong>
-              Du får ett välkomstmejl med information om vilken app du ska ladda
-              ner och vilka steg du ska gå igenom för att få igång laddboxen.
-            </li>
-          </ol>
         </div>
 
         <aside class="aside-card">
@@ -218,14 +191,6 @@
             <li>Även boende i Sjötungan får använda dem.</li>
             <li>Endast personbil, max 3,5 ton, i besiktigat, godkänt och kördugligt skick.</li>
           </ul>
-
-          <div class="mt-lg">
-            <h3>Övervakning</h3>
-            <ul>
-              <li>Parkit sköter parkeringsövervakningen sedan den 1 april 2024.</li>
-              <li>Telefon: 08–125 050 00</li>
-            </ul>
-          </div>
         </aside>
       </div>
     </div>
@@ -245,54 +210,26 @@
     </div>
   </section>
 
-  <section class="section" id="rules">
+  <section class="section" id="area">
     <div class="container container--narrow">
       <div class="prose">
-        <h2>Körning inom området</h2>
+        <h2>Bilfria gårdar</h2>
         <p>
-          Inom Sjötungans bostadsområde är det inte tillåtet att köra bil, men
-          du får köra in i området för att lasta i och ur bilen. Vi vill alla ha
-          en så bilfri boendemiljö som möjligt – gårdarna är vår uteplats, där
-          alla ska kunna vistas utan att störas av buller och avgaser.
+          Det går inga gator inne i området. Gårdarna mellan husen är till för dem som
+          bor här, och barn kan cykla och leka på dem utan genomfartstrafik. Att lasta i
+          och ur vid porten går bra – men ingen kör förbi.
         </p>
 
-        <div class="callout callout--warn">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3.2 19.5h17.6z"/><path d="M12 10v4.5"/><path d="M12 17.5h.01"/></svg>
-          <p>
-            <strong>Ambulans och brandkår måste alltid fram</strong>
-            Utryckningsfordon ska kunna komma fram till portarna utan att hindras
-            av parkerade bilar. Det är den viktigaste anledningen till att
-            reglerna finns.
-          </p>
-        </div>
-
-        <h3>Tider för uppställning</h3>
-        <ul>
-          <li>Framför bom, och framför miljöhusen under hämtningsdagen på onsdagar 06–12: <strong>1 minut</strong>.</li>
-          <li>I- och urlastning i övriga området: <strong>10 minuter</strong>.</li>
-        </ul>
-
-        <h3>Att parkera på sin plats</h3>
+        <h3>Moped och motorcykel</h3>
         <p>
-          Visa hänsyn mot grannen som parkerar bredvid. Om någon parkerar snett
-          eller utanför sin yta måste nästa person anpassa sin position, och
-          till slut finns ingen plats kvar längst bort på raden. Det ökar också
-          risken för parkeringsskador. Platserna på parkeringsdäck har en skylt
-          i mitten av platsen som hjälper dig med avståndet, och platserna utan
-          garage under är markerade med stolpar.
-        </p>
-        <p>
-          Alla parkeringsplatser är lika stora och håller standardmått, men våra
-          bilar blir större och större. Hjälps vi åt får alla plats.
+          Föreningen har egna garage för motorcykel, och plats för moped finns att hyra
+          genom fastighetsskötaren på 08–617 76 00. Utanför bostadsområdet står stolpar
+          märkta ”Moped Gästplats” där mopeden kan låsas fast.
         </p>
 
-        <h3>Mopeder och motorcyklar</h3>
-        <ul>
-          <li>Moped- och motorcykelåkning är förbjuden inom området.</li>
-          <li>För mopeder finns stolpar märkta ”Moped Gästplats” utanför bostadsområdet där mopeden kan låsas fast.</li>
-          <li>Behöver du garageplats för mopeden ringer du fastighetsskötaren på 08–617 76 00.</li>
-        </ul>
-
+        <p>
+          Precis som för bilar körs det inte inne i området – gårdarna är bilfria.
+        </p>
       </div>
     </div>
   </section>
@@ -302,9 +239,15 @@
 <footer class="site-footer">
   <div class="container site-footer__inner">
     <p class="site-footer__note">
-      <a href="https://www.sjotungan.se">sjotungan.se</a> är föreningens officiella webbplats.
+      <a href="https://www.sjotungan.se" target="_blank" rel="noopener">sjotungan.se<span class="sr-only"> (öppnas i ny flik)</span></a> är föreningens officiella webbplats.
       Den här sidan är inte officiell utan är skapad och underhålls av aktiva
       medlemmar i föreningen.
+    </p>
+    <p class="site-footer__note">
+      Innehållet är sammanställt efter bästa förmåga, men kan innehålla fel och
+      hinner bli inaktuellt. Vi tar inget ansvar för felaktiga uppgifter – det
+      som formellt gäller står i föreningens stadgar och årsredovisning och på
+      den officiella webbplatsen.
     </p>
   </div>
 </footer>

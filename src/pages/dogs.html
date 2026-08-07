@@ -1,6 +1,6 @@
 <!--
 title: För dig med hund
-description: Vad som gäller för hundägare i Brf Sjötungan: kopplingstvång i hela området, plocka upp efter hunden och hundrastgården vid idrottsplatsen.
+description: Hund i Brf Sjötungan: egen inhägnad hundrastgård vid idrottsplatsen, kommunens större rastgård i Wättinge på gångavstånd, skogen intill och en aktiv grupp för hundägarna i området.
 -->
 
 <main id="main">
@@ -13,26 +13,25 @@ description: Vad som gäller för hundägare i Brf Sjötungan: kopplingstvång i
       </ol>
       <h1>För dig med hund</h1>
       <p>
-        Hundar hör hemma i Sjötungan. Två regler gäller i hela området, och de
-        är enkla: hunden ska vara kopplad, och du plockar upp efter den.
+        Föreningen har en egen inhägnad hundrastgård inne i området, kommunens
+        större rastgård ligger på gångavstånd i Wättinge, och skogen börjar där
+        gårdarna slutar. Hundägarna här håller dessutom kontakt i en egen grupp.
       </p>
     </div>
   </section>
 
-  <section class="section">
+  <!-- Sidan öppnar med rastgården och inte med kopplingstvånget. Det är den här
+       sidan en mäklare länkar till när köparen har hund, och det första en
+       spekulant möter ska vara det föreningen erbjuder – inte två förbud. Vad
+       som gäller för koppel och påse är sådant man läser när man väl bor här,
+       och det står på sjotungan.se. -->
+  <section class="section" id="hundrastgarden">
     <div class="container">
-      <div class="grid grid--2">
-
-        {{block:kopplingstvang}}
-        {{block:plocka-upp}}
-        {{block:hundrastgarden}}
-        {{block:katter}}
-
-      </div>
+      {{block:hundrastgarden:section}}
     </div>
   </section>
 
-  <section class="section section--alt" id="hundrastgarden">
+  <section class="section section--alt">
     <div class="container">
       {{block:hundrastgarden-bilder:section}}
     </div>
@@ -63,27 +62,6 @@ description: Vad som gäller för hundägare i Brf Sjötungan: kopplingstvång i
   <section class="section" id="gruppen">
     <div class="container">
       {{block:hundgruppen:section}}
-    </div>
-  </section>
-
-  <section class="section section--alt">
-    <div class="container container--narrow">
-      <div class="prose">
-        {{block:varfor-reglerna:prose}}
-
-        <div class="callout">
-          {{icon:info}}
-          <p>
-            <strong>Något som inte fungerar?</strong>
-            Prata i första hand med grannen. Kvarstår problemet hör du av dig
-            till styrelsen på
-            <a href="mailto:info@sjotungan.se">info@sjotungan.se</a>. Frågor om
-            djurhållning i övrigt hanteras av Tyresö kommun.
-          </p>
-        </div>
-
-        {{block:mer-information:prose}}
-      </div>
     </div>
   </section>
 
