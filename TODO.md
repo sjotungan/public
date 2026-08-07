@@ -24,6 +24,43 @@ förstasidan.
       Fastighetsägarna, inte mot A–Ö. Rätta i så fall alla sex ställena samtidigt
 - [ ] Betalar man **båda** avgifterna separat om man har gym och bastu?
 
+## Avgjort: laddplatsen kostar 445 kr/mån plus 69 kr för appen
+
+Sajten sa båda talen samtidigt, på sidor som en mäklare läser bredvid varandra.
+**445 kr/mån är rätt** – A–Ö:s 425 kr är gammalt. Till det kommer 69 kr/mån för
+mobilappen som styr laddningen, plus elförbrukningen. Källa: faktura från Ladda
+Tillsammans för juli 2026 och deras support, båda via medlem 2026-08-07. Det är
+den som tar betalt, så frågan är stängd.
+
+- [x] `det-har-ingar` rättad från 425 till 445 kr/mån, med appavgiften utskriven
+- [x] `parkeringsavgifter` (car.html) och `fakta.html` stod redan rätt
+- [x] `parkeringsavgifter` sa att hela tabellen debiteras på avgiftsavin från
+      Fastighetsägarna – laddningen faktureras av Ladda Tillsammans. Rättat där
+      och i `elbilsladdning`
+
+Kvar: A–Ö visade sig kunna vara inaktuell. Det gör den till en bra men inte
+sista källa – de andra A–Ö-priserna i `det-har-ingar` bör vid tillfälle stämmas
+av mot en avgiftsavi.
+
+## Bilder
+
+- [ ] **Tvättstugornas tolv foton är oanvända.** De låg i blocken
+      `tvattstuga-m52`, `tvattstuga-m64` och `grovtvattstuga-m64`, som inte
+      hämtas in av någon sida längre. Sex tvättstugor med grov- och snabbtvätt
+      är en riktig förmån och står i registret, men tolv bilder av tvättstugor
+      är dokumentation snarare än säljande. Förslag: två eller tre
+      representativa i ett `tvattstugor-bilder`-block under *Gemensamt för
+      alla*, på samma sätt som `grillplatser-bilder`. Beslut behövs om det ska
+      bli några alls
+- [ ] **`car/img_2587.jpg`** ligger kvar oanvänd. Den hör till `laddkabel`, som
+      togs bort som handhavande – ta bort filen eller låt den ligga
+
+**Kontrollera alltid bilderna när ett block slutar användas.** Bildsidan samlar
+in figurer från de sidor som byggs, så ett block som ingen sida hämtar in tar
+sina foton med sig ut ur hela sajten, galleriet inkluderat. Så försvann alla
+elva grillbilderna en gång. Kommandot som visar oanvända bilder står i
+[README.md](README.md#vad-som-fortfarande-saknas).
+
 ## Blockerar: ingressen i `det-har-ingar` lovar för hela listan
 
 Ingressen säger *"Allt ingår i avgiften, utom det som står med en kostnad."*
@@ -66,9 +103,10 @@ Källa: <https://www.sjotungan.se/public_html/new2016/a-o/a-o.html>
 - [x] Gästlägenheten – 400 kr/dygn, en (1) lägenhet på Myggdalsvägen 28, två rum,
       sex bäddar, pentry och WC med dusch. Bara övernattning, inga fester
 - [x] Bastun – 50 kr per hushåll och månad, dras på avgiftsavin
-- [x] Elbilsladdning – 425 kr/mån för laddplatsen utöver garageavgiften på
-      6 000 kr/år, plus elförbrukning och en fast appavgift. Utökat från 8 till
-      34 platser i Garage B
+- [x] Elbilsladdning – A–Ö säger 425 kr/mån för laddplatsen utöver
+      garageavgiften på 6 000 kr/år, men det talet är gammalt: rätt pris är
+      445 kr/mån plus 69 kr/mån för appen och elförbrukningen. Utökat från 8
+      till 34 platser i Garage B
 - [x] Gästparkering – fyra platser, avgiftsbelagda, betalas i app. Parkit sköter
       övervakningen sedan 2024-04-01
 - [x] Paketboxen – gratis, på gaveln vid M64, öppen dygnet runt

@@ -42,7 +42,7 @@ precis före årsredovisningen: de tre hör ihop som det man kontrollerar med.
 ### Tesen: allt det här finns för att föreningen är stor
 
 Blocket `stor-forening` är sajtens egentliga argument, och det enda som
-förklarar resten. Ett gym, en bastu, en föreningslokal, sex tvättstugor, elva
+förklarar resten. Ett gym, en bastu, en föreningslokal, sex tvättstugor, tio
 grillplatser och en borrmaskin kostar nästan ingenting per hushåll när 604
 lägenheter delar på dem – i en förening med fyrtio går de inte att ha alls.
 Marken likaså: 192 kvm per lägenhet, drygt dubbla bostadsytan.
@@ -122,7 +122,7 @@ Tabellen står i menyns ordning: det som lockar först, det som kontrolleras sis
 | Fil | Sida i menyn | Vad sidan gör |
 | --- | --- | --- |
 | [index.html](index.html) | Översikt | Hela argumentet i scrollordning: fotohjälte, sex siffror, området, *Det här ingår i boendet*, tesen om den stora föreningen, rollkorten, grannarna emellan, gemensamt, grillplatserna – och ekonomin sist |
-| [laget.html](laget.html) | Läget | Karta, direktbussen till city, tillgänglighet, närområdet, rådjursfilmen |
+| [laget.html](laget.html) | Läget | Karta, direktbussen till city, tillgänglighet, närområdet, skogen med blåbärsriset och rådjursfilmen |
 | [bilder.html](bilder.html) | Bilder | Sajtens alla bilder i ett galleri, samlas in vid bygget |
 | [family.html](family.html) | För dig … med barn | Lekplatser, gårdar, fotbollsplan, isbana, förskola och kulturskola |
 | [car.html](car.html) | För dig … med bil eller MC | Platser, garage, laddning, MC, däckförvaring |
@@ -205,10 +205,21 @@ inte in gissningar.
 
   Priserna kontrollerades 2026-08-07 mot **föreningens egen A–Ö på
   sjotungan.se**, som visade sig svara på det mesta: gästlägenheten 400 kr/dygn,
-  bastun 50 kr per hushåll och månad, laddplatsen 425 kr/mån utöver
-  garageavgiften, gästparkeringen avgiftsbelagd, paketboxen gratis och
-  ungdomslägenheterna åtta stycken för 18–27-åringar. A–Ö är förstahandskällan
-  för allt sådant här – gå dit före styrelsen.
+  bastun 50 kr per hushåll och månad, gästparkeringen avgiftsbelagd, paketboxen
+  gratis och ungdomslägenheterna åtta stycken för 18–27-åringar. A–Ö är
+  förstahandskällan för allt sådant här – gå dit före styrelsen.
+
+  **Laddplatsen är undantaget som visar att A–Ö kan vara gammal.** Där står
+  425 kr/mån; rätt pris är 445 kr/mån utöver garageavgiften plus 69 kr/mån för
+  mobilappen som styr laddningen. Källan är starkare än A–Ö: en faktura från
+  Ladda Tillsammans för juli 2026 och deras support, båda via medlem
+  2026-08-07 – den som tar betalt säger själv vad det kostar. Talen står numera
+  lika i `det-har-ingar` och `parkeringsavgifter`, alltså på översikten,
+  car.html och fakta.html.
+
+  Fakturan avslöjade också ett fel bredvid priset: `parkeringsavgifter` sa att
+  hela tabellen debiteras på avgiftsavin från Fastighetsägarna, men laddningen
+  faktureras av Ladda Tillsammans. Två avsändare, inte en.
 
   **Gympriset är däremot troligen fel.** Sajten skriver "50 kr i månaden" om
   gymmet på sex ställen, men A–Ö sätter det beloppet på *bastun* och säger bara
@@ -293,10 +304,26 @@ originalfilerna öppnas i samma flik och stängs med bakåtknappen.
 `card`, `link-card`, `section`, `prose`, `subsection`, `text`.
 
 Ett antal block från den gamla sajten ligger kvar utan att vara inhämtade
-någonstans: beskrivningarna av de elva grillplatserna var för sig och av de
+någonstans: beskrivningarna av de tio grillplatserna var för sig och av de
 enskilda tvättstugorna. De är detaljer snarare än beslutsunderlag och togs ur
 översikten när den kortades. Blocken är kvar för den som vill lägga dem på en
 egen sida.
+
+**Kontrollera bilderna när ett block plockas bort.** Bildsidan samlar in figurer
+från de sidor som faktiskt byggs, så ett block som ingen sida hämtar in tar sina
+foton med sig ut ur hela sajten – också ur galleriet. När grillplatsernas egna
+avsnitt togs bort försvann därför alla elva grillbilderna, och kvar stod ett
+påstående om tio grillplatser utan en enda bild. De ligger nu samlade i
+`grillplatser-bilder`, med adressen i varje bildtext eftersom bilden i galleriet
+inte längre står under en rubrik som säger vilken plats det är.
+
+Kommandot som visar vilka bilder som blivit oanvända:
+
+```sh
+comm -23 \
+  <(find assets/images -type f | sed 's|^|/|' | sort) \
+  <(grep -oh 'assets/images/[^"]*' *.html | sed 's|^|/|' | sort -u)
+```
 
 Filnamn, id:n och CSS-klasser är på engelska; all text som besökaren ser är på
 svenska.
