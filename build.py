@@ -65,6 +65,9 @@ ANNUAL_REPORT_PDF = (
 NAV = [
     {"href": "index.html", "label": "Översikt"},
     {"href": "laget.html", "label": "Läget"},
+    # Ämnessida, inte rollsida: utemiljön är något varje köpare bedömer, inte en
+    # läsare som känner igen sig. Den ligger därför här och inte under "För dig…".
+    {"href": "gardarna.html", "label": "Gårdarna"},
     {"href": "bilder.html", "label": "Bilder"},
     {
         # Ingen "href": posten är enbart en meny som fälls ut vid klick.

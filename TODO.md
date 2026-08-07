@@ -44,6 +44,8 @@ av mot en avgiftsavi.
 
 ## Bilder
 
+- [x] Grillplatsernas elva foton – samlade i `grillplatser-bilder`, nu på
+      `gardarna.html`
 - [ ] **Tvättstugornas tolv foton är oanvända.** De låg i blocken
       `tvattstuga-m52`, `tvattstuga-m64` och `grovtvattstuga-m64`, som inte
       hämtas in av någon sida längre. Sex tvättstugor med grov- och snabbtvätt

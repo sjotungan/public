@@ -64,6 +64,23 @@ Det som följer av det:
   att vara länkmål, inte för att vara en meny man klickar sig igenom.
 - **Varje sida ska fungera som första sida.** Mäklare djuplänkar.
 
+### Ämnessidor är undantaget från regeln om roller
+
+En ny sida kräver normalt en ny **roll** – barn, bil, cykel, hund, träning – och
+inte en ny anläggning. `gardarna.html` är undantaget: *utemiljön* är något varje
+köpare bedömer, inte en läsare som känner igen sig i den. "För dig som grillar"
+hade varit fel snitt – ingen spekulant identifierar sig som grillare, och ingen
+mäklare länkar dit.
+
+Sidan finns för att grillavsnittet hade vuxit ur översikten: 18 procent av
+sidans ord och tolv av arton bilder, alltså två tredjedelar av förstasidans
+fotografier. Nu ligger grillplatserna, lekplatserna och sportytorna samlade där
+de hör hemma, och översikten är nere i sex bilder.
+
+Testet för nästa ämnessida är detsamma: bär den ett ämne som någon utifrån
+faktiskt bedömer, och avlastar den översikten? Annars hör innehållet hemma på en
+befintlig sida.
+
 ## Ekonomisidan bryter regeln om minsta möjliga innehåll
 
 Den gamla regeln – *finns uppgiften i årsredovisningen räcker en länk* – är rätt

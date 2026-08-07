@@ -1535,6 +1535,20 @@ tbody tr.is-total th {
   transform: none;
 }
 
+/* En ensam bild i en bred spalt fyller annars hela rutnätets enda ruta – över
+   tusen pixlar på en stor skärm, vilket är dubbelt så stort som varje bild i
+   galleriernas rader och ur skala med resten av sajten. Beskärningen är
+   densamma som för de andra fotografierna, det är bara bredden som hålls
+   tillbaka. */
+.gallery--single {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.gallery--single figure {
+  max-width: 560px;
+}
+
 .credit {
   margin-top: 1.25rem;
   font-size: 0.875rem;
