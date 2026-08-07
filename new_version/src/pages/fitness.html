@@ -1,0 +1,102 @@
+<!--
+title: För dig som tränar
+description: Träning i Brf Sjötungan: föreningens gym med bilder och rundtur, bastu med relaxrum i M90, utegym och boulebana.
+-->
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head__inner">
+      <ol class="breadcrumb">
+        <li><a href="index.html">Översikt</a></li>
+        <li>För dig som tränar</li>
+      </ol>
+      <h1>För dig som tränar</h1>
+      <p>
+        Föreningen har ett eget gym i källarplan med styrkemaskiner, fria vikter
+        och konditionsmaskiner, en bastu med relaxrum i M90, och utomhus ett
+        utegym och en boulebana.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="gym">
+    <div class="container">
+      {{block:gym:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt" id="tour">
+    <div class="container">
+      {{block:gym-rundtur:section}}
+    </div>
+  </section>
+
+  <section class="section" id="photos">
+    <div class="container">
+      {{block:gym-bilder:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt" id="equipment">
+    <div class="container">
+      <div class="split">
+        <div class="prose">
+          {{block:gym-utrustning:prose}}
+        </div>
+
+        <aside class="aside-card">
+          <h3>Också på sidan</h3>
+          <ul>
+            <li><a href="#sauna">Bastun och relaxrummet</a> i M90.</li>
+            <li><a href="#outdoor">Utegym och boulebana</a> utomhus.</li>
+            <li>Cykeln ställer du inomhus, se <a href="bicycle.html">För dig som cyklar</a>.</li>
+          </ul>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="sauna">
+    <div class="container">
+      {{block:bastu:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt" id="outdoor">
+    <div class="container">
+      <div class="section__head">
+        <h2>Utegym och boulebana</h2>
+        <p>Två anläggningar utomhus, på föreningens egen mark.</p>
+      </div>
+
+      <div class="grid grid--2">
+        {{block:utegym}}
+        {{block:boulebana}}
+
+      </div>
+
+      <div class="gallery mt-lg">
+        <figure>
+          <a href="assets/images/outdoor-gym/img_2567.jpg">
+            <img src="assets/images/outdoor-gym/img_2567.jpg" alt="Utegymmet på gräsmattan: böjda stålräcken i förgrunden, en gul träningsmaskin i mitten och en roddmaskin till höger." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Redskapen står fritt på gräsmattan, med ett bänkbord vid husväggen.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/images/outdoor-gym/img_2570.jpg">
+            <img src="assets/images/outdoor-gym/img_2570.jpg" alt="Fyra gula redskap intill husgaveln: vridhjul, roddmaskin och två maskiner att sitta i." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Vridhjul för armar och skuldror, roddmaskin och maskiner att sitta i.</figcaption>
+        </figure>
+        <figure>
+          <a href="assets/images/boulebana/img_2612.jpg">
+            <img src="assets/images/boulebana/img_2612.jpg" alt="Boulebanan sedd från kortsidan: en rektangulär grusyta inramad av liggande träbjälkar, med gräs på ena sidan och asfalt i förgrunden. Till vänster står ett bänkbord och ett högre ståbord på grus, och längre bort en parkbänk vid ett grönt stängsel. Bakom banan står lövträd, en lyktstolpe och flerbostadshus." loading="lazy" decoding="async">
+          </a>
+          <figcaption>Banan är inramad av träbjälkar, med bänkbord och parkbänk intill.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+</main>

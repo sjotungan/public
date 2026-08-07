@@ -1,0 +1,76 @@
+<!--
+title: Ekonomi och underhåll
+description: Nyckeltal, avgiftsutveckling, det pågående stambytet och allt större underhåll år för år, hämtat ur HSB Brf Sjötungans årsredovisning för 2025.
+-->
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head__inner">
+      <h1>Ekonomi och underhåll</h1>
+      <p>
+        Den här sidan återger det som står i årsredovisningen för 2025, i den
+        form den som jämför föreningar behöver den. Årsredovisningen i sin helhet
+        är länkad längst ned – det är den som gäller, den här sidan är ett
+        referat.
+      </p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      {{block:ekonomi-nyckeltal:section}}
+    </div>
+  </section>
+
+  <!-- Stambytet står högt och inte i en fotnot. Det är den enskilt viktigaste
+       uppgiften för någon som ska lägga bud, och den som hittar den först här
+       litar på resten av sidan. Den som hittar den någon annanstans gör det
+       inte. -->
+  <section class="section section--alt" id="stambyte">
+    <div class="container container--narrow">
+      {{block:stambyte:section}}
+    </div>
+  </section>
+
+  <section class="section" id="avgift">
+    <div class="container container--narrow">
+      {{block:avgiften:section}}
+    </div>
+  </section>
+
+  <section class="section section--alt" id="underhall">
+    <div class="container">
+      <div class="split">
+        <div class="prose">
+          {{block:underhall-genomfort:prose}}
+        </div>
+        <div class="prose">
+          {{block:underhall-planerat:prose}}
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="report">
+    <div class="container container--narrow">
+      <div class="prose">
+        <h2>Källan</h2>
+        <p>
+          Allt på den här sidan kommer ur HSB Brf Sjötungans årsredovisning för
+          räkenskapsåret 2025, beslutad av styrelsen 2026-06-02. Där finns också
+          resultat- och balansräkning, noter och revisionsberättelse.
+        </p>
+      </div>
+      <p class="btn-row">
+        <a class="btn btn--primary" href="https://www.sjotungan.se/public_html/new2016/images/information/arsmotes_handlingar/2026/stamma2026.pdf">
+          {{icon:doc}} Årsredovisning 2025 (PDF)
+        </a>
+        <a class="btn btn--ghost" href="fakta.html">
+          Alla fakta i en tabell {{icon:arrow}}
+        </a>
+      </p>
+    </div>
+  </section>
+
+</main>

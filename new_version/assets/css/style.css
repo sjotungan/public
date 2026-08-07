@@ -1,0 +1,1837 @@
+/* ==========================================================================
+   BRF Sjötungan — stylesheet
+   Design tokens first, then base, layout, components, utilities.
+   No external fonts or assets: the site works fully offline.
+   ========================================================================== */
+
+/* --- Tokens --------------------------------------------------------------- */
+
+/* Färgskalan är medvetet nästan neutral och sval. Sajtens starkaste tillgång är
+   fotografierna, och ett tonat gråskikt runt dem drar åt sig uppmärksamhet som
+   ska ligga på bilden. Grönt förekommer därför bara som accent – länkar, ikoner,
+   knappar – aldrig som yta bakom ett foto. */
+:root {
+  --ink: #10161c;
+  --ink-soft: #3c4650;
+  --muted: #6b7681;
+  --line: #e6e9ec;
+  --line-strong: #cdd3d9;
+
+  --bg: #ffffff;
+  --bg-alt: #f6f7f9;
+  --surface: #ffffff;
+
+  --accent: #0f5c4a;
+  --accent-hover: #0b4739;
+  --accent-soft: #e8f1ee;
+  --accent-ink: #ffffff;
+
+  --highlight: #d9613c;
+  --highlight-soft: #fbeee8;
+
+  --note: #f2b705;
+  --note-soft: #fdf4d8;
+
+  --radius-sm: 8px;
+  --radius: 14px;
+  --radius-lg: 22px;
+
+  --shadow-sm: 0 1px 2px rgba(16, 22, 28, 0.05), 0 1px 3px rgba(16, 22, 28, 0.04);
+  --shadow: 0 2px 4px rgba(16, 22, 28, 0.04), 0 12px 28px -12px rgba(16, 22, 28, 0.16);
+
+  --step: clamp(1rem, 0.6rem + 1.4vw, 1.5rem);
+  --gutter: clamp(1.25rem, 0.8rem + 2vw, 2.5rem);
+  --section-gap: clamp(3rem, 2rem + 5vw, 5.5rem);
+
+  --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, "Noto Sans", sans-serif;
+
+  --header-h: 68px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --ink: #e9edf1;
+    --ink-soft: #c0c8d1;
+    --muted: #939da8;
+    --line: #272d34;
+    --line-strong: #39414a;
+
+    --bg: #0e1216;
+    --bg-alt: #141920;
+    --surface: #161c23;
+
+    --accent: #57c9a8;
+    --accent-hover: #7ad9bd;
+    --accent-soft: #16302a;
+    --accent-ink: #08130f;
+
+    --highlight: #f0906c;
+    --highlight-soft: #2e1f1a;
+
+    --note: #f2c14e;
+    --note-soft: #2b2415;
+
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 2px 4px rgba(0, 0, 0, 0.3), 0 14px 30px -14px rgba(0, 0, 0, 0.7);
+  }
+}
+
+/* --- Base ----------------------------------------------------------------- */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--header-h) + 1rem);
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0 0 0.5em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  font-weight: 650;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2rem, 1.3rem + 3vw, 3.25rem);
+}
+h2 {
+  font-size: clamp(1.5rem, 1.15rem + 1.5vw, 2.125rem);
+}
+h3 {
+  font-size: clamp(1.125rem, 1rem + 0.5vw, 1.3125rem);
+}
+
+p {
+  margin: 0 0 1em;
+}
+
+a {
+  color: var(--accent);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+a:hover {
+  color: var(--accent-hover);
+}
+
+img,
+svg {
+  max-width: 100%;
+}
+
+/* Pilen efter en textlänk. En <svg> utan mått är 300 × 150 px stor, så utan den
+   här regeln blir pilen större än stycket den står i. Ikoner med egen storlek –
+   sidhuvudets märke, kortens pil, knapparna – har egna regler som tar över. */
+a svg {
+  width: 1em;
+  height: 1em;
+  vertical-align: -0.14em;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 2.5rem 0;
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --- Layout --------------------------------------------------------------- */
+
+.container {
+  width: 100%;
+  max-width: 1140px;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.container--narrow {
+  max-width: 800px;
+}
+
+.section {
+  padding-block: var(--section-gap);
+}
+
+.section--tight {
+  padding-block: clamp(1.25rem, 1rem + 1vw, 1.9rem);
+}
+
+.section--alt {
+  background: var(--bg-alt);
+  border-block: 1px solid var(--line);
+}
+
+.section__head {
+  max-width: 46rem;
+  margin-bottom: clamp(1.75rem, 1rem + 2vw, 2.75rem);
+}
+
+.section__head p {
+  color: var(--muted);
+  font-size: 1.0625rem;
+  margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+  background: var(--accent);
+  color: var(--accent-ink);
+  padding: 0.75rem 1.25rem;
+  border-radius: 0 0 var(--radius-sm) 0;
+}
+
+.skip-link:focus {
+  left: 0;
+}
+
+/* --- Header / navigation -------------------------------------------------- */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header__inner {
+  min-height: var(--header-h);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-weight: 650;
+  font-size: 1.0625rem;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.brand__mark {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  flex: none;
+  border-radius: 10px;
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.brand__mark svg {
+  width: 19px;
+  height: 19px;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  gap: 0.5rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 550;
+  color: var(--ink);
+  background: var(--surface);
+  border: 1px solid var(--line-strong);
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  cursor: pointer;
+}
+
+.nav-toggle svg {
+  width: 18px;
+  height: 18px;
+}
+
+.nav__list {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav__list a {
+  display: block;
+  padding: 0.5rem 0.75rem;
+  border-radius: 999px;
+  font-size: 0.9375rem;
+  font-weight: 550;
+  color: var(--ink-soft);
+  text-decoration: none;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav__list a:hover {
+  background: var(--bg-alt);
+  color: var(--ink);
+}
+
+.nav__list a[aria-current="page"],
+.nav__list a.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* --- Undermeny ------------------------------------------------------------ */
+
+.nav__has-sub {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+/* Föräldern är en knapp som ser ut som en menylänk – ett klick öppnar
+   undermenyn i stället för att gå vidare till en sida. */
+.nav__sub-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  font-size: 0.9375rem;
+  font-weight: 550;
+  line-height: inherit;
+  color: var(--ink-soft);
+  background: none;
+  border: 0;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.nav__sub-button:hover {
+  background: var(--bg-alt);
+  color: var(--ink);
+}
+
+.nav__sub-button.is-active {
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.nav__sub-button svg {
+  width: 15px;
+  height: 15px;
+  transition: transform 0.15s ease;
+}
+
+.nav__has-sub[data-open="true"] .nav__sub-button svg {
+  transform: rotate(180deg);
+}
+
+.nav__sub {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: 861px) {
+  .nav__sub {
+    position: absolute;
+    top: calc(100% + 0.4rem);
+    left: 0;
+    z-index: 10;
+    display: none;
+    min-width: 11rem;
+    padding: 0.35rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow);
+  }
+
+  .nav__has-sub[data-open="true"] .nav__sub {
+    display: block;
+  }
+
+  .nav__sub a {
+    white-space: nowrap;
+    border-radius: 6px;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav__has-sub {
+    flex-wrap: wrap;
+  }
+
+  .nav__sub-button {
+    flex: 1;
+    justify-content: space-between;
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.875rem;
+    font-size: 1rem;
+  }
+
+  .nav__sub {
+    flex-basis: 100%;
+    display: none;
+    padding-left: 0.875rem;
+    border-left: 2px solid var(--line);
+    margin-left: 0.875rem;
+  }
+
+  .nav__has-sub[data-open="true"] .nav__sub {
+    display: block;
+  }
+}
+
+@media (max-width: 860px) {
+  .nav-toggle {
+    display: inline-flex;
+  }
+
+  .nav {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+    background: var(--bg);
+    border-bottom: 1px solid var(--line);
+    box-shadow: var(--shadow);
+    padding: 0.5rem var(--gutter) 1.25rem;
+  }
+
+  .site-header[data-nav-open="true"] .nav {
+    display: block;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.125rem;
+  }
+
+  .nav__list a {
+    border-radius: var(--radius-sm);
+    padding: 0.75rem 0.875rem;
+    font-size: 1rem;
+  }
+}
+
+/* --- Buttons -------------------------------------------------------------- */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  font-size: 0.9875rem;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn svg {
+  width: 18px;
+  height: 18px;
+  flex: none;
+}
+
+.btn--primary {
+  background: var(--accent);
+  color: var(--accent-ink);
+}
+
+.btn--primary:hover {
+  background: var(--accent-hover);
+  color: var(--accent-ink);
+}
+
+.btn--ghost {
+  background: var(--surface);
+  border-color: var(--line-strong);
+  color: var(--ink);
+}
+
+.btn--ghost:hover {
+  border-color: var(--ink-soft);
+  color: var(--ink);
+}
+
+.btn-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* --- Hero ----------------------------------------------------------------- */
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid var(--line);
+  background:
+    radial-gradient(60rem 30rem at 82% -18%, var(--accent-soft), transparent 65%),
+    linear-gradient(180deg, var(--bg-alt), var(--bg) 78%);
+}
+
+/* The inner element is also the .container, so it keeps the container width and
+   the reading measure is constrained on the children instead — otherwise the
+   narrower max-width would win and `margin-inline: auto` would centre the text. */
+.hero__inner {
+  padding-block: clamp(3rem, 2rem + 6vw, 6rem);
+}
+
+.hero__inner > * {
+  max-width: 44rem;
+}
+
+.hero h1 {
+  margin-bottom: 0.4em;
+}
+
+.hero__lead {
+  font-size: clamp(1.0625rem, 1rem + 0.4vw, 1.25rem);
+  color: var(--ink-soft);
+  margin-bottom: 2rem;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.eyebrow::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--highlight);
+}
+
+/* Fotohjälten på översikten. Första besöket är tre minuter långt och börjar med
+   en bild, inte med ett stycke: det är fotografierna som visar hur det är att bo
+   här, och texten som förklarar bilden efteråt.
+
+   Bilden ligger som <img> och inte som background-image för att den ska kunna
+   ha alt-text, laddas med hög prioritet och beskäras med object-position. */
+.hero--photo {
+  border-bottom: 0;
+  background: var(--ink);
+}
+
+.hero--photo .hero__media {
+  position: absolute;
+  inset: 0;
+}
+
+.hero--photo .hero__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 58%;
+}
+
+/* Två lager: ett mörkt fält nedtill som texten står i, och en svag toning över
+   hela bilden så att sidhuvudet syns mot ljusa partier i himlen. */
+.hero--photo .hero__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(8, 12, 16, 0.55) 0%, rgba(8, 12, 16, 0) 38%),
+    linear-gradient(0deg, rgba(8, 12, 16, 0.86) 4%, rgba(8, 12, 16, 0.28) 46%,
+      rgba(8, 12, 16, 0) 72%);
+}
+
+.hero--photo .hero__inner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-height: clamp(26rem, 20rem + 26vw, 40rem);
+  padding-block: clamp(2.5rem, 1.5rem + 4vw, 4.5rem);
+  color: #fff;
+}
+
+.hero--photo h1 {
+  color: #fff;
+  letter-spacing: -0.03em;
+  text-shadow: 0 1px 24px rgba(0, 0, 0, 0.28);
+}
+
+.hero--photo .hero__lead {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+  text-shadow: 0 1px 16px rgba(0, 0, 0, 0.35);
+}
+
+/* align-self krävs: .hero__inner är en flexkolumn, och utan den sträcks pillret
+   ut till hela textbredden i stället för att omsluta sin text. */
+.hero--photo .eyebrow {
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.28);
+  color: #fff;
+  backdrop-filter: blur(6px);
+}
+
+/* Bildtexten hör till fotot, inte till rubriken, så den ligger diskret i
+   underkanten och konkurrerar inte med ingressen. */
+.hero__credit {
+  position: absolute;
+  right: var(--gutter);
+  bottom: 0.75rem;
+  margin: 0;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.62);
+}
+
+@media (max-width: 640px) {
+  .hero__credit {
+    display: none;
+  }
+}
+
+/* Compact hero used on subpages */
+.page-head {
+  border-bottom: 1px solid var(--line);
+  background: linear-gradient(180deg, var(--bg-alt), var(--bg));
+}
+
+.page-head__inner {
+  padding-block: clamp(2.25rem, 1.5rem + 3.5vw, 4rem);
+}
+
+.page-head__inner > * {
+  max-width: 46rem;
+}
+
+.page-head p {
+  font-size: 1.0625rem;
+  color: var(--ink-soft);
+  margin: 0;
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0 0 1.25rem;
+  padding: 0;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.breadcrumb a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--ink);
+  text-decoration: underline;
+}
+
+.breadcrumb li + li::before {
+  content: "/";
+  margin-right: 0.4rem;
+  color: var(--line-strong);
+}
+
+/* --- Facts strip ---------------------------------------------------------- */
+
+.facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+
+.facts__item {
+  background: var(--surface);
+  padding: 1.25rem 1.375rem;
+}
+
+.facts__value {
+  display: block;
+  font-size: clamp(1.375rem, 1.2rem + 0.8vw, 1.75rem);
+  font-weight: 650;
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+  font-variant-numeric: tabular-nums;
+}
+
+.facts__label {
+  display: block;
+  margin-top: 0.2rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* --- Faktarader ----------------------------------------------------------- */
+
+/* Etikett till vänster, uppgift till höger, hårfin linje emellan. Formen är
+   vald för att den är den som en spekulant redan läser objektfakta i på
+   bostadssajterna – den som har tre lägenheter kvar på listan jämför rad mot
+   rad, och känner igen mönstret utan att behöva lära sig det.
+
+   <dl> med .factrow: varje <div> är ett par. */
+.factrow {
+  margin: 0;
+  border-top: 1px solid var(--line);
+}
+
+.factrow > div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem 1.5rem;
+  padding: 0.85rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.factrow dt {
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.factrow dd {
+  margin: 0;
+  text-align: right;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+/* En rad kan behöva en förtydligande mening under uppgiften – "räknat på
+   totalytan", "höjd 2025-01-01". Den ska inte se ut som en egen rad. */
+.factrow dd small {
+  display: block;
+  margin-top: 0.15rem;
+  font-size: 0.8125rem;
+  font-weight: 400;
+  color: var(--muted);
+}
+
+.factrow--lead > div:first-child {
+  padding-top: 0;
+}
+
+/* --- Nyckeltal ------------------------------------------------------------ */
+
+/* Samma som .facts men med plats för en rad sammanhang under siffran. En siffra
+   utan jämförelse säger ingenting för den som inte kan bostadsrättsekonomi, och
+   det är just den läsaren sidan är skriven för. */
+.metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: clamp(1rem, 0.6rem + 1vw, 1.5rem);
+}
+
+.metric {
+  padding: clamp(1.15rem, 1rem + 0.6vw, 1.5rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.metric__value {
+  display: block;
+  font-size: clamp(1.75rem, 1.4rem + 1.4vw, 2.25rem);
+  font-weight: 680;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+
+.metric__label {
+  display: block;
+  margin-top: 0.35rem;
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.metric__note {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* --- Förmåner ------------------------------------------------------------- */
+
+/* Register över allt som ingår i boendet, en rad per sak. Formen finns för att
+   varken en spekulant eller en mäklare vet vad föreningen har – det står inte i
+   annonsen, och ingen läser sig till det ur en årsredovisning. Ett gym för 50
+   kronor i månaden eller en borrmaskin att låna är sådant som avgör jämförelser
+   men som aldrig nämns, för att ingen vet att det finns att fråga efter.
+
+   Raderna är korta med flit: listan ska gå att svepa igenom, och den som fastnar
+   på en rad följer länken till sidan som har detaljerna. */
+.perks {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: clamp(1.5rem, 1rem + 2vw, 2.75rem);
+}
+
+.perks__group h3 {
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--line);
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.perks ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.perks li {
+  position: relative;
+  padding: 0.4rem 0 0.4rem 1.5rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-soft);
+}
+
+/* Bocken ritas i CSS och inte som ikon: raderna är många, och en <svg> per rad
+   hade lagt på mer markup än texten den står bredvid. */
+.perks li::before {
+  content: "";
+  position: absolute;
+  left: 0.15rem;
+  top: 0.78rem;
+  width: 0.42rem;
+  height: 0.72rem;
+  border: solid var(--accent);
+  border-width: 0 2px 2px 0;
+  transform: rotate(42deg);
+}
+
+.perks li strong {
+  color: var(--ink);
+  font-weight: 600;
+}
+
+/* --- Tidslinje ------------------------------------------------------------ */
+
+/* Underhållet, år för år. En tabell hade rymt samma uppgifter, men det som ska
+   framgå är att arbetet pågått löpande i tjugo år – och det syns i en följd,
+   inte i ett rutnät. */
+.timeline {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 1.75rem;
+  position: relative;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 4px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: var(--line);
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 1.15rem;
+}
+
+.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -1.75rem;
+  top: 0.5rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--surface);
+  border: 2px solid var(--line-strong);
+}
+
+/* Det som ligger i framtiden är ofyllt: en planerad åtgärd är inte samma sak
+   som en utförd, och skillnaden ska synas utan att man läser årtalet. */
+.timeline--planned li::before {
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.timeline__year {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.timeline__what {
+  display: block;
+  margin-top: 0.1rem;
+  color: var(--ink-soft);
+}
+
+/* --- Cards ---------------------------------------------------------------- */
+
+.grid {
+  display: grid;
+  gap: clamp(1rem, 0.6rem + 1.2vw, 1.5rem);
+}
+
+/* Explicit two-up rather than auto-fit: with four cards, auto-fit would leave a
+   lone card on a second row at wide viewports. */
+.grid--2 {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .grid--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.grid--3 {
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+}
+
+.card h3 {
+  margin-bottom: 0.35em;
+}
+
+.card p {
+  color: var(--ink-soft);
+  font-size: 0.9875rem;
+  margin-bottom: 1rem;
+}
+
+.card > :last-child {
+  margin-bottom: 0;
+  margin-top: auto;
+}
+
+.card__icon {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+.card__icon svg {
+  width: 22px;
+  height: 22px;
+}
+
+.card--link {
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease,
+    transform 0.15s ease;
+}
+
+.card--link:hover {
+  color: inherit;
+  border-color: var(--line-strong);
+  box-shadow: var(--shadow);
+  transform: translateY(-2px);
+}
+
+.card__more {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.card--link:hover .card__more {
+  gap: 0.6rem;
+}
+
+.card__more svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.15s ease;
+}
+
+/* --- Prose / content ------------------------------------------------------ */
+
+.prose > * + * {
+  margin-top: 1rem;
+}
+
+.prose > * + h2 {
+  margin-top: 2.75rem;
+}
+
+.prose > * + h3 {
+  margin-top: 2rem;
+}
+
+.prose h2 {
+  padding-top: 0.5rem;
+}
+
+.prose ul,
+.prose ol {
+  margin: 0;
+  padding-left: 1.35rem;
+  color: var(--ink-soft);
+}
+
+.prose li + li {
+  margin-top: 0.4rem;
+}
+
+.prose li::marker {
+  color: var(--accent);
+}
+
+.lead {
+  font-size: 1.125rem;
+  color: var(--ink-soft);
+}
+
+/* Definition-style key/value list */
+.deflist {
+  display: grid;
+  grid-template-columns: minmax(9rem, 14rem) 1fr;
+  gap: 0.75rem 1.5rem;
+  margin: 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--line);
+}
+
+.deflist dt {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.deflist dd {
+  margin: 0;
+  color: var(--ink-soft);
+}
+
+@media (max-width: 640px) {
+  .deflist {
+    grid-template-columns: 1fr;
+    gap: 0.2rem;
+  }
+
+  .deflist dd + dt {
+    margin-top: 0.9rem;
+  }
+}
+
+/* --- Tables --------------------------------------------------------------- */
+
+.table-wrap {
+  overflow-x: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+}
+
+table {
+  width: 100%;
+  min-width: 30rem;
+  border-collapse: collapse;
+  font-size: 0.9875rem;
+}
+
+caption {
+  padding: 1rem 1.25rem 0;
+  text-align: left;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+th,
+td {
+  padding: 0.8rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--line);
+}
+
+thead th {
+  font-size: 0.8125rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+  background: var(--bg-alt);
+}
+
+tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+td.num,
+th.num {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+tbody tr.is-total td,
+tbody tr.is-total th {
+  font-weight: 650;
+  background: var(--bg-alt);
+}
+
+/* --- Callouts ------------------------------------------------------------- */
+
+.callout {
+  display: flex;
+  gap: 0.9rem;
+  padding: 1.1rem 1.25rem;
+  border-radius: var(--radius);
+  background: var(--accent-soft);
+  border: 1px solid color-mix(in srgb, var(--accent) 22%, transparent);
+  font-size: 0.9875rem;
+}
+
+.callout svg {
+  width: 20px;
+  height: 20px;
+  flex: none;
+  margin-top: 0.2rem;
+  color: var(--accent);
+}
+
+.callout p:last-child {
+  margin-bottom: 0;
+}
+
+.callout strong {
+  display: block;
+}
+
+.callout--warn {
+  background: var(--note-soft);
+  border-color: color-mix(in srgb, var(--note) 45%, transparent);
+}
+
+.callout--warn svg {
+  color: var(--highlight);
+}
+
+/* Ansvarsfriskrivningen står som en not, inte som en ruta: ingen bakgrund och
+   ingen ram, bara liten text i dämpad ton. */
+.disclaimer {
+  display: flex;
+  gap: 0.55rem;
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.disclaimer svg {
+  width: 16px;
+  height: 16px;
+  flex: none;
+  margin-top: 0.22rem;
+  color: var(--muted);
+}
+
+.disclaimer a {
+  color: inherit;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.disclaimer a:hover {
+  color: var(--accent);
+}
+
+/* --- FAQ / accordion ------------------------------------------------------ */
+
+.faq {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  overflow: hidden;
+}
+
+.faq details + details {
+  border-top: 1px solid var(--line);
+}
+
+.faq summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+}
+
+.faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq summary::after {
+  content: "";
+  width: 9px;
+  height: 9px;
+  flex: none;
+  border-right: 2px solid var(--muted);
+  border-bottom: 2px solid var(--muted);
+  transform: rotate(45deg) translate(-2px, -2px);
+  transition: transform 0.15s ease;
+}
+
+.faq details[open] summary::after {
+  transform: rotate(-135deg);
+}
+
+.faq summary:hover {
+  background: var(--bg-alt);
+}
+
+.faq__body {
+  padding: 0 1.25rem 1.25rem;
+  color: var(--ink-soft);
+  font-size: 0.9875rem;
+}
+
+.faq__body > :last-child {
+  margin-bottom: 0;
+}
+
+/* --- Steps ---------------------------------------------------------------- */
+
+.steps {
+  counter-reset: step;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.steps li {
+  position: relative;
+  padding-left: 3rem;
+  color: var(--ink-soft);
+}
+
+.steps li::before {
+  counter-increment: step;
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.9375rem;
+  font-weight: 650;
+}
+
+.steps strong {
+  display: block;
+  color: var(--ink);
+}
+
+/* --- Badges & misc -------------------------------------------------------- */
+
+.badge {
+  display: inline-block;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  background: var(--accent-soft);
+  color: var(--accent);
+}
+
+/* Spacing utilities */
+.mt-sm {
+  margin-top: 0.75rem;
+}
+.mt-md {
+  margin-top: 1.5rem;
+}
+.mt-lg {
+  margin-top: 2rem;
+}
+.mt-section {
+  margin-top: var(--section-gap);
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: clamp(1.5rem, 1rem + 2vw, 3rem);
+  align-items: start;
+}
+
+.aside-card {
+  padding: clamp(1.25rem, 1rem + 1vw, 1.75rem);
+  background: var(--bg-alt);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+}
+
+.aside-card h3 {
+  margin-bottom: 0.75rem;
+}
+
+.aside-card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  font-size: 0.9375rem;
+  color: var(--ink-soft);
+}
+
+.aside-card li + li {
+  margin-top: 0.35rem;
+}
+
+/* --- Media: gallery and video --------------------------------------------- */
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(1rem, 0.7rem + 1vw, 1.5rem);
+}
+
+.gallery figure {
+  margin: 0;
+}
+
+.gallery a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--bg-alt);
+}
+
+.gallery a:hover {
+  border-color: var(--line-strong);
+}
+
+/* A uniform crop keeps the grid tidy even though the source photos mix
+   portrait and landscape; the link opens the uncropped original. */
+.gallery img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  transition: transform 0.35s ease;
+}
+
+.gallery a:hover img {
+  transform: scale(1.04);
+}
+
+.gallery figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--muted);
+}
+
+/* Bildsidan: hela sajtens bilder i ett enda galleri, alla lika stora. Kartorna
+   och skärmbilderna har width och height i HTML, och height-attributet skulle
+   annars sätta höjden i stället för beskärningen – samma skäl som nedan. Här
+   ska de beskäras som fotografierna: det är miniatyren som ska bli fyrkantig,
+   och hela bilden syns ändå när den öppnas. */
+.gallery--all img {
+  height: auto;
+}
+
+/* Kartbilder, till skillnad från fotografierna: de har teckenförklaringen i ett
+   hörn och en text i bild, så de får varken beskäras eller zoomas vid hover.
+   Två i bredd av samma skäl som .grid--2 – med fyra kartor skulle auto-fit
+   lämna en ensam på andra raden – och för att gatorna ska gå att urskilja. */
+.gallery--map {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 720px) {
+  .gallery--map {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* height: auto krävs – bildernas height-attribut skulle annars sätta höjden till
+   460 px och object-fit lägga svarta fält över och under kartan. */
+.gallery--map img {
+  aspect-ratio: 700 / 460;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--map a:hover img {
+  transform: none;
+}
+
+/* Översiktskartan över lekplatserna är ett brett utsnitt, drygt 2,5:1. Den får
+   varken beskäras till 4:3 som fotografierna eller tvingas in i kartornas
+   700/460 – båda skulle klippa bort markeringar – utan behåller sina egna
+   proportioner i en enda spalt. */
+.gallery--wide {
+  grid-template-columns: 1fr;
+}
+
+.gallery--wide img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--wide a:hover img {
+  transform: none;
+}
+
+/* Skärmbilder från telefonen är höga och smala. En 4:3-beskärning skulle klippa
+   bort både sidhuvud och de nedersta meddelandena, så bilden behåller sin form
+   och begränsas i bredd i stället – ungefär en telefon bred på en stor skärm. */
+.gallery--phone {
+  grid-template-columns: 1fr;
+  justify-items: start;
+}
+
+.gallery--phone figure {
+  max-width: 320px;
+}
+
+/* height: auto av samma skäl som kartorna ovan: height-attributet på img sätter
+   annars höjden till 1731 px, och bilden får tomrum över och under sig. */
+.gallery--phone img {
+  aspect-ratio: auto;
+  height: auto;
+  object-fit: contain;
+}
+
+.gallery--phone a:hover img {
+  transform: none;
+}
+
+.credit {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+.video {
+  max-width: 400px;
+  margin-inline: auto;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #000;
+  box-shadow: var(--shadow-sm);
+}
+
+.video video {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.video-note {
+  max-width: 400px;
+  margin: 0.9rem auto 0;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+}
+
+/* --- Bildvisaren ---------------------------------------------------------- */
+
+/* Överlägget som öppnas när en bild i ett galleri klickas. Utan JavaScript
+   händer ingenting här: länken öppnar bilden som förut. Chromet är mörkt i
+   både ljust och mörkt läge – bilden ska vara det enda som lyser. */
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200; /* över sidhuvudet (50) och hoppa-till-länken (100) */
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  background: rgba(9, 14, 13, 0.94);
+  color: #f2f5f3;
+  overscroll-behavior: contain;
+}
+
+.lightbox[hidden] {
+  display: none;
+}
+
+body.has-lightbox {
+  overflow: hidden;
+}
+
+.lightbox__bar {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.75rem clamp(0.75rem, 0.4rem + 1.5vw, 1.5rem);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Titeln tar överblivet utrymme och skjuter räkningen och Stäng åt höger. */
+.lightbox__title {
+  margin: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.lightbox__count {
+  margin: 0 0 0 auto;
+  flex: none;
+  text-align: right;
+  font-size: 0.875rem;
+  font-variant-numeric: tabular-nums;
+  color: rgba(242, 245, 243, 0.72);
+}
+
+/* Knapparna i överlägget: samma form överallt, mörk yta på mörk botten. */
+.lightbox button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: inherit;
+  font: inherit;
+  font-size: 0.9375rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox button:hover {
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.32);
+}
+
+.lightbox button:focus-visible {
+  outline: 2px solid #f2f5f3;
+  outline-offset: 2px;
+}
+
+.lightbox button svg {
+  width: 1.25rem;
+  height: 1.25rem;
+  flex: none;
+}
+
+.lightbox__close {
+  flex: none;
+}
+
+.lightbox__stage {
+  position: relative;
+  min-height: 0;
+  --lb-pad: clamp(0.5rem, 0.2rem + 1.5vw, 1.25rem);
+}
+
+/* Bilden är absolut placerad och centrerad med margin: auto. Ett vanligt
+   flödesbarn med max-height: 100% räcker inte: höjden här kommer från en
+   1fr-rad, och procenten mot den ger ingen begränsning – bilden växer då förbi
+   både bildtexten och fönstret. Mot ett absolut placerat barn räknas procenten
+   alltid mot ytan runt omkring, och bilden håller sig innanför. */
+.lightbox__img {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  max-width: calc(100% - var(--lb-pad) * 2);
+  max-height: calc(100% - var(--lb-pad) * 2);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+  transition: opacity 0.2s ease;
+}
+
+.lightbox.is-loading .lightbox__img {
+  opacity: 0.35;
+}
+
+/* Pilarna ligger över bilden i kanterna och är runda – de tar ingen plats från
+   bilden på små skärmar, där utrymmet är som knappast. */
+.lightbox__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0.6rem;
+  background: rgba(9, 14, 13, 0.65);
+}
+
+.lightbox__nav--prev {
+  left: clamp(0.25rem, 0.5vw, 1rem);
+}
+
+.lightbox__nav--next {
+  right: clamp(0.25rem, 0.5vw, 1rem);
+}
+
+.lightbox__foot {
+  padding: 0.75rem clamp(0.75rem, 0.4rem + 1.5vw, 1.5rem) 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.lightbox__caption {
+  margin: 0 auto;
+  max-width: 46rem;
+  text-align: center;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: rgba(242, 245, 243, 0.86);
+}
+
+/* Övriga bilder i uppsättningen, som en rad att bläddra i. */
+.lightbox__thumbs {
+  display: flex;
+  gap: 0.5rem;
+  margin: 0.85rem 0 0;
+  padding: 0.25rem;
+  list-style: none;
+  overflow-x: auto;
+  scrollbar-width: thin;
+  justify-content: safe center;
+}
+
+.lightbox__thumbs li {
+  flex: none;
+}
+
+.lightbox__thumbs button {
+  padding: 0;
+  border-radius: var(--radius-sm);
+  border-color: transparent;
+  background: none;
+  overflow: hidden;
+  opacity: 0.55;
+  transition: opacity 0.2s ease, border-color 0.2s ease;
+}
+
+.lightbox__thumbs button:hover {
+  opacity: 0.85;
+  background: none;
+}
+
+.lightbox__thumbs button[aria-current="true"] {
+  opacity: 1;
+  border-color: #f2f5f3;
+}
+
+.lightbox__thumbs img {
+  display: block;
+  width: 76px;
+  height: 56px;
+  object-fit: cover;
+}
+
+/* En ensam bild har varken pilar, miniatyrer eller räkning att visa. */
+.lightbox.is-single .lightbox__nav,
+.lightbox.is-single .lightbox__thumbs,
+.lightbox.is-single .lightbox__count {
+  display: none;
+}
+
+@media (max-width: 560px) {
+  .lightbox__thumbs img {
+    width: 60px;
+    height: 44px;
+  }
+  /* På smal skärm får räkningen platsen ensam; titeln står kvar på sidan
+     bakom och behövs inte i listen. */
+  .lightbox__title {
+    display: none;
+  }
+  .lightbox__count {
+    margin-left: 0;
+  }
+  .lightbox__close {
+    margin-left: auto;
+  }
+}
+
+/* --- CTA band ------------------------------------------------------------- */
+
+.cta {
+  padding: clamp(2rem, 1.5rem + 3vw, 3.25rem);
+  border-radius: var(--radius-lg);
+  background: var(--accent);
+  color: var(--accent-ink);
+  text-align: center;
+}
+
+.cta h2 {
+  color: var(--accent-ink);
+}
+
+.cta p {
+  max-width: 40rem;
+  margin-inline: auto;
+  color: color-mix(in srgb, var(--accent-ink) 82%, transparent);
+}
+
+.cta .btn-row {
+  justify-content: center;
+  margin-top: 1.75rem;
+}
+
+.cta .btn--ghost {
+  background: transparent;
+  border-color: color-mix(in srgb, var(--accent-ink) 45%, transparent);
+  color: var(--accent-ink);
+}
+
+.cta .btn--ghost:hover {
+  border-color: var(--accent-ink);
+  color: var(--accent-ink);
+}
+
+/* --- Footer --------------------------------------------------------------- */
+
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: var(--bg-alt);
+  padding-block: clamp(2.5rem, 2rem + 2vw, 3.5rem) 2rem;
+  font-size: 0.9375rem;
+}
+
+.site-footer__inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.site-footer p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-footer p.site-footer__note {
+  max-width: 46ch;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.site-footer a {
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: var(--accent);
+  text-decoration: underline;
+}

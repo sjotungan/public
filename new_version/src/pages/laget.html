@@ -1,0 +1,105 @@
+<!--
+title: Läget
+description: Brf Sjötungan ligger mellan Tyresö centrum och skogen i Bollmora. Karta över området, kommunikationer, förskola och skola i närområdet.
+-->
+
+<main id="main">
+
+  <section class="page-head">
+    <div class="container page-head__inner">
+      <h1>Läget</h1>
+      <p>
+        Området har butikerna, Stadsparken och bussarna i Tyresö centrum åt ena
+        hållet och skogen åt det andra: husen i söder gränsar till skogsmark, och
+        gårdarna fortsätter ut i den utan att någon gata ligger emellan. Det
+        märks på djuren – rådjur i skogsbrynet syns från fönstren.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="karta">
+    <div class="container">
+      <div class="section__head">
+        <h2>Området och närområdet</h2>
+        <p>
+          Föreningens mark markerad i gult på en satellitbild. Tyresö centrum
+          ligger uppe till vänster i bilden, skogen och grönstråket nedanför och
+          till höger.
+        </p>
+      </div>
+
+      <div class="gallery gallery--wide mt-md">
+        <figure>
+          <a href="assets/images/nature/karta.jpg">
+            <img src="assets/images/nature/karta.jpg" alt="Satellitbild över Bollmora med föreningens husrader markerade i ett gult fält mitt i bilden. Uppe till vänster ligger Tyresö centrum med butikskvarter och stora parkeringar, nedanför och till höger tar skog och öppna grönytor vid. Utsatta namn i bilden är Tyresöhallen, Fårdala skola, Förskola Pusslet och Frejs lekplats." loading="lazy" decoding="async" width="1600" height="901">
+          </a>
+          <figcaption>Husen ligger mellan centrum och skogen – kvartersstaden på ena sidan, grönytorna på den andra.</figcaption>
+        </figure>
+      </div>
+
+      <p class="credit">
+        Kartbilden är ett utsnitt ur Google Maps satellitvy och är Googles
+        material, inte föreningens.
+      </p>
+    </div>
+  </section>
+
+  <!-- Kommunikationerna saknas ännu: busslinjer, restid till Gullmarsplan och
+       Slussen, gångavstånd till hållplats. Det är den vanligaste frågan från
+       någon som väger adresser mot varandra och bör fyllas i först av allt.
+       Luckan står som en anteckning här och i README, inte som en synlig
+       "Innehåll kommer" på sidan – på en säljande sajt läses en sådan rad som
+       att sidan är övergiven, inte som att någon är ärlig. Skriv inte in
+       gissningar: restider och linjenummer ändras, och ett fel märks direkt av
+       den som bor i Stockholm. -->
+
+  <section class="section section--alt" id="tillganglighet">
+    <div class="container container--narrow">
+      {{block:tillganglighet:section}}
+    </div>
+  </section>
+
+  <section class="section" id="naromradet">
+    <div class="container">
+      <div class="section__head">
+        <h2>I närområdet</h2>
+        <p>
+          Sådant som inte ägs av föreningen men som ligger inom gångavstånd och
+          påverkar vardagen lika mycket.
+        </p>
+      </div>
+
+      <div class="grid grid--3">
+        {{block:forskolan-gunghasten}}
+        {{block:stadslekplatsen}}
+        {{block:tyreso-kulturskola}}
+        {{block:wattinge-hundrastgard}}
+        {{block:tyreso-cykelkarta}}
+        {{block:cykelvag-myggdalsvagen}}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="djuren">
+    <div class="container container--narrow">
+      <div class="section__head">
+        <h2>Rådjur utanför fönstret</h2>
+        <p>
+          Skogen börjar där gårdarna slutar, och djuren stannar inte vid gränsen.
+          Filmen är tagen från ett fönster i området.
+        </p>
+      </div>
+
+      <div class="video mt-md">
+        <video controls preload="none" playsinline
+               poster="assets/images/nature/video-poster.jpg"
+               width="540" height="960">
+          <source src="assets/video/wildlife.mp4" type="video/mp4">
+          Din webbläsare kan inte spela upp videon.
+        </video>
+      </div>
+      <p class="video-note">40 sekunder, utan ljud.</p>
+    </div>
+  </section>
+
+</main>
