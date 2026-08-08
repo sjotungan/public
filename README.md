@@ -210,9 +210,15 @@ inte in gissningar.
 - **Hiss per hus** (`tillganglighet`-blocket) – vilka av de 24 husen som har
   hiss. Att samtliga hissar renoverades 2023 är belagt; fördelningen är det
   inte. Viktigt för den som säljer villa och söker sig till lägenhet.
-- **Bredbandsleverantör och hastighet** (`bredband`-blocket) – att bredband och
-  TV ingår i avgiften är belagt, men inte vilken leverantör eller vilken
+- **Bredband och TV** (`bredband`-blocket) – **Telenor 250/250 Mbit/s** sedan
+  2021-08-01, uttaget i hallen, och **TV från Tele2**, tidigare Com Hem, med det
+  digitala grundutbudet på 16 kanaler sedan 2020-09-08. Kontrollerat 2026-08-08
+  mot A–Ö, som är enda källan – årsredovisningen nämner varken leverantör eller
   hastighet.
+
+  **Att det är två olika bolag skrivs ut med flit.** "Bredband och TV ingår"
+  läses annars som ett avtal hos en leverantör, och den som ringer fel bolag om
+  TV-kanalerna får svaret att han inte är kund. Skriv inte ihop dem igen.
 - **Vad som kostar extra** (`det-har-ingar`-blocket) – ingressen säger nu att
   allt ingår i avgiften utom det som står med en kostnad. Fyra rader har pris
   (gym, p-plats, garage, MC-garage) och en är uttryckligen kostnadsfri

@@ -95,8 +95,6 @@ boende, kategori B är HSB-föreningar i Tyresö. Administrativ köavgift 100 kr
 - [ ] **Hiss per hus** – vilka av de 24 husen som har hiss. Att alla hissar
       renoverades 2023 är belagt, fördelningen inte. Viktig för den som säljer
       villa
-- [ ] **Bredbandsleverantör och hastighet** – att bredband och TV ingår är
-      belagt, men inte av vem eller hur snabbt
 
 ## Klart, hämtat ur A–Ö 2026-08-07
 
@@ -113,6 +111,16 @@ Källa: <https://www.sjotungan.se/public_html/new2016/a-o/a-o.html>
       övervakningen sedan 2024-04-01
 - [x] Paketboxen – gratis, på gaveln vid M64, öppen dygnet runt
 - [x] Ungdomslägenheterna – åtta stycken, 18–27 år, kötid och kategori
+
+## Klart, hämtat ur A–Ö 2026-08-08
+
+Källa: <https://www.sjotungan.se/public_html/new2016/a-o/a-o.html>
+
+- [x] Bredbandsleverantör och hastighet – Telenor 250/250 Mbit/s ingår i
+      avgiften sedan 2021-08-01, uttaget sitter i hallen. TV är en **annan**
+      leverantör: Tele2, tidigare Com Hem, med det digitala grundutbudet på
+      16 kanaler sedan 2020-09-08. Com Hems bredband finns att teckna vid sidan
+      av. Årsredovisningen säger inget om detta – A–Ö är enda källan
 
 ## Klart, uppgift från medlem 2026-08-07
 
