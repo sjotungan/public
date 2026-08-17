@@ -210,7 +210,14 @@ BLOCK_RE = re.compile(
 
 # Första stycket i ett block är ingressen: den mening som ensam duger som svar.
 # Varianten "section" sätter den i sidhuvudet och resten under.
-LEAD_RE = re.compile(r"\A\s*(<p>.*?</p>)(.*)\Z", re.S)
+#
+# De inledande kommentarerna räknas inte som text. Uttrycket krävde tidigare att
+# kroppen började med <p>, och de fem block som dokumenterar sina val i en
+# kommentar överst matchade därför aldrig: ingressen blev liggande kvar i
+# kroppen och renderades som brödtext i stället för som ingress. Kommentarerna
+# fångas nu i en egen grupp så att de följer med ut i sidan – de är skrivna för
+# den som läser källan och ska inte tappas bort på vägen.
+LEAD_RE = re.compile(r"\A\s*((?:<!--.*?-->\s*)*)(<p>.*?</p>)(.*)\Z", re.S)
 
 
 def indent(text, pad):
@@ -229,11 +236,17 @@ def read_block(name):
 
 
 def split_lead(body):
-    """Delar innehållet i ingress (första stycket) och resten."""
+    """Delar innehållet i ingress (första stycket) och resten.
+
+    Kommentarerna överst hör till resten, inte till ingressen, och ställs
+    först i den så att de står kvar ovanför texten de handlar om.
+    """
     m = LEAD_RE.match(body)
     if not m:
         return "", body
-    return m.group(1), m.group(2).strip("\n")
+    notes, lead, rest = m.group(1), m.group(2), m.group(3)
+    kvar = [del_ for del_ in (notes.strip(), rest.strip()) if del_]
+    return lead, "\n\n".join(kvar)
 
 
 def card_body(meta, body):
