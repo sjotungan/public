@@ -1,0 +1,18 @@
+# Konfiguration för GitHub Pages, som kör Jekyll på det här repot även utan en
+# sådan här fil. Den finns av ett enda skäl, och det är inte att bygga något:
+# Pages serverar allt som ligger i repot, inte bara de elva sidor build.py
+# skriver. Vad som helst som checkas in går alltså att surfa till.
+#
+# old_version/ är det gamla bygget, sparat som referens. Det är 85 filer med
+# text som är ersatt eller borttagen med flit – bland annat pekade den gamla
+# däckförvaringstexten ut vilket garage däcken står i, en uppgift som togs bort
+# ur den nuvarande sajten just för att den inte ska ligga öppet. Arkivet
+# fortsatte servera den. Undantaget nedan stänger den vägen.
+#
+# Filerna ligger kvar i git. Det här handlar bara om vad som publiceras.
+#
+# ATT TÄNKA PÅ: raden gäller det som Pages bygger, inte det som finns i repot.
+# Den som lägger en ny mapp med utkast eller anteckningar i roten måste föra upp
+# den här – annars ligger den ute.
+exclude:
+  - old_version
