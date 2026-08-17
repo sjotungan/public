@@ -357,11 +357,31 @@ GALLERY_MARK_RE = re.compile(r"^[ \t]*\{\{gallery\}\}[ \t]*$", re.M)
 
 FIGURE_RE = re.compile(r"^([ \t]*)<figure>.*?</figure>", re.M | re.S)
 HREF_RE = re.compile(r'<a href="([^"]+)"')
+COMMENT_RE = re.compile(r"<!--.*?-->", re.S)
 
 
 def dedent_to(text, pad):
     return "\n".join(line[len(pad):] if line.startswith(pad) else line.lstrip()
                      for line in text.splitlines())
+
+
+def find_figures(content):
+    """Sidans figurer som (text, start, slut) – aldrig de som står i en kommentar.
+
+    Kommentarerna måste undantas. FIGURE_RE är lat och slutar vid första
+    </figure>, så ett <figure> som råkar stå i en kommentar – och sajtens
+    kommentarer beskriver ofta uppmärkningen de sitter bredvid – ger en träff
+    som börjar inne i kommentaren och slutar i nästa riktiga figur. Lyfter man
+    ut den biten följer kommentarens avslutande --> med, och resten av
+    kommentartexten hamnar i galleriet som synlig text. Det hände på
+    bildsidan."""
+    skip = [m.span() for m in COMMENT_RE.finditer(content)]
+    found = []
+    for m in FIGURE_RE.finditer(content):
+        if any(start <= m.start() < end for start, end in skip):
+            continue
+        found.append((dedent_to(m.group(0), m.group(1)), m.start(), m.end()))
+    return found
 
 
 def take_own_figures(content):
@@ -370,9 +390,10 @@ def take_own_figures(content):
     Returnerar bilderna och sidan utan dem. De ska stå i galleriet och ingen
     annanstans, så de tas bort där de skrevs – annars hade sidan visat dem två
     gånger, en gång löst och en gång i galleriet."""
-    figures = [dedent_to(found.group(0), found.group(1))
-               for found in FIGURE_RE.finditer(content)]
-    return figures, FIGURE_RE.sub("", content)
+    found = find_figures(content)
+    for _, start, end in reversed(found):
+        content = content[:start] + content[end:]
+    return [figure for figure, _, _ in found], content
 
 
 def collect_figures(pages, order, own=()):
@@ -389,8 +410,7 @@ def collect_figures(pages, order, own=()):
         if name == GALLERY_PAGE:
             continue
         found = own if name is None else [
-            dedent_to(m.group(0), m.group(1))
-            for m in FIGURE_RE.finditer(pages[name][1])
+            figure for figure, _, _ in find_figures(pages[name][1])
         ]
         for figure in found:
             href = HREF_RE.search(figure)

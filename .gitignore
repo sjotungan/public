@@ -1,7 +1,14 @@
 # Camera originals, HEIC rakt från telefonen. De nedskalade JPEG-kopiorna under
-# assets/ är det sajten använder; originalen är ~114 MB och hör inte hemma i git.
+# assets/ är det sajten använder; originalen är ~138 MB och hör inte hemma i git.
+#
+# Gemener och versaler står som egna rader. Telefonen levererar bägge – IMG_2638
+# kom som .HEIC och IMG_4040 som .heic – och att bara .HEIC räckte hittills beror
+# på att macOS sätter core.ignorecase=true. På ett skiftlägeskänsligt filsystem
+# matchar IMG_*.HEIC inte IMG_4040.heic, och originalen hade följt med in i git.
 IMG_*.HEIC
+IMG_*.heic
 IMG_*.MOV
+IMG_*.mov
 
 # Skärmbilder från telefonen. IMG_2613.PNG är originalet ur hundägarnas
 # WhatsApp-grupp, med namn, ett mobilnummer och profilbilder i klartext. Det är
