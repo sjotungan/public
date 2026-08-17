@@ -47,20 +47,38 @@ description: HSB Brf Sjötungan i Tyresö: 604 lägenheter vid Myggdalsvägen i 
           <span class="facts__value">Äkta</span>
           <span class="facts__label">Förening, äger marken</span>
         </div>
-        <div class="facts__item">
-          <span class="facts__value">116 000</span>
-          <span class="facts__label">Kvm markyta</span>
-        </div>
-        <!-- Sex uppgifter och inte fem: med ett udda antal blir den sista cellen
-             tom i tvåkolumnsläget på mobil, och tomrummet syns som en grå ruta.
+        <!-- Marken står med *en* gång, inte två. Rutan "116 000 kvm markyta"
+             stod här intill och sa samma sak: 192 är 116 000 delat med 604, och
+             604 står som första uppgift i samma strip. Läsaren fick alltså
+             uppgiften dubbelt och divisorn på köpet, i en strip vars hela värde
+             är att sex olika saker syns på en gång.
 
-             Marken per lägenhet står här i stället för medlemsantalet. 116 000
-             kvm är abstrakt; 192 kvm per lägenhet är drygt dubbla bostadsytan
-             och går att föreställa sig. Antalet medlemmar säger en spekulant
-             ingenting och finns kvar på fakta.html. -->
+             Av de två är det 192 som stannar. 116 000 kvm är abstrakt; 192 kvm
+             per lägenhet är drygt dubbla bostadsytan och går att föreställa sig,
+             och det är per lägenhet en spekulant jämför föreningar. Totalytan är
+             inte borta – den står i ingressen till "Ett område som sköts om"
+             direkt nedanför och en gång till i `stor-forening`.
+
+             Marken per lägenhet står i sin tur här i stället för medlemsantalet,
+             som inte säger en spekulant något och finns kvar på fakta.html.
+
+             SEX UPPGIFTER, ALDRIG FEM. .facts är auto-fit minmax(160px, 1fr) och
+             ger sex kolumner i containern, tre i mellanläget och två på mobil.
+             Sex går jämnt upp i alla tre. Fem lämnar en tom cell i både tre- och
+             tvåkolumnsläget, och tomrummet syns som en grå ruta eftersom
+             griddens bakgrund är linjefärgen. Tar du bort en rad måste du sätta
+             dit en annan. -->
         <div class="facts__item">
           <span class="facts__value">192</span>
           <span class="facts__label">Kvm mark per lägenhet</span>
+        </div>
+        <!-- 572 = 287 p-platser + 285 garage, båda ur `parkering` och fakta.html.
+             Talet fyller cellen som totalytan lämnade och bär samtidigt påståendet
+             i `stor-forening` om att det finns nästan en plats per lägenhet –
+             572 på 604 är 0,95. Ändras någon av de två delarna ändras summan. -->
+        <div class="facts__item">
+          <span class="facts__value">572</span>
+          <span class="facts__label">P-platser och garage</span>
         </div>
       </div>
     </div>
