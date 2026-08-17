@@ -20,6 +20,10 @@ Femtiolappen ser alltså ut att vara bastuns avgift som vandrat över till gymme
 Det är sajtens mest upprepade enskilda påstående, och det står i ingressen på
 förstasidan.
 
+Omkontrollerat mot A–Ö 2026-08-17: oförändrat. Gymmet står fortfarande utan
+belopp och femtiolappen sitter fortfarande på bastun. A–Ö kommer alltså inte att
+lösa det här – frågan måste till någon som har en avi.
+
 - [ ] **Vad kostar gymmedlemskapet?** Kontrollera mot en avgiftsavi från
       Fastighetsägarna, inte mot A–Ö. Rätta i så fall alla sex ställena samtidigt
 - [ ] Betalar man **båda** avgifterna separat om man har gym och bastu?
@@ -79,13 +83,31 @@ Varje rad utan kostnad påstår alltså att den är gratis. Kvar att belägga:
 Åtta stycken, 18–27 år, kategori A är boende i föreningen eller barn till
 boende, kategori B är HSB-föreningar i Tyresö. Administrativ köavgift 100 kr/år.
 
-- [ ] **Är uthyrningen fortfarande pausad?** A–Ö säger att både köavgiften och
-      uthyrandet pausats under stambytet. Raden lovar i dag inget om
-      inflyttning – men om pausen är hävd är det en mycket starkare rad
+- [x] **Är uthyrningen fortfarande pausad?** Ja, kontrollerat mot A–Ö
+      2026-08-17: *"Under stambytet har vi pausat köavgiften för och uthyrandet
+      av ungdomslägenheterna."* Stambytet är beräknat klart 2030. Raden sa
+      "efter kötid", vilket lovade en kötid som inte finns, och säger nu
+      "uthyrningen pausad under stambytet" i stället
 - [ ] **Hyran** för en ungdomslägenhet – fortfarande okänd
-- [ ] Flytta upp gruppen *Att låna, boka och hyra* först i listan när raderna är
-      klara – grupperna står i fallande ordning efter hur ovanliga de är, och
-      nio egna lägenheter slår ett gym
+- [ ] Flytta upp gruppen *Att låna, boka och hyra* först i listan **när pausen är
+      hävd** – grupperna står i fallande ordning efter hur ovanliga de är, och nio
+      egna lägenheter slår ett gym. Men åtta av de nio går inte att hyra förrän
+      stambytet är klart, och då bär de ingen förstaplacering. Väntar på att
+      uthyrningen öppnar igen, inte på att raden skrivs om
+
+## Ska M10 stå utskrivet?
+
+Garaget med däckförvaringen är avidentifierat, se *Var förråden ligger står inte
+utskrivet* i [README.md](README.md). Cykelförrådet är det inte: `cykelforrad-m10`
+heter *"Långtidsförvaring i M10"* och raden i `det-har-ingar` säger samma sak. En
+cykel i långtidsförvaring är ett bättre byte än ett däck.
+
+- [ ] **Avgör om regeln gäller cykelförrådet också.** Ja betyder ny rubrik på
+      blocket, ändrad rad i `det-har-ingar` och en genomgång av `bicycle.html`,
+      som hämtar in blocket. Nej betyder att raden om däckgaraget bör omprövas –
+      det ena eller det andra, inte båda
+- [ ] Fråga samtidigt om cykelförrådet är **larmat eller låst med egen nyckel**.
+      Är det det, faller hela invändningen och båda uppgifterna kan stå kvar
 
 ## Övriga luckor
 
@@ -121,6 +143,34 @@ Källa: <https://www.sjotungan.se/public_html/new2016/a-o/a-o.html>
       leverantör: Tele2, tidigare Com Hem, med det digitala grundutbudet på
       16 kanaler sedan 2020-09-08. Com Hems bredband finns att teckna vid sidan
       av. Årsredovisningen säger inget om detta – A–Ö är enda källan
+
+## Klart, hämtat ur A–Ö 2026-08-17
+
+Källa: <https://www.sjotungan.se/public_html/new2016/a-o/a-o.html>
+
+- [x] **Ungdomslägenheterna är fortfarande pausade** – se avsnittet ovan. Raden i
+      `det-har-ingar` är omskriven efter det
+- [x] **A–Ö namnger själv garaget** för däckförvaringen. Vi har tagit bort
+      bokstaven ur den här sajten på inrådan från en granne, men uppgiften ligger
+      kvar öppet på föreningens officiella sajt. Att ändra det är styrelsens
+      beslut, inte vårt – tipsa dem gärna.
+
+      Det är däremot inget skäl att ta tillbaka bokstaven här. Vår borttagning
+      står på egna ben: uppgiften är värdelös för spekulanten och mäklaren som
+      sidan är skriven för, den finns redan i porten för den som bor här, och den
+      enda som har konkret nytta av den är en tjuv. Se kommentaren i
+      `dackforvaring`
+- [x] **A–Ö säger fortfarande 425 kr/mån för laddplatsen.** Rätt pris är 445 kr
+      plus 69 kr för appen, belagt mot faktura. Sidan behöver inte ändras – det
+      här är bara ännu en bekräftelse på att A–Ö kan vara gammal
+- [x] **Gästparkeringen** – ingen prisuppgift, men Parkit sköter övervakningen
+      sedan 2024-04-01 och betalning sker via Easypark, Parkster eller SMS.
+      Raden "betalas i app" stämmer
+
+A–Ö svarar **inte** på priset för cykelförrådet, barnvagnsrummen, tvättstugorna,
+borrmaskinen, paketboxen eller föreningslokalen. De raderna vilar alltså
+fortfarande bara på uppgiften från en medlem nedan, och de tre som står kvar
+under *Blockerar* ovan är fortfarande obelagda.
 
 ## Klart, uppgift från medlem 2026-08-07
 

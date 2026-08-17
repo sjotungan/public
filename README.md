@@ -132,6 +132,50 @@ att sidan är övergiven. Luckor står som HTML-kommentar i blocket och i listan
 nedan – aldrig i texten besökaren ser. Skriv hellre en kortare färdig mening än
 en längre med ett hål i.
 
+### Var förråden ligger står inte utskrivet
+
+Sajten ligger öppet på nätet. Att skriva ut exakt var föreningens förråd finns är
+därför en upplysning, och frågan är alltid **vem den är till nytta för**:
+
+- **Spekulanten och mäklaren**, som sidorna är skrivna för: ingen nytta alls. De
+  har inga däck och inga cyklar stående i föreningens utrymmen. Det som säljer är
+  att förvaringen *finns* och är gratis.
+- **Den som bor här**: svag nytta, och uppgiften står redan i anslaget i porten,
+  som texten kan peka på i stället.
+- **Den som vill stjäla ur ett olarmat utrymme**: full nytta. Det är den enda
+  läsaren som har konkret användning av en adress.
+
+Är fördelningen sådan, skriv inte ut var det ligger. Skriv att det finns, vad det
+kostar och var man får veta resten.
+
+**Det här är inte samma sak som att göra sajten otydlig, och inte ett undantag
+från "göm inte" ovan.** Den regeln gäller det obekväma – avgiftshöjningar,
+stambytet, sådant en köpare behöver för att bedöma föreningen. En förrådsdörr är
+ingen svaghet som göms; det är en driftsdetalj som inte hör till det läsaren ska
+bedöma.
+
+Taget bort med detta som skäl:
+
+- **Vilket garage däcken förvaras i** – ur `dackforvaring` och raden i
+  `det-har-ingar`, 2026-08-17.
+
+Två saker att veta innan någon skriver tillbaka det:
+
+1. **Kommentarerna följer med ut i den byggda HTML-filen.** Uppgiften får alltså
+   inte stå i en kommentar som förklarar varför den är borttagen heller – den går
+   att läsa i källkoden på sidan.
+2. **A–Ö på sjotungan.se skriver ut garaget ändå** (kontrollerat 2026-08-17). Det
+   är inget skäl att ta tillbaka det: att uppgiften finns någon annanstans gör den
+   inte nyttigare här. Att städa den officiella sajten är styrelsens beslut.
+
+**Ojämnt tillämpat i dag.** `cykelforrad-m10` heter *"Långtidsförvaring i M10"* i
+rubriken, och raden i `det-har-ingar` säger samma sak. En cykel i
+långtidsförvaring är ett bättre byte än ett däck – den är lätt att bära, lätt att
+sälja och ingen tittar till den på flera månader. Antingen gäller regeln även där
+och blocket ska byta rubrik, eller så är den inte värd att ha. Frågan står i
+[TODO.md](TODO.md). Barnvagnsrummen är däremot beskrivna som *"nedre botten i
+trapphuset"*, vilket är en sorts plats och inte en adress – det är i sin ordning.
+
 ## Sidor
 
 Tabellen står i menyns ordning: det som lockar först, det som kontrolleras sist.
