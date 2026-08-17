@@ -95,19 +95,21 @@ boende, kategori B är HSB-föreningar i Tyresö. Administrativ köavgift 100 kr
       stambytet är klart, och då bär de ingen förstaplacering. Väntar på att
       uthyrningen öppnar igen, inte på att raden skrivs om
 
-## Ska M10 stå utskrivet?
+## Cykelförrådet: huset borttaget, men hur får man plats?
 
-Garaget med däckförvaringen är avidentifierat, se *Var förråden ligger står inte
-utskrivet* i [README.md](README.md). Cykelförrådet är det inte: `cykelforrad-m10`
-heter *"Långtidsförvaring i M10"* och raden i `det-har-ingar` säger samma sak. En
-cykel i långtidsförvaring är ett bättre byte än ett däck.
+Huset är avidentifierat sedan 2026-08-17, samma regel som däckgaraget – se *Var
+förråden ligger står inte utskrivet* i [README.md](README.md).
 
-- [ ] **Avgör om regeln gäller cykelförrådet också.** Ja betyder ny rubrik på
-      blocket, ändrad rad i `det-har-ingar` och en genomgång av `bicycle.html`,
-      som hämtar in blocket. Nej betyder att raden om däckgaraget bör omprövas –
-      det ena eller det andra, inte båda
-- [ ] Fråga samtidigt om cykelförrådet är **larmat eller låst med egen nyckel**.
-      Är det det, faller hela invändningen och båda uppgifterna kan stå kvar
+Det lämnade en lucka som däcktexten inte har. Den kan säga "står i anslaget i
+porten", för A–Ö säger att öppettiderna anslås där. För cykelförrådet vet vi
+ingenting motsvarande, så texten säger nu bara att förrådet finns.
+
+- [ ] **Hur får en medlem plats eller nyckel till cykelförrådet?** Med det svaret
+      kan blocket peka vidare i stället för att sluta i tomma intet, precis som
+      däcktexten gör
+- [ ] **Är förrådet larmat eller låst med egen nyckel?** Är det det, faller
+      invändningen och husbeteckningen kan stå kvar igen – både här och,
+      beroende på svaret för garaget, för däcken
 
 ## Övriga luckor
 

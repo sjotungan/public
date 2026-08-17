@@ -154,10 +154,14 @@ stambytet, sådant en köpare behöver för att bedöma föreningen. En förråd
 ingen svaghet som göms; det är en driftsdetalj som inte hör till det läsaren ska
 bedöma.
 
-Taget bort med detta som skäl:
+Taget bort med detta som skäl, båda 2026-08-17:
 
 - **Vilket garage däcken förvaras i** – ur `dackforvaring` och raden i
-  `det-har-ingar`, 2026-08-17.
+  `det-har-ingar`.
+- **Vilket hus cykelförrådet ligger i** – ur `cykelforrad-m10` (som också bytte
+  rubrik), raden i `det-har-ingar` samt ingressen och sidbeskrivningen på
+  `bicycle.html`. En cykel i långtidsförvaring är ett bättre byte än ett däck:
+  lätt att bära, lätt att sälja, och ingen tittar till den på flera månader.
 
 Två saker att veta innan någon skriver tillbaka det:
 
@@ -168,13 +172,15 @@ Två saker att veta innan någon skriver tillbaka det:
    är inget skäl att ta tillbaka det: att uppgiften finns någon annanstans gör den
    inte nyttigare här. Att städa den officiella sajten är styrelsens beslut.
 
-**Ojämnt tillämpat i dag.** `cykelforrad-m10` heter *"Långtidsförvaring i M10"* i
-rubriken, och raden i `det-har-ingar` säger samma sak. En cykel i
-långtidsförvaring är ett bättre byte än ett däck – den är lätt att bära, lätt att
-sälja och ingen tittar till den på flera månader. Antingen gäller regeln även där
-och blocket ska byta rubrik, eller så är den inte värd att ha. Frågan står i
-[TODO.md](TODO.md). Barnvagnsrummen är däremot beskrivna som *"nedre botten i
-trapphuset"*, vilket är en sorts plats och inte en adress – det är i sin ordning.
+**Barnvagnsrummen är i sin ordning** som de står: *"nedre botten i trapphuset"*
+är en sorts plats och inte en adress, och en barnvagn är inget någon bär ut ur
+området. Regeln gäller utrymmen som står orörda och innehåller något säljbart,
+inte varje mening som nämner var något finns – bastun i M90 och tvättstugorna
+står kvar med hus, och ska göra det. De används dagligen.
+
+**Blocknamnen är inte städade.** `cykelforrad-m10` heter fortfarande så i
+`src/blocks/`. Blocknamn följer aldrig med ut i den byggda sidan, så de döljer
+ingenting – ett byte hade bara rört om i sidorna som hämtar in blocket.
 
 ## Sidor
 
