@@ -340,6 +340,28 @@ påstående om tio grillplatser utan en enda bild. De ligger nu samlade i
 `grillplatser-bilder`, med adressen i varje bildtext eftersom bilden i galleriet
 inte längre står under en rubrik som säger vilken plats det är.
 
+### Bilder utan sida
+
+Regeln är att varje foto står under ett påstående det styrker. Det är den regeln
+som håller nere antalet bilder, och den gäller fortfarande. Men ett foto kan
+vara värt att visa utan att bevisa något, och tvingar man in ett sådant på en
+ämnessida får den sidan bära en bild som inte hör till dess ärende.
+
+Sådana bilder skrivs som vanliga `<figure>` direkt i `src/pages/bilder.html`,
+mellan sidhuvudet och `{{gallery}}`. `build.py` lyfter ut dem ur sidan och
+lägger dem **sist** i galleriet – de står alltså inte kvar där de skrevs, och
+sidan har ett enda galleri, inte två. Bygget skriver ut hur många de är:
+
+```text
+bildsidan: 65 bilder, varav 0 egna
+```
+
+**Bildtexten måste bära sig själv.** En sådan bild står aldrig under en rubrik
+som säger var den är tagen – den har ingen sida att stå på. Det är samma problem
+som grillbilderna fick när de hamnade i galleriet, fast permanent: skriv ut plats
+och sammanhang i `figcaption`, inte "en av gårdarna". `alt` och `figcaption`
+följer med bilden in i galleriet, eftersom det är hela `<figure>` som flyttas.
+
 Kommandot som visar vilka bilder som blivit oanvända:
 
 ```sh

@@ -335,14 +335,23 @@ def expand_blocks(html, stack=()):
     return html
 
 
-# Bildsidan. Sidan skriver inga bilder själv utan samlar in dem: när blocken
-# hämtats in går skriptet igenom de andra sidorna i menyns ordning och plockar
-# ut varje <figure>. Bilderna hamnar i ett enda galleri – en uppsättning att
-# bläddra igenom, utan avsnitt och rubriker emellan. Bildtexten står kvar på ett
-# enda ställe – i blocket eller på sidan där bilden hör hemma – och bildsidan
-# fylls på av sig själv när en bild läggs till någon annanstans.
+# Bildsidan. Sidan samlar in bilderna: när blocken hämtats in går skriptet
+# igenom de andra sidorna i menyns ordning och plockar ut varje <figure>.
+# Bilderna hamnar i ett enda galleri – en uppsättning att bläddra igenom, utan
+# avsnitt och rubriker emellan. Bildtexten står kvar på ett enda ställe – i
+# blocket eller på sidan där bilden hör hemma – och bildsidan fylls på av sig
+# själv när en bild läggs till någon annanstans.
 #
 # Sidfragmentet markerar platsen med {{gallery}}, ensamt på en rad.
+#
+# UNDANTAGET: bildsidan får skriva egna bilder. Varje annan bild på sajten står
+# under ett påstående den styrker, och det är den regeln som gör att sajten inte
+# svämmar över av foton. Men ett foto kan vara värt att visa utan att bevisa
+# något – hur det ser ut mellan husen en kväll i augusti – och tvingar man in
+# det på en ämnessida får den sidan bära en bild som inte hör till dess ärende.
+# Sådana bilder skrivs som vanliga <figure> direkt i src/pages/bilder.html, och
+# take_own_figures() lyfter ut dem ur sidan och lägger dem sist i galleriet. De
+# står alltså inte kvar där de skrevs: sidan har ett enda galleri, inte två.
 GALLERY_PAGE = "bilder.html"
 GALLERY_MARK_RE = re.compile(r"^[ \t]*\{\{gallery\}\}[ \t]*$", re.M)
 
@@ -355,18 +364,35 @@ def dedent_to(text, pad):
                      for line in text.splitlines())
 
 
-def collect_figures(pages, order):
+def take_own_figures(content):
+    """Bildsidans egna bilder, utlyfta ur sidan.
+
+    Returnerar bilderna och sidan utan dem. De ska stå i galleriet och ingen
+    annanstans, så de tas bort där de skrevs – annars hade sidan visat dem två
+    gånger, en gång löst och en gång i galleriet."""
+    figures = [dedent_to(found.group(0), found.group(1))
+               for found in FIGURE_RE.finditer(content)]
+    return figures, FIGURE_RE.sub("", content)
+
+
+def collect_figures(pages, order, own=()):
     """Alla bilder på sajten, i den ordning läsaren möter dem.
 
     Blocken är redan inhämtade, så det spelar ingen roll om en bild står på
-    sidan eller i ett block. En bild som står på flera sidor tas med en gång."""
+    sidan eller i ett block. En bild som står på flera sidor tas med en gång.
+
+    Bildsidans egna bilder kommer sist: de hör inte till något avsnitt, och
+    läsaren ska möta bilderna som står under ett påstående först."""
     seen = set()
     figures = []
-    for name in order:
+    for name in list(order) + [None]:
         if name == GALLERY_PAGE:
             continue
-        for found in FIGURE_RE.finditer(pages[name][1]):
-            figure = dedent_to(found.group(0), found.group(1))
+        found = own if name is None else [
+            dedent_to(m.group(0), m.group(1))
+            for m in FIGURE_RE.finditer(pages[name][1])
+        ]
+        for figure in found:
             href = HREF_RE.search(figure)
             key = href.group(1) if href else figure
             if key in seen:
@@ -520,16 +546,17 @@ def main():
 
     order = page_order(names)
     if GALLERY_PAGE in pages:
-        figures = collect_figures(pages, order)
         meta, content = pages[GALLERY_PAGE]
         if not GALLERY_MARK_RE.search(content):
             sys.exit("%s saknar {{gallery}} på egen rad" % GALLERY_PAGE)
+        own, content = take_own_figures(content)
+        figures = collect_figures(pages, order, own)
         pages[GALLERY_PAGE] = (
             meta,
             # Funktionen som ersättning: innehållet skrivs in som det står.
             GALLERY_MARK_RE.sub(lambda m: render_gallery_page(figures), content),
         )
-        print("bildsidan: %d bilder" % len(figures))
+        print("bildsidan: %d bilder, varav %d egna" % (len(figures), len(own)))
 
     for name in order:
         meta, content = pages[name]
