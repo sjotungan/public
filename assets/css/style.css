@@ -863,12 +863,42 @@ hr {
   padding: 0;
 }
 
+/* Raden är två delar: vad saken är, och vad den kostar. Formen är samma flex som
+   .factrow använder – beskrivning till vänster, uppgift till höger – för att en
+   spekulant redan läser objektfakta så, och för att den är det enda som håller i
+   en spalt som bara är ett par tum bred.
+
+   Wrap plus margin-left:auto på kostnaden i stället för en riktig kolumn: .perks
+   är ett rutnät med minmax(15rem, 1fr), så grupperna är smala och en fast kolumn
+   hade brutit texten på tok. Får kostnaden inte plats på raden hamnar den på
+   nästa, fortfarande högerställd. */
 .perks li {
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 0.75rem;
   padding: 0.4rem 0 0.4rem 1.5rem;
   font-size: 0.9375rem;
   line-height: 1.5;
   color: var(--ink-soft);
+}
+
+.perk__what {
+  flex: 1 1 auto;
+}
+
+/* Tabular-nums så att beloppen står i lodrät linje under varandra, nowrap så att
+   "50 kr/mån" aldrig bryts mitt i, och dämpad färg för att raden ska läsas som
+   sak först och pris sedan. Priset är ett argument, inte ett förbehåll – men det
+   är saken som säljer. */
+.perk__cost {
+  flex: 0 0 auto;
+  margin-left: auto;
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--muted);
 }
 
 /* Bocken ritas i CSS och inte som ikon: raderna är många, och en <svg> per rad

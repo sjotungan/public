@@ -7,18 +7,19 @@ står bara vad som ska fram och av vem.
 Skriv aldrig in en gissning. En kortare färdig mening är bättre än en längre med
 ett hål i.
 
-## Först: gympriset kan vara fel på sex ställen
+## Först: gympriset kan vara fel på fem ställen
 
-Sajten påstår **"ett gym för 50 kronor i månaden"** i `gym`-blocket,
-`kort-traning`, `det-har-ingar`, ingressen på översikten och två gånger i
-README. Föreningens egen A–Ö säger något annat:
+Sajten påstår **"ett gym för 50 kronor i månaden"** i `gym`-blockets text och i
+dess faktaruta, i `kort-traning`, på raden i `det-har-ingar` och i README.
+Föreningens egen A–Ö säger något annat:
 
 - bastun kostar **"50 kr per hushåll per månad"**
 - gymmet beskrivs bara som **"för en låg kostnad"**, utan belopp
 
 Femtiolappen ser alltså ut att vara bastuns avgift som vandrat över till gymmet.
-Det är sajtens mest upprepade enskilda påstående, och det står i ingressen på
-förstasidan.
+Det är sajtens mest upprepade enskilda påstående. (Det stod tidigare även i
+ingressen på översikten – den är borta sedan 2026-08-17, men talet står kvar i
+`kort-traning`, som ligger på samma sida.)
 
 Omkontrollerat mot A–Ö 2026-08-17: oförändrat. Gymmet står fortfarande utan
 belopp och femtiolappen sitter fortfarande på bastun. A–Ö kommer alltså inte att
@@ -67,13 +68,19 @@ sina foton med sig ut ur hela sajten, galleriet inkluderat. Så försvann alla
 elva grillbilderna en gång. Kommandot som visar oanvända bilder står i
 [README.md](README.md#vad-som-fortfarande-saknas).
 
-## Blockerar: ingressen i `det-har-ingar` lovar för hela listan
+## Vad kostar cykelförrådet, barnvagnsrummet och föreningslokalen?
 
-Ingressen säger *"Allt ingår i avgiften, utom det som står med en kostnad."*
-Varje rad utan kostnad påstår alltså att den är gratis. Kvar att belägga:
+Blockerade tidigare hela blocket: ingressen sa *"Allt ingår i avgiften, utom det
+som står med en kostnad"*, och då påstod varje tyst rad att den var gratis.
+Ingressen är borta sedan 2026-08-17, så raderna påstår ingenting längre och
+frågan blockerar inte prodsättning.
 
-- [ ] **Cykelförrådet i M10** – husens cykelrum är gratis, men gäller det även
-      långtidsförrådet, eller finns kö eller avgift dit?
+Den är däremot inte mindre värd att svara på – **tystnad är inte ett svar till
+läsaren, bara ett ärligt icke-svar.** Tre rader kan bli säljande av ett besked:
+
+- [ ] **Cykelförrådet** – husens cykelrum är gratis, men gäller det även
+      långtidsförrådet, eller finns kö eller avgift dit? Samma svar behövs för
+      hur man får plats eller nyckel, se avsnittet om cykelförrådet ovan
 - [ ] **Barnvagnsrum** – fritt för alla i huset?
 - [ ] **Föreningslokalen** står som "bokas utan kostnad" – A–Ö bekräftar inte
       det, priset ligger på en undersida. Verifiera påståendet
@@ -176,12 +183,12 @@ under *Blockerar* ovan är fortfarande obelagda.
 
 ## Klart, uppgift från medlem 2026-08-07
 
-Ingen av de här kostar något. Raderna i `det-har-ingar` står därför kvar utan
-kostnad, vilket är precis vad ingressen säger att de ska göra – inget att ändra.
+Ingen av de här kostar något. Sedan ingressen togs bort 2026-08-17 skriver de
+fyra raderna ut "utan kostnad" själva i `det-har-ingar`, tillsammans med
+paketboxen ur A–Ö – de fem är listans enda belagda kostnadsuppgifter.
 
 - [x] **Däckförvaring** – gratis. Skrivet med ord i `dackforvaring`-blocket
-      också, eftersom rollsidorna inte lyder under ingressens regel och de
-      flesta föreningar tar betalt för det här
+      också, eftersom de flesta föreningar tar betalt för det här
 - [x] **Tvättstugor** – gratis
 - [x] **Borrmaskin** – gratis, ingen deposition
 - [x] **Cykelrum** i husen – gratis

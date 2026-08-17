@@ -201,11 +201,7 @@
   <section class="section" id="included">
     <div class="container">
       <div class="section__head">
-        <h2>Det här ingår i boendet</h2>
-        <p>
-          Det mesta av det här står varken i annonsen eller i årsredovisningen. Allt
-          ingår i avgiften, utom det som står med en kostnad.
-        </p>
+        <h2>Det här finns i föreningen</h2>
       </div>
 
       <!-- Grupperna står i fallande ordning efter hur ovanliga de är, inte efter hur
@@ -219,8 +215,9 @@
            den leder inte.
 
            Rubriken blev tematisk av ett andra skäl: en grupp som ensam hette "Ingår i
-           avgiften" sa åt läsaren att de fem andra grupperna inte gjorde det. Regeln
-           står i ingressen i stället, och gäller då hela listan.
+           avgiften" sa åt läsaren att de fem andra grupperna inte gjorde det. Skälet
+           håller fortfarande, men regeln den hänvisade till gör det inte – ingressen
+           som bar den är borta. Se det tredje kommentarsblocket nedan.
 
            Först står det som en spekulant faktiskt inte hittar någon annanstans: en
            gästlägenhet, en ungdomslägenhet, ett gym för 50 kronor i månaden, en
@@ -252,59 +249,116 @@
            fyra ställena tillsammans.
 
            Däckförvaringen, tvättstugorna, borrmaskinen och husens cykelrum är gratis,
-           uppgift från medlem 2026-08-07. Därför står de utan kostnad – det är vad
-           ingressen säger att en sådan rad betyder, och en utskriven nolla hade bara
-           försvagat regeln.
+           uppgift från medlem 2026-08-07. Det är de fyra "Ingår" som vilar på en
+           kontroll av just den raden. Bredband, TV, bostadsrättstillägg, värme och
+           vatten står i årsredovisningen och i A–Ö.
 
-           KVAR ATT KONTROLLERA: meningen "Allt ingår i avgiften" gäller hela listan,
-           så varje rad utan kostnad påstår att den är gratis. Obelagda är fortfarande
-           cykelförrådet, barnvagnsrummen och föreningslokalens "utan kostnad".
+           De övriga "Ingår" står på öppna ytor utan tillträdeskontroll – utegym,
+           boulebana, fotbollsplan, isbana, grillplatser, lekplatser, hundrastgård. Där
+           finns ingen avgift att ta ut: det finns inget medlemskap och ingen bokning.
+           Skilj dem från gymmet och bastun, som har medlemskap och därför pris.
 
-           GYMPRISET ÄR TVEKSAMT. Sajten skriver "50 kr i månaden" om gymmet på sex
+           "INGÅR" BETYDER "INGÅR I AVGIFTEN", och gäller därför bara det föreningen
+           själv håller. Två rader står för något som någon annan tar betalt för och har
+           egna formuleringar: paketboxen är Postnords ("Fri att använda") och
+           gästparkeringen debiteras av Parkit ("Avgift i app"). Laddplatsen är ett
+           mellanting – beloppet är en kostnad för den som hyr, men fakturan kommer från
+           Ladda Tillsammans och inte på avgiftsavin. Kolumnen svarar på vad saken
+           kostar den som bor här, inte på vem som skickar räkningen.
+
+           KVAR ATT KONTROLLERA: cykelförrådet, barnvagnsrummen och föreningslokalen –
+           se det tredje kommentarsblocket.
+
+           GYMPRISET ÄR TVEKSAMT. Sajten skriver "50 kr i månaden" om gymmet på fem
            ställen, men A–Ö sätter 50 kr per hushåll och månad på *bastun* och säger
            bara "för en låg kostnad" om gymmet. Sannolikt har bastuns avgift smittat
            av sig på gymmet. Rör inte gymraderna förrän det är avgjort mot en
            avgiftsavi – de är sajtens mest upprepade påstående.
 
-           Ungdomslägenheterna: A–Ö säger att både köavgiften och *uthyrningen* är
-           pausade under stambytet. Raden säger därför "efter kötid" och lovar inget
-           om att det går att flytta in nu. Kontrollera om pausen fortfarande gäller
-           innan raden får en starkare formulering. -->
+           Ungdomslägenheterna: pausen är omkontrollerad 2026-08-17 och gäller
+           fortfarande. Raden är omskriven efter det – se kommentaren vid raden. -->
 
-      <!-- Ingressen gjorde tre saker och en av dem hörde inte hemma här. Kvar står
-           påståendet som ger läsaren skäl att läsa listan noga, och regeln som gör
-           att en rad utan pris betyder något.
+      <!-- BLOCKET HAR INGEN INGRESS, OCH SKA INTE HA NÅGON. Här stod ett stycke som
+           slutade "Allt ingår i avgiften, utom det som står med en kostnad". Det togs
+           bort inför prodsättning på begäran, 2026-08-17, hela stycket.
 
-           Bortplockat är meningen "en mäklare kan inte gärna nämna det som ingen
-           berättat om". Den förklarade *varför* uppgifterna saknas på andra håll,
-           vilket är ett svar på en fråga läsaren inte har ställt – och eftersom
-           mäklaren är en av sidans två läsare stod det en invändning mot honom i
-           hans egen ingress. Skälet till att sajten finns hör hemma i README, inte
-           på sidan. "Här är allt samlat på ett ställe" föll av samma anledning:
-           rubriken säger det redan.
+           Två saker följde av det, och de hänger ihop med varandra:
 
-           SISTA MENINGEN ÄR BÄRANDE. Den är enda stället som säger vad en rad utan
-           pris betyder, och ett tjugotal rader vilar på den. Tas den bort måste
-           varje sådan rad skriva ut "utan kostnad" själv. -->
+           1. RUBRIKEN ÄNDRADES från "Det här ingår i boendet" till "Det här finns i
+              föreningen". Den gamla rubriken var ett påstående om att allt nedan ingår,
+              och det var ingressens undantag – "utom det som står med en kostnad" –
+              som höll det påståendet sant. Utan undantaget lovade rubriken att garaget
+              för 500 kr i månaden ingår i avgiften. Rubriken säger nu bara vad
+              föreningen har.
+
+           2. VARJE RAD BÄR SIN EGEN KOSTNAD, i en egen `perk__cost`. Förut betydde en
+              rad utan pris att den ingick, eftersom ingressen sa det. Nu säger raden
+              det själv: ett belopp, eller "Ingår".
+
+           Alternativet var att gruppera om listan i "Ingår i avgiften" och "Kostar
+           extra". Det avstods medvetet. Grupperna står i fallande ordning efter hur
+           ovanliga sakerna är, och det är listans säljande ryggrad – en indelning efter
+           pris byter ut den mot en bokföringsordning, tvingar sidan att öppna med värme
+           och vatten (se första kommentaren) och flyttar gymmet och gästlägenheten till
+           en hög som läses som förbehåll. Ett pris ska läsas som ett fynd. Femtio
+           kronor för ett gym är ett argument.
+
+           TRE RADER HAR MEDVETET INGEN KOSTNADSUPPGIFT:
+
+           - Cykelförrådet och barnvagnsrummen – ingen vet, och en gissning är värre än
+             en lucka. Står i TODO.md. Fyll i så snart svaret finns; de är de enda två
+             raderna där en läsare rimligen undrar och inte får svar.
+           - Bilfria gårdar och nya innergårdar – ingen ställer frågan vad en gård utan
+             gator kostar. De är egenskaper hos området, inte tjänster med en avgift, och
+             en "Ingår" på dem hade sett ut som ett svar på en fråga ingen har.
+
+           FÖRENINGSLOKALENS "Ingår" ÄR DEN ENDA OBELAGDA KOSTNADSUPPGIFTEN på listan.
+           Raden har påstått det länge och står kvar som den är, men A–Ö bekräftar inte
+           det – belägg det eller ta bort taggen.
+
+           Sätt inte tillbaka ingressen utan att samtidigt ta ställning till rubriken
+           och taggarna – annars står påståendet dubbelt på tjugo rader och rubriken
+           lovar för mycket igen. -->
 
       <div class="perks">
 
         <div class="perks__group">
           <h3>Träning och bad</h3>
           <ul>
-            <li><strong>Gym</strong> – eget, inne i området, 50 kr i månaden</li>
-            <li><strong>Bastu</strong> – med duschrum och relaxrum i M90, 50 kr i månaden</li>
-            <li><strong>Utegym</strong> – redskap på gräsmattan intill husen</li>
-            <li><strong>Boulebana</strong> – grusbana med bänkbord intill</li>
-            <li><strong>Fotbollsplan</strong> – egen plan vid idrottsplatsen</li>
-            <li><strong>Isbana</strong> – asfaltplan med sarg, som grannar spolar vintertid</li>
+            <li>
+              <span class="perk__what"><strong>Gym</strong> – eget, inne i området</span>
+              <span class="perk__cost">50 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Bastu</strong> – med duschrum och relaxrum i M90</span>
+              <span class="perk__cost">50 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Utegym</strong> – redskap på gräsmattan intill husen</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Boulebana</strong> – grusbana med bänkbord intill</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Fotbollsplan</strong> – egen plan vid idrottsplatsen</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Isbana</strong> – asfaltplan med sarg, som grannar spolar vintertid</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
           </ul>
         </div>
 
         <div class="perks__group">
           <h3>Att låna, boka och hyra</h3>
           <ul>
-            <li><strong>Gästlägenhet</strong> – två rum och sex bäddar, 400 kr per dygn</li>
+            <li>
+              <span class="perk__what"><strong>Gästlägenhet</strong> – två rum och sex bäddar</span>
+              <span class="perk__cost">400 kr/dygn</span>
+            </li>
             <!-- "Efter kötid" stod här och lovade för mycket. A–Ö, kontrollerad
                  2026-08-17: "Under stambytet har vi pausat köavgiften för och
                  uthyrandet av ungdomslägenheterna." Stambytet är beräknat klart 2030,
@@ -312,57 +366,132 @@
                  Raden ska säga att föreningen *äger* åtta lägenheter – det är det
                  ovanliga – utan att antyda att en artondaåring kan flytta in.
                  Skriv om raden om pausen hävs, inte innan. -->
-            <li><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen, uthyrningen pausad under stambytet</li>
-            <li><strong>Borrmaskin</strong> – lånas ut en vecka i taget</li>
-            <li><strong>Föreningslokal</strong> – bokas utan kostnad, för kalas och fest</li>
-            <li><strong>Tvättstugor</strong> – sex stycken, plus grovtvätt och snabbtvätt vid tre av dem</li>
-            <li><strong>Paketbox</strong> – Postnord, inne i området</li>
+            <li>
+              <span class="perk__what"><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen</span>
+              <span class="perk__cost">Pausad under stambytet</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Borrmaskin</strong> – lånas ut en vecka i taget</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Föreningslokal</strong> – bokas för kalas och fest</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Tvättstugor</strong> – sex stycken, plus grovtvätt och snabbtvätt vid tre av dem</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <!-- "Fri att använda" och inte "Ingår". Kostnadskolumnen betyder i praktiken
+                 "ingår i avgiften", och det gör paketboxen inte: den är Postnords, inte
+                 föreningens, och vad en leverans kostar avgörs av den som skickar. A–Ö:s
+                 "gratis" betyder att boxen är fri att använda, inte att avgiften betalar
+                 för den. Skriv inte om det till "Ingår". -->
+            <li>
+              <span class="perk__what"><strong>Paketbox</strong> – Postnord, inne i området</span>
+              <span class="perk__cost">Fri att använda</span>
+            </li>
           </ul>
         </div>
 
         <div class="perks__group">
           <h3>Ute i området</h3>
           <ul>
-            <li><strong>Tio grillplatser</strong> – upprustade, utspridda över gårdarna</li>
-            <li><strong>Fyra lekplatser</strong> – på bilfria gårdar</li>
-            <li><strong>Hundrastgård</strong> – egen och inhägnad, vid idrottsplatsen</li>
-            <li><strong>Bilfria gårdar</strong> – inga gator mellan husen</li>
-            <li><strong>Nya innergårdar</strong> – ombyggda 2021–2023</li>
+            <li>
+              <span class="perk__what"><strong>Tio grillplatser</strong> – upprustade, utspridda över gårdarna</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Fyra lekplatser</strong> – på bilfria gårdar</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Hundrastgård</strong> – egen och inhägnad, vid idrottsplatsen</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Bilfria gårdar</strong> – inga gator mellan husen</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Nya innergårdar</strong> – ombyggda 2021–2023</span>
+            </li>
           </ul>
         </div>
 
         <div class="perks__group">
           <h3>Bil och parkering</h3>
           <ul>
-            <li><strong>287 p-platser</strong> – självkostnad, från 250 kr i månaden</li>
-            <li><strong>285 garageplatser</strong> – 500 kr i månaden, renoverade 2016–2019</li>
-            <li><strong>Elbilsladdning</strong> – 34 platser i Garage B, 445 kr i månaden utöver garaget, plus 69 kr för laddappen</li>
-            <li><strong>MC-garage</strong> – 150 kr i månaden</li>
-            <li><strong>Gästparkering</strong> – fyra platser, betalas i app</li>
+            <li>
+              <span class="perk__what"><strong>287 p-platser</strong> – hyrs till självkostnad</span>
+              <span class="perk__cost">från 250 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>285 garageplatser</strong> – renoverade 2016–2019</span>
+              <span class="perk__cost">500 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Elbilsladdning</strong> – 34 platser i Garage B, utöver garageavgiften, plus 69 kr för laddappen</span>
+              <span class="perk__cost">445 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>MC-garage</strong> – för motorcykel och moped</span>
+              <span class="perk__cost">150 kr/mån</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Gästparkering</strong> – fyra platser</span>
+              <span class="perk__cost">Avgift i app</span>
+            </li>
           </ul>
         </div>
 
         <div class="perks__group">
           <h3>Förvaring</h3>
           <ul>
-            <li><strong>Cykelrum</strong> – inomhus i husen, plus cykelställ vid porten</li>
+            <li>
+              <span class="perk__what"><strong>Cykelrum</strong> – inomhus i husen, plus cykelställ vid porten</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
             <!-- Huset stod utskrivet här. Se `cykelforrad-m10` och README, "Var förråden
                  ligger står inte utskrivet". Skriv inte dit beteckningen igen. -->
-            <li><strong>Cykelförråd</strong> – långtidsförvaring över vintern</li>
-            <li><strong>Barnvagnsrum</strong> – på nedre botten i de flesta trapphus</li>
+            <li>
+              <span class="perk__what"><strong>Cykelförråd</strong> – långtidsförvaring över vintern</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Barnvagnsrum</strong> – på nedre botten i de flesta trapphus</span>
+            </li>
             <!-- Garaget namngavs här förut. Se kommentaren i `dackforvaring` för varför
                  det inte gör det längre – kortfattat: öppen sajt, olarmat utrymme,
                  däck. Skriv inte dit bokstaven igen. -->
-            <li><strong>Däckförvaring</strong> – säsongsförvaring vår och höst</li>
+            <li>
+              <span class="perk__what"><strong>Däckförvaring</strong> – säsongsförvaring vår och höst</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
           </ul>
         </div>
 
         <div class="perks__group">
           <h3>Räkningar du slipper</h3>
           <ul>
-            <li><strong>Bredband och TV</strong> – Telenor 250/250 Mbit/s, TV från Tele2</li>
-            <li><strong>Bostadsrättstillägg</strong> – ingår i föreningens försäkring</li>
-            <li><strong>Värme och vatten</strong> – ingen separat räkning</li>
+            <!-- "Ingår i avgiften" står utskrivet sedan ingressen togs bort. Raden är den
+                 enda i den här gruppen som inte sa det själv – bostadsrättstillägget
+                 säger "ingår i föreningens försäkring" och värmen "ingen separat
+                 räkning", men bredbandsraden räknade bara upp leverantör och hastighet
+                 och lutade sig mot ingressen. Bredband och TV är en räkning en köpare
+                 faktiskt slipper, så den ska inte stå tyst. Belagt: A–Ö 2026-08-08,
+                 Telenor ingår i avgiften sedan 2021-08-01, Tele2:s grundutbud sedan
+                 2020-09-08. -->
+            <li>
+              <span class="perk__what"><strong>Bredband och TV</strong> – Telenor 250/250 Mbit/s och TV från Tele2</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Bostadsrättstillägg</strong> – i föreningens försäkring</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
+            <li>
+              <span class="perk__what"><strong>Värme och vatten</strong> – ingen separat räkning</span>
+              <span class="perk__cost">Ingår</span>
+            </li>
           </ul>
         </div>
 

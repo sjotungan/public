@@ -188,7 +188,7 @@ Tabellen står i menyns ordning: det som lockar först, det som kontrolleras sis
 
 | Fil | Sida i menyn | Vad sidan gör |
 | --- | --- | --- |
-| [index.html](index.html) | Översikt | Hela argumentet i scrollordning: fotohjälte, sex siffror, området, *Det här ingår i boendet*, tesen om den stora föreningen, rollkorten, grannarna emellan, gemensamt, grillplatserna – och ekonomin sist |
+| [index.html](index.html) | Översikt | Hela argumentet i scrollordning: fotohjälte, sex siffror, området, *Det här finns i föreningen*, tesen om den stora föreningen, rollkorten, grannarna emellan, gemensamt, grillplatserna – och ekonomin sist |
 | [laget.html](laget.html) | Läget | Karta, direktbussen till city, tillgänglighet, närområdet, skogen med blåbärsriset och rådjursfilmen |
 | [bilder.html](bilder.html) | Bilder | Sajtens alla bilder i ett galleri, samlas in vid bygget |
 | [family.html](family.html) | För dig … med barn | Lekplatser, gårdar, fotbollsplan, isbana, förskola och kulturskola |
@@ -199,9 +199,9 @@ Tabellen står i menyns ordning: det som lockar först, det som kontrolleras sis
 | [ekonomi.html](ekonomi.html) | Ekonomi och underhåll | Nyckeltalen förklarade, stambytet, avgiftsutvecklingen, allt underhåll år för år |
 | [fakta.html](fakta.html) | Fakta | Allt i faktarader, i den form uppgifter jämförs i mellan föreningar |
 
-*Det här ingår i boendet* på översikten är ett register över allt föreningen
+*Det här finns i föreningen* på översikten är ett register över allt föreningen
 har, en rad per sak. Det finns för att **varken spekulanten eller mäklaren vet
-vad som ingår** – en gästlägenhet, en ungdomslägenhet, ett gym för 50 kronor i
+vad föreningen har** – en gästlägenhet, en ungdomslägenhet, ett gym för 50 kronor i
 månaden, en bastu, en föreningslokal utan kostnad och en borrmaskin att låna
 står inte i annonsen och går inte att läsa sig till någon annanstans. Håll
 listan uppdaterad; den är sajtens tydligaste skäl att finnas.
@@ -209,9 +209,11 @@ listan uppdaterad; den är sajtens tydligaste skäl att finnas.
 Listan är ordnad efter hur ovanliga sakerna är, och **lägenheterna är det
 ovanligaste föreningen har**: en gästlägenhet och åtta ungdomslägenheter utöver
 de 604 är inget en spekulant har sett i någon av de andra föreningarna på
-listan, och det är tesen i `stor-forening` i två rader. De ligger tills vidare i
-*Att låna, boka och hyra* som står som andra grupp – flytta upp den när
-ungdomslägenheternas status är avgjord.
+listan, och det är tesen i `stor-forening` i två rader. De ligger i *Att låna,
+boka och hyra* som står som andra grupp, och där står de kvar: uthyrningen av
+ungdomslägenheterna är pausad under stambytet, beräknat klart 2030 (A–Ö
+2026-08-17). Åtta lägenheter som ingen kan hyra på flera år bär ingen
+förstaplacering. Flytta upp gruppen när pausen är hävd.
 
 ## Vad som fortfarande saknas
 
@@ -269,12 +271,22 @@ inte in gissningar.
   **Att det är två olika bolag skrivs ut med flit.** "Bredband och TV ingår"
   läses annars som ett avtal hos en leverantör, och den som ringer fel bolag om
   TV-kanalerna får svaret att han inte är kund. Skriv inte ihop dem igen.
-- **Vad som kostar extra** (`det-har-ingar`-blocket) – ingressen säger nu att
-  allt ingår i avgiften utom det som står med en kostnad. Fyra rader har pris
-  (gym, p-plats, garage, MC-garage) och en är uttryckligen kostnadsfri
-  (föreningslokalen). Tio rader är aldrig kontrollerade: bastu, borrmaskin,
-  tvättstugor, paketbox, elbilsladdning, gästparkering, cykelrum, cykelförråd,
-  barnvagnsrum och däckförvaring.
+- **Vad som kostar extra** (`det-har-ingar`-blocket) – varje rad bär sin egen
+  kostnadsuppgift, eller ingen alls. Blocket hade tidigare en ingress som slutade
+  *"Allt ingår i avgiften, utom det som står med en kostnad"*, och då betydde en
+  tyst rad att den ingick. Ingressen togs bort inför prodsättning 2026-08-17 och
+  regeln försvann med den.
+
+  Kvar står: rader med pris (gym, p-plats, garage, MC-garage, laddplats,
+  gästlägenhet), fem rader med utskrivet "utan kostnad" som är kontrollerade
+  (däckförvaring, tvättstugor, borrmaskin, cykelrum, paketbox) – och resten
+  tysta, vilket nu inte påstår någonting. **Det är en förbättring, inte en
+  lucka:** ett tjugotal rader vilade förut på en enda mening, och sex av dem var
+  aldrig kontrollerade.
+
+  Kvar att belägga: cykelförrådet, barnvagnsrummen och föreningslokalens "bokas
+  utan kostnad" – den sista är den enda rad som fortfarande påstår något
+  obelagt.
 
   Priserna kontrollerades 2026-08-07 mot **föreningens egen A–Ö på
   sjotungan.se**, som visade sig svara på det mesta: gästlägenheten 400 kr/dygn,
@@ -295,23 +307,23 @@ inte in gissningar.
   faktureras av Ladda Tillsammans. Två avsändare, inte en.
 
   **Gympriset är däremot troligen fel.** Sajten skriver "50 kr i månaden" om
-  gymmet på sex ställen, men A–Ö sätter det beloppet på *bastun* och säger bara
-  "för en låg kostnad" om gymmet. Femtiolappen ser ut att ha vandrat från bastun
-  till gymmet någon gång i skrivandet. Det är sajtens mest upprepade påstående
-  och står i ingressen på översikten, så det ska avgöras mot en avgiftsavi och
-  rättas på alla sex ställena samtidigt – inte lappas på ett.
+  gymmet på fem ställen – `gym`-blockets text och dess faktaruta, `kort-traning`,
+  raden i `det-har-ingar` och en gång här nedan – men A–Ö sätter det beloppet på
+  *bastun* och säger bara "för en låg kostnad" om gymmet. Femtiolappen ser ut att
+  ha vandrat från bastun till gymmet någon gång i skrivandet. Omkontrollerat mot
+  A–Ö 2026-08-17: oförändrat, så A–Ö kommer inte att lösa det. Avgör mot en
+  avgiftsavi och rätta alla ställena samtidigt – lappa inte ett.
 
-  Regeln i ingressen är formulerad så för att ett pris ska läsas som ett
-  fynd i stället för som ett förbehåll – femtio kronor för ett gym är ett
-  argument – och för att den sätter upp tesen i `stor-forening`, som står
-  direkt efter. En lista där varje rad bär ett pris säger tvärtom att avgiften
-  köper lägenheten och inget annat.
+  **Priser läses som fynd, inte som förbehåll.** Femtio kronor för ett gym är ett
+  argument, och det är därför prissatta rader hör hit i stället för att gömmas.
+  Men en lista där *varje* rad bär ett pris säger tvärtom att avgiften köper
+  lägenheten och inget annat. Skriv därför pris där det finns ett, och skriv
+  ingenting där det inte är kontrollerat – aldrig en gissning i någon riktning.
 
-  Det gör också meningen till ett löfte om hela listan. Kontrollera de tio
-  innan blocket ligger uppe; störst risk är däckförvaring och gästparkering,
-  som tas betalt för i de flesta föreningar, och laddningen, där strömmen
-  alltid mäts. Ett pris som visar sig på visningen i stället för på sidan är
-  precis det som får en mäklare att sluta använda sajten.
+  Ett pris som visar sig på visningen i stället för på sidan är precis det som
+  får en mäklare att sluta använda sajten. Det var det starkaste skälet att ta
+  bort ingressens löfte om hela listan: sidan lovade gratis för sex rader som
+  ingen hade kontrollerat.
 
 ## Var uppgifterna kommer ifrån
 
