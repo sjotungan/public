@@ -120,19 +120,19 @@ ingenting motsvarande, så texten säger nu bara att förrådet finns.
 
 ## Gästlägenheten och ungdomslägenheterna har inget innehåll alls
 
-De två enda raderna i registret som inte kan länkas vidare: det finns inget block,
-ingen sida och inget foto om någon av dem. Alla andra 27 rader leder numera till
-ett avsnitt som beskriver saken med bild.
-
-Det är sajtens största innehållslucka, och den sitter på fel rader – README:s tes
-är att de nio egna lägenheterna är det ovanligaste föreningen har.
+Blocken finns sedan 2026-08-18, `gastlagenhet` och `ungdomslagenheter`, båda
+under *Gemensamt för alla* på översikten. Därmed leder alla 29 rader i registret
+vidare. Kvar är bilderna och två uppgifter:
 
 - [ ] **Bilder på gästlägenheten.** Två rum, sex bäddar, pentry och WC med dusch,
-      på Myggdalsvägen 28. Ingen bild finns
-- [ ] **Ett block om gästlägenheten** – vad den kostar, hur den bokas, vad som
-      ingår. Priset är belagt (400 kr/dygn), resten inte
-- [ ] **Ungdomslägenheterna** – kan vänta tills pausen är hävd, men hyran och
-      kötiden behövs innan raden kan bära en egen sida
+      på Myggdalsvägen 28. Ingen bild finns, och blocket är det enda i *Gemensamt
+      för alla* utan foto tillsammans med ungdomslägenheterna. Det är också den
+      rad README kallar det ovanligaste föreningen har – den förtjänar en bild
+- [ ] **Hur bokar man gästlägenheten?** Står inte i A–Ö, och därför inte i
+      blocket. Utan det vet läsaren att den finns men inte hur man får den
+- [ ] **Hyran för en ungdomslägenhet** – fortfarande okänd. Ett belopp gör raden
+      starkare; den som jämför med en hyresrätt i Stockholm har inget att jämföra
+      med i dag
 
 ## Övriga luckor
 

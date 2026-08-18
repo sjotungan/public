@@ -389,7 +389,7 @@
           <h3>Att låna, boka och hyra</h3>
           <ul>
             <li>
-              <span class="perk__what"><strong>Gästlägenhet</strong> – två rum och sex bäddar</span>
+              <a class="perk__what" href="#common"><strong>Gästlägenhet</strong> – två rum och sex bäddar</a>
               <span class="perk__cost">400 kr/dygn</span>
             </li>
             <!-- "Efter kötid" stod här och lovade för mycket. A–Ö, kontrollerad
@@ -400,7 +400,7 @@
                  ovanliga – utan att antyda att en artondaåring kan flytta in.
                  Skriv om raden om pausen hävs, inte innan. -->
             <li>
-              <span class="perk__what"><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen, uthyrningen pausad under stambytet</span>
+              <a class="perk__what" href="#common"><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen, uthyrningen pausad under stambytet</a>
             </li>
             <li>
               <a class="perk__what" href="#common"><strong>Borrmaskin</strong> – lånas ut en vecka i taget</a>
@@ -725,6 +725,65 @@
       </div>
 
       <div class="grid grid--3">
+        <!-- Lägenheterna står först i gruppen. De är de två ovanligaste sakerna
+             föreningen har – nio egna lägenheter utöver de 604 – och de enda två
+             raderna i registret som förut inte kunde länkas vidare, eftersom det
+             inte fanns någon text om dem någonstans på sajten. -->
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20V9.5L12 4l8.5 5.5V20"/><path d="M3.5 20h17"/><path d="M9 20v-5h6v5"/></svg></span>
+          <h3>Gästlägenhet att hyra</h3>
+          <!-- Belagt ur A–Ö, sjotungan.se, kontrollerat 2026-08-07: en (1) lägenhet på
+               Myggdalsvägen 28, två rum, sex bäddar, pentry och WC med dusch, 400 kr per
+               dygn, kuddar och täcken för sex personer.
+
+               A–Ö skriver också att lägenheten är till för övernattning och inte för
+               fester. Den meningen står inte här: den är en ordningsregel, och enligt
+               README skriver sajten möjligheten och inte förbudet. "För övernattande
+               gäster" säger samma sak åt rätt håll.
+
+               LUCKA: hur man bokar står inte i A–Ö och är därför inte utskrivet. Det finns
+               inga foton på lägenheten heller – blocket är text tills någon fotograferar
+               den. Båda står i TODO.md. Skriv inte in en gissning om bokningen. -->
+
+          <p>
+            Föreningen äger en gästlägenhet på Myggdalsvägen 28 som medlemmar hyr för
+            400 kronor per dygn. Den som får besök behöver alltså varken bädda i
+            vardagsrummet eller boka hotell i Tyresö centrum.
+          </p>
+
+          <p>
+            Lägenheten är på två rum med sex bäddar, pentry och WC med dusch, och kuddar
+            och täcken finns för sex personer. Den är till för övernattande gäster.
+          </p>
+        </article>
+        <article class="card">
+          <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V21h14V9.6"/><path d="M9.5 21v-6h5v6"/></svg></span>
+          <h3>Åtta ungdomslägenheter</h3>
+          <!-- Belagt ur A–Ö, sjotungan.se: åtta lägenheter, 18–27 år, kategori A är boende
+               i föreningen eller barn till boende, kategori B är HSB-föreningar i Tyresö,
+               administrativ köavgift 100 kr/år (kontrollerat 2026-08-07).
+
+               PAUSEN ÄR FÄRSK OCH SKA STÅ KVAR: "Under stambytet har vi pausat köavgiften
+               för och uthyrandet av ungdomslägenheterna" (omkontrollerat 2026-08-17).
+               Stambytet är beräknat klart 2030. Utan den meningen läser en spekulant med
+               en artonåring hemma det här som något som går att ordna nu, och får veta
+               sanningen på visningen i stället. Raden i `det-har-ingar` säger samma sak.
+
+               LUCKA: hyran är okänd. Skriv in den när den finns – ett belopp gör raden
+               starkare, och den som jämför med en hyresrätt i Stockholm har inget att
+               jämföra med i dag. Står i TODO.md. -->
+
+          <p>
+            Utöver de 604 bostadsrätterna äger föreningen åtta ungdomslägenheter, som hyrs
+            ut till 18–27-åringar som bor i föreningen eller är barn till någon som gör
+            det. Det är ovanligt: en ung vuxen kan flytta hemifrån utan att lämna området.
+          </p>
+
+          <p>
+            Platserna fördelas efter kötid, och köavgiften är 100 kronor om året. Både kön
+            och uthyrningen är pausade under stambytet, som beräknas vara klart 2030.
+          </p>
+        </article>
         <article class="card">
           <span class="card__icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2.5"/><circle cx="12" cy="14" r="4"/><path d="M8 6.5h.01"/><path d="M11 6.5h.01"/></svg></span>
           <h3>Tvättstugor</h3>
