@@ -206,6 +206,19 @@ månaden, en bastu, en föreningslokal utan kostnad och en borrmaskin att låna
 står inte i annonsen och går inte att läsa sig till någon annanstans. Håll
 listan uppdaterad; den är sajtens tydligaste skäl att finnas.
 
+**Raderna är länkar in i resten av sajten**, 27 av 29. Registret påstod förut 29
+saker utan att ge något sätt att kontrollera dem, trots att gymmet, bastun,
+grillplatserna och resten stod beskrivna med foton en bit bort – och den som
+läste uppifrån och ner hittade rollkorten först två avsnitt längre ner. En
+granne som gick igenom sajten upptäckte bilderna först vid andra genomläsningen,
+och det var beviset: hittar inte den som letar, hittar ingen. Länkarna kopplar
+ihop påstående och underlag utan att översikten växer en rad.
+
+Skriv därför aldrig en ny rad i registret utan att fråga vart den ska peka. Finns
+det inget mål är det raden som saknar innehåll, inte länken som saknas – och då
+hör den hemma i [TODO.md](TODO.md). Gästlägenheten och ungdomslägenheterna är de
+två som står så i dag.
+
 Listan är ordnad efter hur ovanliga sakerna är, och **lägenheterna är det
 ovanligaste föreningen har**: en gästlägenhet och åtta ungdomslägenheter utöver
 de 604 är inget en spekulant har sett i någon av de andra föreningarna på

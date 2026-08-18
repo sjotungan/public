@@ -118,6 +118,22 @@ ingenting motsvarande, så texten säger nu bara att förrådet finns.
       invändningen och husbeteckningen kan stå kvar igen – både här och,
       beroende på svaret för garaget, för däcken
 
+## Gästlägenheten och ungdomslägenheterna har inget innehåll alls
+
+De två enda raderna i registret som inte kan länkas vidare: det finns inget block,
+ingen sida och inget foto om någon av dem. Alla andra 27 rader leder numera till
+ett avsnitt som beskriver saken med bild.
+
+Det är sajtens största innehållslucka, och den sitter på fel rader – README:s tes
+är att de nio egna lägenheterna är det ovanligaste föreningen har.
+
+- [ ] **Bilder på gästlägenheten.** Två rum, sex bäddar, pentry och WC med dusch,
+      på Myggdalsvägen 28. Ingen bild finns
+- [ ] **Ett block om gästlägenheten** – vad den kostar, hur den bokas, vad som
+      ingår. Priset är belagt (400 kr/dygn), resten inte
+- [ ] **Ungdomslägenheterna** – kan vänta tills pausen är hävd, men hyran och
+      kötiden behövs innan raden kan bära en egen sida
+
 ## Övriga luckor
 
 - [ ] **Hemresan från city på eftermiddagen** – aldrig kontrollerad. SL:s

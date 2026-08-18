@@ -102,7 +102,7 @@ icon: house
      en hög som läses som förbehåll. Ett pris ska läsas som ett fynd. Femtio
      kronor för ett gym är ett argument.
 
-     TRE RADER HAR MEDVETET INGEN KOSTNADSUPPGIFT:
+     FEM RADER HAR MEDVETET INGEN KOSTNADSUPPGIFT:
 
      - Cykelförrådet och barnvagnsrummen – ingen vet, och en gissning är värre än
        en lucka. Står i TODO.md. Fyll i så snart svaret finns; de är de enda två
@@ -110,6 +110,11 @@ icon: house
      - Bilfria gårdar och nya innergårdar – ingen ställer frågan vad en gård utan
        gator kostar. De är egenskaper hos området, inte tjänster med en avgift, och
        en "Ingår" på dem hade sett ut som ett svar på en fråga ingen har.
+     - Ungdomslägenheterna – hyran är okänd, och "Pausad under stambytet" stod en
+       tid i kostnadskolumnen. Det var fel på två sätt: en paus är ett tillstånd
+       och inte ett pris, och taggen var så bred att den klämde ihop raden till
+       ett tvåradigt namn med en strimla text bredvid. Pausen står i beskrivningen
+       i stället.
 
      FÖRENINGSLOKALENS "Ingår" ÄR DEN ENDA OBELAGDA KOSTNADSUPPGIFTEN på listan.
      Raden har påstått det länge och står kvar som den är, men A–Ö bekräftar inte
@@ -119,33 +124,56 @@ icon: house
      och taggarna – annars står påståendet dubbelt på tjugo rader och rubriken
      lovar för mycket igen. -->
 
+<!-- RADERNA ÄR LÄNKAR, 27 av 29. Efterfrågat: "Gör dessa klickbara för att få
+     fram bilder och information för respektive facilitet", och bekräftat en gång
+     till när samma person upptäckte att materialet redan låg längre ner på sajten
+     och undrade om det borde flyttas upp. Det behövde det inte – det behövde nås
+     härifrån. Registret påstod 29 saker och gav inget sätt att kontrollera dem,
+     fastän gymmet, bastun, grillplatserna och resten stod beskrivna med foton en
+     bit bort. Länkarna är den kopplingen, och de kostar sidan ingen längd.
+
+     Målen är befintliga avsnitt, inga nya sidor: fitness.html, gardarna.html,
+     car.html, bicycle.html, dogs.html, family.html, ekonomi.html och fyra rader
+     till #common längre ner på den här sidan.
+
+     #common bär fyra rader – borrmaskinen, tvättstugorna, paketboxen och
+     bredbandet – för att korten i "Gemensamt för alla" inte har egna id. Vill du
+     träffa rätt kort och inte bara rätt avsnitt får korten id först.
+
+     TVÅ RADER SAKNAR LÄNK: gästlägenheten och ungdomslägenheterna. Det finns
+     ingenting om dem någonstans på sajten – inget block, ingen sida, inget foto.
+     Det är sajtens största innehållslucka, och enligt README är just de nio
+     lägenheterna det ovanligaste föreningen har. Skriv blocken, länka sedan.
+
+     Bara namnet är färgat, inte hela raden. Skälet står i CSS:en. -->
+
 <div class="perks">
 
   <div class="perks__group">
     <h3>Träning och bad</h3>
     <ul>
       <li>
-        <span class="perk__what"><strong>Gym</strong> – eget, inne i området</span>
+        <a class="perk__what" href="fitness.html#gym"><strong>Gym</strong> – eget, inne i området</a>
         <span class="perk__cost">50 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Bastu</strong> – med duschrum och relaxrum i M90</span>
+        <a class="perk__what" href="fitness.html#sauna"><strong>Bastu</strong> – med duschrum och relaxrum i M90</a>
         <span class="perk__cost">50 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Utegym</strong> – redskap på gräsmattan intill husen</span>
+        <a class="perk__what" href="fitness.html#outdoor"><strong>Utegym</strong> – redskap på gräsmattan intill husen</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Boulebana</strong> – grusbana med bänkbord intill</span>
+        <a class="perk__what" href="fitness.html#outdoor"><strong>Boulebana</strong> – grusbana med bänkbord intill</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Fotbollsplan</strong> – egen plan vid idrottsplatsen</span>
+        <a class="perk__what" href="gardarna.html#sport"><strong>Fotbollsplan</strong> – egen plan vid idrottsplatsen</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Isbana</strong> – asfaltplan med sarg, som grannar spolar vintertid</span>
+        <a class="perk__what" href="gardarna.html#sport"><strong>Isbana</strong> – asfaltplan med sarg, som grannar spolar vintertid</a>
         <span class="perk__cost">Ingår</span>
       </li>
     </ul>
@@ -166,19 +194,18 @@ icon: house
            ovanliga – utan att antyda att en artondaåring kan flytta in.
            Skriv om raden om pausen hävs, inte innan. -->
       <li>
-        <span class="perk__what"><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen</span>
-        <span class="perk__cost">Pausad under stambytet</span>
+        <span class="perk__what"><strong>Åtta ungdomslägenheter</strong> – för unga 18–27 år i föreningen, uthyrningen pausad under stambytet</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Borrmaskin</strong> – lånas ut en vecka i taget</span>
+        <a class="perk__what" href="#common"><strong>Borrmaskin</strong> – lånas ut en vecka i taget</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Föreningslokal</strong> – bokas för kalas och fest</span>
+        <a class="perk__what" href="family.html"><strong>Föreningslokal</strong> – bokas för kalas och fest</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Tvättstugor</strong> – sex stycken, plus grovtvätt och snabbtvätt vid tre av dem</span>
+        <a class="perk__what" href="#common"><strong>Tvättstugor</strong> – sex stycken, plus grovtvätt och snabbtvätt vid tre av dem</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <!-- "Fri att använda" och inte "Ingår". Kostnadskolumnen betyder i praktiken
@@ -187,7 +214,7 @@ icon: house
            "gratis" betyder att boxen är fri att använda, inte att avgiften betalar
            för den. Skriv inte om det till "Ingår". -->
       <li>
-        <span class="perk__what"><strong>Paketbox</strong> – Postnord, inne i området</span>
+        <a class="perk__what" href="#common"><strong>Paketbox</strong> – Postnord, inne i området</a>
         <span class="perk__cost">Fri att använda</span>
       </li>
     </ul>
@@ -197,22 +224,22 @@ icon: house
     <h3>Ute i området</h3>
     <ul>
       <li>
-        <span class="perk__what"><strong>Tio grillplatser</strong> – upprustade, utspridda över gårdarna</span>
+        <a class="perk__what" href="gardarna.html#grill"><strong>Tio grillplatser</strong> – upprustade, utspridda över gårdarna</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Fyra lekplatser</strong> – på bilfria gårdar</span>
+        <a class="perk__what" href="gardarna.html#lekplatser"><strong>Fyra lekplatser</strong> – på bilfria gårdar</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Hundrastgård</strong> – egen och inhägnad, vid idrottsplatsen</span>
+        <a class="perk__what" href="dogs.html#hundrastgarden"><strong>Hundrastgård</strong> – egen och inhägnad, vid idrottsplatsen</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Bilfria gårdar</strong> – inga gator mellan husen</span>
+        <a class="perk__what" href="gardarna.html#gardarna"><strong>Bilfria gårdar</strong> – inga gator mellan husen</a>
       </li>
       <li>
-        <span class="perk__what"><strong>Nya innergårdar</strong> – ombyggda 2021–2023</span>
+        <a class="perk__what" href="gardarna.html#gardarna"><strong>Nya innergårdar</strong> – ombyggda 2021–2023</a>
       </li>
     </ul>
   </div>
@@ -221,23 +248,23 @@ icon: house
     <h3>Bil och parkering</h3>
     <ul>
       <li>
-        <span class="perk__what"><strong>287 p-platser</strong> – hyrs till självkostnad</span>
+        <a class="perk__what" href="car.html#fees"><strong>287 p-platser</strong> – hyrs till självkostnad</a>
         <span class="perk__cost">från 250 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>285 garageplatser</strong> – renoverade 2016–2019</span>
+        <a class="perk__what" href="car.html#fees"><strong>285 garageplatser</strong> – renoverade 2016–2019</a>
         <span class="perk__cost">500 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Elbilsladdning</strong> – 34 platser i Garage B, utöver garageavgiften, plus 69 kr för laddappen</span>
+        <a class="perk__what" href="car.html#charging"><strong>Elbilsladdning</strong> – 34 platser i Garage B, utöver garageavgiften, plus 69 kr för laddappen</a>
         <span class="perk__cost">445 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>MC-garage</strong> – för motorcykel och moped</span>
+        <a class="perk__what" href="car.html#area"><strong>MC-garage</strong> – för motorcykel och moped</a>
         <span class="perk__cost">150 kr/mån</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Gästparkering</strong> – fyra platser</span>
+        <a class="perk__what" href="car.html#gastparkering"><strong>Gästparkering</strong> – fyra platser</a>
         <span class="perk__cost">Avgift i app</span>
       </li>
     </ul>
@@ -247,22 +274,22 @@ icon: house
     <h3>Förvaring</h3>
     <ul>
       <li>
-        <span class="perk__what"><strong>Cykelrum</strong> – inomhus i husen, plus cykelställ vid porten</span>
+        <a class="perk__what" href="bicycle.html#storage"><strong>Cykelrum</strong> – inomhus i husen, plus cykelställ vid porten</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <!-- Huset stod utskrivet här. Se `cykelforrad-m10` och README, "Var förråden
            ligger står inte utskrivet". Skriv inte dit beteckningen igen. -->
       <li>
-        <span class="perk__what"><strong>Cykelförråd</strong> – långtidsförvaring över vintern</span>
+        <a class="perk__what" href="bicycle.html#storage"><strong>Cykelförråd</strong> – långtidsförvaring över vintern</a>
       </li>
       <li>
-        <span class="perk__what"><strong>Barnvagnsrum</strong> – på nedre botten i de flesta trapphus</span>
+        <a class="perk__what" href="family.html"><strong>Barnvagnsrum</strong> – på nedre botten i de flesta trapphus</a>
       </li>
       <!-- Garaget namngavs här förut. Se kommentaren i `dackforvaring` för varför
            det inte gör det längre – kortfattat: öppen sajt, olarmat utrymme,
            däck. Skriv inte dit bokstaven igen. -->
       <li>
-        <span class="perk__what"><strong>Däckförvaring</strong> – säsongsförvaring vår och höst</span>
+        <a class="perk__what" href="car.html#tires"><strong>Däckförvaring</strong> – säsongsförvaring vår och höst</a>
         <span class="perk__cost">Ingår</span>
       </li>
     </ul>
@@ -280,15 +307,15 @@ icon: house
            Telenor ingår i avgiften sedan 2021-08-01, Tele2:s grundutbud sedan
            2020-09-08. -->
       <li>
-        <span class="perk__what"><strong>Bredband och TV</strong> – Telenor 250/250 Mbit/s och TV från Tele2</span>
+        <a class="perk__what" href="#common"><strong>Bredband och TV</strong> – Telenor 250/250 Mbit/s och TV från Tele2</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Bostadsrättstillägg</strong> – i föreningens försäkring</span>
+        <a class="perk__what" href="ekonomi.html#avgift"><strong>Bostadsrättstillägg</strong> – i föreningens försäkring</a>
         <span class="perk__cost">Ingår</span>
       </li>
       <li>
-        <span class="perk__what"><strong>Värme och vatten</strong> – ingen separat räkning</span>
+        <a class="perk__what" href="ekonomi.html#avgift"><strong>Värme och vatten</strong> – ingen separat räkning</a>
         <span class="perk__cost">Ingår</span>
       </li>
     </ul>
