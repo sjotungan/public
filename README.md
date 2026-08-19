@@ -319,13 +319,16 @@ inte in gissningar.
   hela tabellen debiteras på avgiftsavin från Fastighetsägarna, men laddningen
   faktureras av Ladda Tillsammans. Två avsändare, inte en.
 
-  **Gympriset är däremot troligen fel.** Sajten skriver "50 kr i månaden" om
-  gymmet på fem ställen – `gym`-blockets text och dess faktaruta, `kort-traning`,
-  raden i `det-har-ingar` och en gång här nedan – men A–Ö sätter det beloppet på
-  *bastun* och säger bara "för en låg kostnad" om gymmet. Femtiolappen ser ut att
-  ha vandrat från bastun till gymmet någon gång i skrivandet. Omkontrollerat mot
-  A–Ö 2026-08-17: oförändrat, så A–Ö kommer inte att lösa det. Avgör mot en
-  avgiftsavi och rätta alla ställena samtidigt – lappa inte ett.
+  **Gympriset var misstänkt men rätt.** Sajten skriver "50 kr i månaden" om
+  gymmet på fem ställen, och A–Ö sätter samma belopp på *bastun* men säger bara
+  "för en låg kostnad" om gymmet. Det såg ut som att femtiolappen vandrat mellan
+  dem. Uppgift från granne 2026-08-19: båda kostar 50 kr i månaden. Det var
+  likheten som såg ut som ett fel, och inget behövde rättas.
+
+  Lärdomen är värd att behålla: **A–Ö kan sakna en uppgift utan att motsäga den.**
+  Att beloppet stod på bastun och inte på gymmet var inget bevis för att gymmet
+  var fel – bara för att A–Ö inte svarade. Skilj "obelagt" från "motsagt" innan du
+  river upp en text.
 
   **Priser läses som fynd, inte som förbehåll.** Femtio kronor för ett gym är ett
   argument, och det är därför prissatta rader hör hit i stället för att gömmas.

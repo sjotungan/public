@@ -7,27 +7,25 @@ står bara vad som ska fram och av vem.
 Skriv aldrig in en gissning. En kortare färdig mening är bättre än en längre med
 ett hål i.
 
-## Först: gympriset kan vara fel på fem ställen
+## Avgjort: gymmet kostar 50 kr/mån, och bastun gör det också
 
-Sajten påstår **"ett gym för 50 kronor i månaden"** i `gym`-blockets text och i
-dess faktaruta, i `kort-traning`, på raden i `det-har-ingar` och i README.
-Föreningens egen A–Ö säger något annat:
+**Sajten hade rätt hela tiden.** Misstanken var att femtiolappen vandrat från
+bastun till gymmet: A–Ö sätter "50 kr per hushåll per månad" på bastun och säger
+bara "för en låg kostnad" om gymmet, utan belopp. Omkontrollerat mot A–Ö
+2026-08-17 stod det likadant, så A–Ö kunde inte avgöra saken.
 
-- bastun kostar **"50 kr per hushåll per månad"**
-- gymmet beskrivs bara som **"för en låg kostnad"**, utan belopp
+Uppgift från granne 2026-08-19: **gymmet 50 kr/mån, bastun 50 kr/mån.** Två
+avgifter på samma belopp – det var likheten som såg ut som ett fel. Inget behövde
+rättas på något av de fem ställena.
 
-Femtiolappen ser alltså ut att vara bastuns avgift som vandrat över till gymmet.
-Det är sajtens mest upprepade enskilda påstående. (Det stod tidigare även i
-ingressen på översikten – den är borta sedan 2026-08-17, men talet står kvar i
-`kort-traning`, som ligger på samma sida.)
+Källan är en boende och inte en avgiftsavi. Det är starkare än A–Ö, som varken
+har beloppet eller är aktuell, men skriv in "avi" här om någon någon gång tittar
+i en – då är frågan stängd helt.
 
-Omkontrollerat mot A–Ö 2026-08-17: oförändrat. Gymmet står fortfarande utan
-belopp och femtiolappen sitter fortfarande på bastun. A–Ö kommer alltså inte att
-lösa det här – frågan måste till någon som har en avi.
-
-- [ ] **Vad kostar gymmedlemskapet?** Kontrollera mot en avgiftsavi från
-      Fastighetsägarna, inte mot A–Ö. Rätta i så fall alla sex ställena samtidigt
-- [ ] Betalar man **båda** avgifterna separat om man har gym och bastu?
+- [x] **Vad kostar gymmedlemskapet?** 50 kr/mån, bekräftat
+- [ ] Betalar man **båda** avgifterna separat om man har gym och bastu? Svaret
+      räknar upp dem var för sig, vilket talar för två separata avgifter, men
+      det är en slutsats och inte något som sagts rakt ut
 
 ## Avgjort: laddplatsen kostar 445 kr/mån plus 69 kr för appen
 
@@ -59,8 +57,10 @@ av mot en avgiftsavi.
       representativa i ett `tvattstugor-bilder`-block under *Gemensamt för
       alla*, på samma sätt som `grillplatser-bilder`. Beslut behövs om det ska
       bli några alls
-- [ ] **`car/img_2587.jpg`** ligger kvar oanvänd. Den hör till `laddkabel`, som
-      togs bort som handhavande – ta bort filen eller låt den ligga
+- [x] **`car/img_2587.jpg`** – inte längre oanvänd. Laddboxbilden är flyttad in i
+      `car.html` direkt, vid laddavsnittet, och syns därmed också i galleriet.
+      Blocket `laddkabel` ligger kvar oanvänt i `src/blocks/` men tar inte längre
+      någon bild med sig ut
 
 **Kontrollera alltid bilderna när ett block slutar användas.** Bildsidan samlar
 in figurer från de sidor som byggs, så ett block som ingen sida hämtar in tar
@@ -82,8 +82,8 @@ läsaren, bara ett ärligt icke-svar.** Tre rader kan bli säljande av ett beske
       långtidsförrådet, eller finns kö eller avgift dit? Samma svar behövs för
       hur man får plats eller nyckel, se avsnittet om cykelförrådet ovan
 - [ ] **Barnvagnsrum** – fritt för alla i huset?
-- [ ] **Föreningslokalen** står som "bokas utan kostnad" – A–Ö bekräftar inte
-      det, priset ligger på en undersida. Verifiera påståendet
+- [x] **Föreningslokalen** – gratis, uppgift från granne 2026-08-19. Raden och
+      kostnadstaggen "Ingår" står kvar oförändrade, nu belagda
 
 ## Ungdomslägenheterna
 
